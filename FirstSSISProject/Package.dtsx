@@ -1,0 +1,1709 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="9/27/2021 10:54:54 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="MSI"
+  DTS:CreatorName="MSI\1prab"
+  DTS:DTSID="{30231609-B06B-4F95-8A6A-487518287AA3}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.170"
+  DTS:LocaleID="16393"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="10"
+  DTS:VersionGUID="{4EE25C22-454C-42ED-A999-D66EE673E5C4}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DinoExcel]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{39E2A6F8-A39A-46CB-A6D3-DD8E66DC6042}"
+      DTS:ObjectName="DinoExcel">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\1prab\Documents\Downloads\SSIS Excel\DinoFile.xls;Extended Properties=&quot;EXCEL 8.0;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DinoSQL]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{F46880D8-C4CF-4E34-A28B-221441994444}"
+      DTS:ObjectName="DinoSQL">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=MSI\SQLEXPRESS;User ID=sa;Initial Catalog=Dino_DB;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATAbnV6TfFEaLlSQVwvMrVwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACQeVPNiWZHraOP516gZgIDfkkOrTbJ1z2D0Zdc2c8wKQAAAAAOgAAAAAIAACAAAACMKGDKr61Gwv7vODJdMvHhk11JWL1QPpPTHeD/z2ehJxAAAAAzJjZT3O5nHeVq5CN3oXVPQAAAADTt6o4jpxJpGMmD3T3rGff7A294xIb6A/fka0A3YOGW+lZmLxltLrGirqibyrSalu+NCKw34miYYol02//auNM</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{57779BCE-8AF2-4907-B769-67A74ABD7062}"
+      DTS:ObjectName="Excel Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\1prab\Documents\Downloads\SSIS Excel\SalesPerson.xls;Extended Properties=&quot;Excel 8.0;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[MSI\SQLEXPRESS.AdventureWorks2017.sa]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{AACFB385-F957-4EFE-B672-B4A0CC3D9368}"
+      DTS:ObjectName="MSI\SQLEXPRESS.AdventureWorks2017.sa">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=MSI\SQLEXPRESS;User ID=sa;Initial Catalog=AdventureWorks2017;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATAbnV6TfFEaLlSQVwvMrVwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAQKYu/lyQg4CXYdC9IGtHuZnf3ANxYp/+r3ShI8KjgUgAAAAAOgAAAAAIAACAAAAA5K4irrcnDyjJHFa8LU2Gfrm/PffKWfOTLYt3gl0H1HBAAAACEb/f9NAmHHdgAnf8680pAQAAAALYzvyJqke7/A7V4kiZkOp/NNUUfT7lXllY6VvSFu8jc4LojrDHxkN0Uy9aCDZRlpvFGYJyoM/6zdV9ZxAwz14s</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[MSI\SQLEXPRESS.AdventureWorks2019.sa]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{DCE5C2B0-A842-4EF3-9D48-E8ED53859BFD}"
+      DTS:ObjectName="MSI\SQLEXPRESS.AdventureWorks2019.sa">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=MSI\SQLEXPRESS;User ID=sa;Initial Catalog=AdventureWorks2019;Provider=SQLNCLI11.1;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATAbnV6TfFEaLlSQVwvMrVwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAB+rlTxZh0zHjm34ubIv1xzJ1l2frFLeZGEusQukLC6EQAAAAAOgAAAAAIAACAAAADxxMXhIUHEaHePUARjJCxcsdXIcfMDBa5MJ/H7Tg5QIxAAAABt2Pd3ewTjdmczZW+mqcqnQAAAAJJeJMTeGOSkLuk/kYzQAMx2DRyCdyVU6rGi3t0Bd/zrAOTQD65MK6nmZKIoaMg1ZGtI9do7hgHi9FnXhzhfGsk</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[MSI\SQLEXPRESS.Dino_DB.sa 1]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{9A48FED3-DE79-4285-94D1-5020ABBA2F83}"
+      DTS:ObjectName="MSI\SQLEXPRESS.Dino_DB.sa 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=MSI\SQLEXPRESS;User ID=sa;Initial Catalog=Dino_DB;Provider=SQLNCLI11.1;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATAbnV6TfFEaLlSQVwvMrVwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAOinm6zTHzGYxhNdjsWLWzgkoGhfufPHcPGGFwpz3OnQAAAAAOgAAAAAIAACAAAABTcoPPlKltrn03MBQdOipwsO9vzmGj5GdqLrdaIVxylBAAAADSOybnO3HZekGmYEUj1KHkQAAAAO3zbLfg8QTupZLadzOcPBj63/oNhfJ3rVOe3g0dmLBDv5nZHbp594g2ZqySdwr0BPOPPvaCTmej2WUu+RXfodc</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\ExcelToSQLServer"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{823F64A7-7B7B-4615-8154-4702F6329B1C}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="ExcelToSQLServer"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\ExcelToSQLServer\Dino_Excel"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="Dino_Excel"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">Specimens$</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\ExcelToSQLServer\Dino_Excel.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DinoExcel]"
+                  connectionManagerRefId="Package.ConnectionManagers[DinoExcel]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\ExcelToSQLServer\Dino_Excel.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ExcelToSQLServer\Dino_Excel.Outputs[Excel Source Output].Columns[Name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ExcelToSQLServer\Dino_Excel.Outputs[Excel Source Output].ExternalColumns[Name]"
+                      length="255"
+                      lineageId="Package\ExcelToSQLServer\Dino_Excel.Outputs[Excel Source Output].Columns[Name]"
+                      name="Name"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\ExcelToSQLServer\Dino_Excel.Outputs[Excel Source Output].Columns[Pronunciation]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ExcelToSQLServer\Dino_Excel.Outputs[Excel Source Output].ExternalColumns[Pronunciation]"
+                      length="255"
+                      lineageId="Package\ExcelToSQLServer\Dino_Excel.Outputs[Excel Source Output].Columns[Pronunciation]"
+                      name="Pronunciation"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\ExcelToSQLServer\Dino_Excel.Outputs[Excel Source Output].Columns[Period]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ExcelToSQLServer\Dino_Excel.Outputs[Excel Source Output].ExternalColumns[Period]"
+                      length="255"
+                      lineageId="Package\ExcelToSQLServer\Dino_Excel.Outputs[Excel Source Output].Columns[Period]"
+                      name="Period"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\ExcelToSQLServer\Dino_Excel.Outputs[Excel Source Output].Columns[Diet]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ExcelToSQLServer\Dino_Excel.Outputs[Excel Source Output].ExternalColumns[Diet]"
+                      length="255"
+                      lineageId="Package\ExcelToSQLServer\Dino_Excel.Outputs[Excel Source Output].Columns[Diet]"
+                      name="Diet"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\ExcelToSQLServer\Dino_Excel.Outputs[Excel Source Output].Columns[Group]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ExcelToSQLServer\Dino_Excel.Outputs[Excel Source Output].ExternalColumns[Group]"
+                      length="255"
+                      lineageId="Package\ExcelToSQLServer\Dino_Excel.Outputs[Excel Source Output].Columns[Group]"
+                      name="Group"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\ExcelToSQLServer\Dino_Excel.Outputs[Excel Source Output].Columns[MeaningOfName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ExcelToSQLServer\Dino_Excel.Outputs[Excel Source Output].ExternalColumns[MeaningOfName]"
+                      length="255"
+                      lineageId="Package\ExcelToSQLServer\Dino_Excel.Outputs[Excel Source Output].Columns[MeaningOfName]"
+                      name="MeaningOfName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\ExcelToSQLServer\Dino_Excel.Outputs[Excel Source Output].Columns[LengthInMeater]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ExcelToSQLServer\Dino_Excel.Outputs[Excel Source Output].ExternalColumns[LengthInMeater]"
+                      lineageId="Package\ExcelToSQLServer\Dino_Excel.Outputs[Excel Source Output].Columns[LengthInMeater]"
+                      name="LengthInMeater"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\ExcelToSQLServer\Dino_Excel.Outputs[Excel Source Output].Columns[HeightInMeater]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ExcelToSQLServer\Dino_Excel.Outputs[Excel Source Output].ExternalColumns[HeightInMeater]"
+                      lineageId="Package\ExcelToSQLServer\Dino_Excel.Outputs[Excel Source Output].Columns[HeightInMeater]"
+                      name="HeightInMeater"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\ExcelToSQLServer\Dino_Excel.Outputs[Excel Source Output].Columns[MassInKg]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ExcelToSQLServer\Dino_Excel.Outputs[Excel Source Output].ExternalColumns[MassInKg]"
+                      lineageId="Package\ExcelToSQLServer\Dino_Excel.Outputs[Excel Source Output].Columns[MassInKg]"
+                      name="MassInKg"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\ExcelToSQLServer\Dino_Excel.Outputs[Excel Source Output].Columns[NoOfFeetItWalkedOn]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ExcelToSQLServer\Dino_Excel.Outputs[Excel Source Output].ExternalColumns[NoOfFeetItWalkedOn]"
+                      lineageId="Package\ExcelToSQLServer\Dino_Excel.Outputs[Excel Source Output].Columns[NoOfFeetItWalkedOn]"
+                      name="NoOfFeetItWalkedOn"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\ExcelToSQLServer\Dino_Excel.Outputs[Excel Source Output].Columns[HipType]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ExcelToSQLServer\Dino_Excel.Outputs[Excel Source Output].ExternalColumns[HipType]"
+                      length="255"
+                      lineageId="Package\ExcelToSQLServer\Dino_Excel.Outputs[Excel Source Output].Columns[HipType]"
+                      name="HipType"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\ExcelToSQLServer\Dino_Excel.Outputs[Excel Source Output].ExternalColumns[Name]"
+                      dataType="wstr"
+                      length="255"
+                      name="Name" />
+                    <externalMetadataColumn
+                      refId="Package\ExcelToSQLServer\Dino_Excel.Outputs[Excel Source Output].ExternalColumns[Pronunciation]"
+                      dataType="wstr"
+                      length="255"
+                      name="Pronunciation" />
+                    <externalMetadataColumn
+                      refId="Package\ExcelToSQLServer\Dino_Excel.Outputs[Excel Source Output].ExternalColumns[Period]"
+                      dataType="wstr"
+                      length="255"
+                      name="Period" />
+                    <externalMetadataColumn
+                      refId="Package\ExcelToSQLServer\Dino_Excel.Outputs[Excel Source Output].ExternalColumns[Diet]"
+                      dataType="wstr"
+                      length="255"
+                      name="Diet" />
+                    <externalMetadataColumn
+                      refId="Package\ExcelToSQLServer\Dino_Excel.Outputs[Excel Source Output].ExternalColumns[Group]"
+                      dataType="wstr"
+                      length="255"
+                      name="Group" />
+                    <externalMetadataColumn
+                      refId="Package\ExcelToSQLServer\Dino_Excel.Outputs[Excel Source Output].ExternalColumns[MeaningOfName]"
+                      dataType="wstr"
+                      length="255"
+                      name="MeaningOfName" />
+                    <externalMetadataColumn
+                      refId="Package\ExcelToSQLServer\Dino_Excel.Outputs[Excel Source Output].ExternalColumns[LengthInMeater]"
+                      dataType="r8"
+                      name="LengthInMeater" />
+                    <externalMetadataColumn
+                      refId="Package\ExcelToSQLServer\Dino_Excel.Outputs[Excel Source Output].ExternalColumns[HeightInMeater]"
+                      dataType="r8"
+                      name="HeightInMeater" />
+                    <externalMetadataColumn
+                      refId="Package\ExcelToSQLServer\Dino_Excel.Outputs[Excel Source Output].ExternalColumns[MassInKg]"
+                      dataType="r8"
+                      name="MassInKg" />
+                    <externalMetadataColumn
+                      refId="Package\ExcelToSQLServer\Dino_Excel.Outputs[Excel Source Output].ExternalColumns[NoOfFeetItWalkedOn]"
+                      dataType="r8"
+                      name="NoOfFeetItWalkedOn" />
+                    <externalMetadataColumn
+                      refId="Package\ExcelToSQLServer\Dino_Excel.Outputs[Excel Source Output].ExternalColumns[HipType]"
+                      dataType="wstr"
+                      length="255"
+                      name="HipType" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\ExcelToSQLServer\Dino_Excel.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ExcelToSQLServer\Dino_Excel.Outputs[Excel Source Error Output].Columns[Name]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\ExcelToSQLServer\Dino_Excel.Outputs[Excel Source Error Output].Columns[Name]"
+                      name="Name" />
+                    <outputColumn
+                      refId="Package\ExcelToSQLServer\Dino_Excel.Outputs[Excel Source Error Output].Columns[MeaningOfName]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\ExcelToSQLServer\Dino_Excel.Outputs[Excel Source Error Output].Columns[MeaningOfName]"
+                      name="MeaningOfName" />
+                    <outputColumn
+                      refId="Package\ExcelToSQLServer\Dino_Excel.Outputs[Excel Source Error Output].Columns[Pronunciation]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\ExcelToSQLServer\Dino_Excel.Outputs[Excel Source Error Output].Columns[Pronunciation]"
+                      name="Pronunciation" />
+                    <outputColumn
+                      refId="Package\ExcelToSQLServer\Dino_Excel.Outputs[Excel Source Error Output].Columns[Period]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\ExcelToSQLServer\Dino_Excel.Outputs[Excel Source Error Output].Columns[Period]"
+                      name="Period" />
+                    <outputColumn
+                      refId="Package\ExcelToSQLServer\Dino_Excel.Outputs[Excel Source Error Output].Columns[Diet]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\ExcelToSQLServer\Dino_Excel.Outputs[Excel Source Error Output].Columns[Diet]"
+                      name="Diet" />
+                    <outputColumn
+                      refId="Package\ExcelToSQLServer\Dino_Excel.Outputs[Excel Source Error Output].Columns[LengthInMeater]"
+                      dataType="r8"
+                      lineageId="Package\ExcelToSQLServer\Dino_Excel.Outputs[Excel Source Error Output].Columns[LengthInMeater]"
+                      name="LengthInMeater" />
+                    <outputColumn
+                      refId="Package\ExcelToSQLServer\Dino_Excel.Outputs[Excel Source Error Output].Columns[HeightInMeater]"
+                      dataType="r8"
+                      lineageId="Package\ExcelToSQLServer\Dino_Excel.Outputs[Excel Source Error Output].Columns[HeightInMeater]"
+                      name="HeightInMeater" />
+                    <outputColumn
+                      refId="Package\ExcelToSQLServer\Dino_Excel.Outputs[Excel Source Error Output].Columns[MassInKg]"
+                      dataType="r8"
+                      lineageId="Package\ExcelToSQLServer\Dino_Excel.Outputs[Excel Source Error Output].Columns[MassInKg]"
+                      name="MassInKg" />
+                    <outputColumn
+                      refId="Package\ExcelToSQLServer\Dino_Excel.Outputs[Excel Source Error Output].Columns[NoOfFeetItWalkedOn]"
+                      dataType="r8"
+                      lineageId="Package\ExcelToSQLServer\Dino_Excel.Outputs[Excel Source Error Output].Columns[NoOfFeetItWalkedOn]"
+                      name="NoOfFeetItWalkedOn" />
+                    <outputColumn
+                      refId="Package\ExcelToSQLServer\Dino_Excel.Outputs[Excel Source Error Output].Columns[HipType]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\ExcelToSQLServer\Dino_Excel.Outputs[Excel Source Error Output].Columns[HipType]"
+                      name="HipType" />
+                    <outputColumn
+                      refId="Package\ExcelToSQLServer\Dino_Excel.Outputs[Excel Source Error Output].Columns[Group]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\ExcelToSQLServer\Dino_Excel.Outputs[Excel Source Error Output].Columns[Group]"
+                      name="Group" />
+                    <outputColumn
+                      refId="Package\ExcelToSQLServer\Dino_Excel.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\ExcelToSQLServer\Dino_Excel.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\ExcelToSQLServer\Dino_Excel.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\ExcelToSQLServer\Dino_Excel.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\ExcelToSQLServer\Dio_SQL"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Dio_SQL"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Dino_SQL]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\ExcelToSQLServer\Dio_SQL.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[MSI\SQLEXPRESS.Dino_DB.sa 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[MSI\SQLEXPRESS.Dino_DB.sa 1]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\ExcelToSQLServer\Dio_SQL.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\ExcelToSQLServer\Dio_SQL.Inputs[OLE DB Destination Input].Columns[Name]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Name"
+                      externalMetadataColumnId="Package\ExcelToSQLServer\Dio_SQL.Inputs[OLE DB Destination Input].ExternalColumns[Name]"
+                      lineageId="Package\ExcelToSQLServer\Dino_Excel.Outputs[Excel Source Output].Columns[Name]" />
+                    <inputColumn
+                      refId="Package\ExcelToSQLServer\Dio_SQL.Inputs[OLE DB Destination Input].Columns[Pronunciation]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Pronunciation"
+                      externalMetadataColumnId="Package\ExcelToSQLServer\Dio_SQL.Inputs[OLE DB Destination Input].ExternalColumns[Pronunciation]"
+                      lineageId="Package\ExcelToSQLServer\Dino_Excel.Outputs[Excel Source Output].Columns[Pronunciation]" />
+                    <inputColumn
+                      refId="Package\ExcelToSQLServer\Dio_SQL.Inputs[OLE DB Destination Input].Columns[Period]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Period"
+                      externalMetadataColumnId="Package\ExcelToSQLServer\Dio_SQL.Inputs[OLE DB Destination Input].ExternalColumns[Period]"
+                      lineageId="Package\ExcelToSQLServer\Dino_Excel.Outputs[Excel Source Output].Columns[Period]" />
+                    <inputColumn
+                      refId="Package\ExcelToSQLServer\Dio_SQL.Inputs[OLE DB Destination Input].Columns[Diet]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Diet"
+                      externalMetadataColumnId="Package\ExcelToSQLServer\Dio_SQL.Inputs[OLE DB Destination Input].ExternalColumns[Diet]"
+                      lineageId="Package\ExcelToSQLServer\Dino_Excel.Outputs[Excel Source Output].Columns[Diet]" />
+                    <inputColumn
+                      refId="Package\ExcelToSQLServer\Dio_SQL.Inputs[OLE DB Destination Input].Columns[Group]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Group"
+                      externalMetadataColumnId="Package\ExcelToSQLServer\Dio_SQL.Inputs[OLE DB Destination Input].ExternalColumns[Group]"
+                      lineageId="Package\ExcelToSQLServer\Dino_Excel.Outputs[Excel Source Output].Columns[Group]" />
+                    <inputColumn
+                      refId="Package\ExcelToSQLServer\Dio_SQL.Inputs[OLE DB Destination Input].Columns[MeaningOfName]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="MeaningOfName"
+                      externalMetadataColumnId="Package\ExcelToSQLServer\Dio_SQL.Inputs[OLE DB Destination Input].ExternalColumns[MeaningOfName]"
+                      lineageId="Package\ExcelToSQLServer\Dino_Excel.Outputs[Excel Source Output].Columns[MeaningOfName]" />
+                    <inputColumn
+                      refId="Package\ExcelToSQLServer\Dio_SQL.Inputs[OLE DB Destination Input].Columns[LengthInMeater]"
+                      cachedDataType="r8"
+                      cachedName="LengthInMeater"
+                      externalMetadataColumnId="Package\ExcelToSQLServer\Dio_SQL.Inputs[OLE DB Destination Input].ExternalColumns[LengthInMeater]"
+                      lineageId="Package\ExcelToSQLServer\Dino_Excel.Outputs[Excel Source Output].Columns[LengthInMeater]" />
+                    <inputColumn
+                      refId="Package\ExcelToSQLServer\Dio_SQL.Inputs[OLE DB Destination Input].Columns[HeightInMeater]"
+                      cachedDataType="r8"
+                      cachedName="HeightInMeater"
+                      externalMetadataColumnId="Package\ExcelToSQLServer\Dio_SQL.Inputs[OLE DB Destination Input].ExternalColumns[HeightInMeater]"
+                      lineageId="Package\ExcelToSQLServer\Dino_Excel.Outputs[Excel Source Output].Columns[HeightInMeater]" />
+                    <inputColumn
+                      refId="Package\ExcelToSQLServer\Dio_SQL.Inputs[OLE DB Destination Input].Columns[MassInKg]"
+                      cachedDataType="r8"
+                      cachedName="MassInKg"
+                      externalMetadataColumnId="Package\ExcelToSQLServer\Dio_SQL.Inputs[OLE DB Destination Input].ExternalColumns[MassInKg]"
+                      lineageId="Package\ExcelToSQLServer\Dino_Excel.Outputs[Excel Source Output].Columns[MassInKg]" />
+                    <inputColumn
+                      refId="Package\ExcelToSQLServer\Dio_SQL.Inputs[OLE DB Destination Input].Columns[NoOfFeetItWalkedOn]"
+                      cachedDataType="r8"
+                      cachedName="NoOfFeetItWalkedOn"
+                      externalMetadataColumnId="Package\ExcelToSQLServer\Dio_SQL.Inputs[OLE DB Destination Input].ExternalColumns[NoOfFeetItWalkedOn]"
+                      lineageId="Package\ExcelToSQLServer\Dino_Excel.Outputs[Excel Source Output].Columns[NoOfFeetItWalkedOn]" />
+                    <inputColumn
+                      refId="Package\ExcelToSQLServer\Dio_SQL.Inputs[OLE DB Destination Input].Columns[HipType]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="HipType"
+                      externalMetadataColumnId="Package\ExcelToSQLServer\Dio_SQL.Inputs[OLE DB Destination Input].ExternalColumns[HipType]"
+                      lineageId="Package\ExcelToSQLServer\Dino_Excel.Outputs[Excel Source Output].Columns[HipType]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\ExcelToSQLServer\Dio_SQL.Inputs[OLE DB Destination Input].ExternalColumns[Name]"
+                      dataType="wstr"
+                      length="255"
+                      name="Name" />
+                    <externalMetadataColumn
+                      refId="Package\ExcelToSQLServer\Dio_SQL.Inputs[OLE DB Destination Input].ExternalColumns[Pronunciation]"
+                      dataType="wstr"
+                      length="255"
+                      name="Pronunciation" />
+                    <externalMetadataColumn
+                      refId="Package\ExcelToSQLServer\Dio_SQL.Inputs[OLE DB Destination Input].ExternalColumns[Period]"
+                      dataType="wstr"
+                      length="255"
+                      name="Period" />
+                    <externalMetadataColumn
+                      refId="Package\ExcelToSQLServer\Dio_SQL.Inputs[OLE DB Destination Input].ExternalColumns[Diet]"
+                      dataType="wstr"
+                      length="255"
+                      name="Diet" />
+                    <externalMetadataColumn
+                      refId="Package\ExcelToSQLServer\Dio_SQL.Inputs[OLE DB Destination Input].ExternalColumns[Group]"
+                      dataType="wstr"
+                      length="255"
+                      name="Group" />
+                    <externalMetadataColumn
+                      refId="Package\ExcelToSQLServer\Dio_SQL.Inputs[OLE DB Destination Input].ExternalColumns[MeaningOfName]"
+                      dataType="wstr"
+                      length="255"
+                      name="MeaningOfName" />
+                    <externalMetadataColumn
+                      refId="Package\ExcelToSQLServer\Dio_SQL.Inputs[OLE DB Destination Input].ExternalColumns[LengthInMeater]"
+                      dataType="r8"
+                      name="LengthInMeater" />
+                    <externalMetadataColumn
+                      refId="Package\ExcelToSQLServer\Dio_SQL.Inputs[OLE DB Destination Input].ExternalColumns[HeightInMeater]"
+                      dataType="r8"
+                      name="HeightInMeater" />
+                    <externalMetadataColumn
+                      refId="Package\ExcelToSQLServer\Dio_SQL.Inputs[OLE DB Destination Input].ExternalColumns[MassInKg]"
+                      dataType="r8"
+                      name="MassInKg" />
+                    <externalMetadataColumn
+                      refId="Package\ExcelToSQLServer\Dio_SQL.Inputs[OLE DB Destination Input].ExternalColumns[NoOfFeetItWalkedOn]"
+                      dataType="r8"
+                      name="NoOfFeetItWalkedOn" />
+                    <externalMetadataColumn
+                      refId="Package\ExcelToSQLServer\Dio_SQL.Inputs[OLE DB Destination Input].ExternalColumns[HipType]"
+                      dataType="wstr"
+                      length="255"
+                      name="HipType" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\ExcelToSQLServer\Dio_SQL.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\ExcelToSQLServer\Dio_SQL.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ExcelToSQLServer\Dio_SQL.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\ExcelToSQLServer\Dio_SQL.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\ExcelToSQLServer\Dio_SQL.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\ExcelToSQLServer\Dio_SQL.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\ExcelToSQLServer.Paths[Excel Source Output]"
+              endId="Package\ExcelToSQLServer\Dio_SQL.Inputs[OLE DB Destination Input]"
+              name="Excel Source Output"
+              startId="Package\ExcelToSQLServer\Dino_Excel.Outputs[Excel Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SQLToExcel"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{FD51B4C2-EEA3-415F-9053-FDF33FC65634}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SQLToExcel"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\SQLToExcel\SalesPersons_Excel"
+              componentClassID="Microsoft.ExcelDestination"
+              contactInfo="Excel Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Excel Destination"
+              name="SalesPersons_Excel"
+              usesDispositions="true">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">SalePersons</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\SQLToExcel\SalesPersons_Excel.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\SQLToExcel\SalesPersons_Excel.Inputs[Excel Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Excel Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\SQLToExcel\SalesPersons_Excel.Inputs[Excel Destination Input].Columns[BusinessEntityID]"
+                      cachedDataType="i4"
+                      cachedName="BusinessEntityID"
+                      externalMetadataColumnId="Package\SQLToExcel\SalesPersons_Excel.Inputs[Excel Destination Input].ExternalColumns[BusinessEntityID]"
+                      lineageId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].Columns[BusinessEntityID]" />
+                    <inputColumn
+                      refId="Package\SQLToExcel\SalesPersons_Excel.Inputs[Excel Destination Input].Columns[Title]"
+                      cachedDataType="wstr"
+                      cachedLength="8"
+                      cachedName="Title"
+                      externalMetadataColumnId="Package\SQLToExcel\SalesPersons_Excel.Inputs[Excel Destination Input].ExternalColumns[Title]"
+                      lineageId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].Columns[Title]" />
+                    <inputColumn
+                      refId="Package\SQLToExcel\SalesPersons_Excel.Inputs[Excel Destination Input].Columns[FirstName]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="FirstName"
+                      externalMetadataColumnId="Package\SQLToExcel\SalesPersons_Excel.Inputs[Excel Destination Input].ExternalColumns[FirstName]"
+                      lineageId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].Columns[FirstName]" />
+                    <inputColumn
+                      refId="Package\SQLToExcel\SalesPersons_Excel.Inputs[Excel Destination Input].Columns[MiddleName]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="MiddleName"
+                      externalMetadataColumnId="Package\SQLToExcel\SalesPersons_Excel.Inputs[Excel Destination Input].ExternalColumns[MiddleName]"
+                      lineageId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].Columns[MiddleName]" />
+                    <inputColumn
+                      refId="Package\SQLToExcel\SalesPersons_Excel.Inputs[Excel Destination Input].Columns[LastName]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="LastName"
+                      externalMetadataColumnId="Package\SQLToExcel\SalesPersons_Excel.Inputs[Excel Destination Input].ExternalColumns[LastName]"
+                      lineageId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].Columns[LastName]" />
+                    <inputColumn
+                      refId="Package\SQLToExcel\SalesPersons_Excel.Inputs[Excel Destination Input].Columns[Suffix]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="Suffix"
+                      externalMetadataColumnId="Package\SQLToExcel\SalesPersons_Excel.Inputs[Excel Destination Input].ExternalColumns[Suffix]"
+                      lineageId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].Columns[Suffix]" />
+                    <inputColumn
+                      refId="Package\SQLToExcel\SalesPersons_Excel.Inputs[Excel Destination Input].Columns[JobTitle]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="JobTitle"
+                      externalMetadataColumnId="Package\SQLToExcel\SalesPersons_Excel.Inputs[Excel Destination Input].ExternalColumns[JobTitle]"
+                      lineageId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].Columns[JobTitle]" />
+                    <inputColumn
+                      refId="Package\SQLToExcel\SalesPersons_Excel.Inputs[Excel Destination Input].Columns[PhoneNumber]"
+                      cachedDataType="wstr"
+                      cachedLength="25"
+                      cachedName="PhoneNumber"
+                      externalMetadataColumnId="Package\SQLToExcel\SalesPersons_Excel.Inputs[Excel Destination Input].ExternalColumns[PhoneNumber]"
+                      lineageId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].Columns[PhoneNumber]" />
+                    <inputColumn
+                      refId="Package\SQLToExcel\SalesPersons_Excel.Inputs[Excel Destination Input].Columns[PhoneNumberType]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="PhoneNumberType"
+                      externalMetadataColumnId="Package\SQLToExcel\SalesPersons_Excel.Inputs[Excel Destination Input].ExternalColumns[PhoneNumberType]"
+                      lineageId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].Columns[PhoneNumberType]" />
+                    <inputColumn
+                      refId="Package\SQLToExcel\SalesPersons_Excel.Inputs[Excel Destination Input].Columns[EmailAddress]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="EmailAddress"
+                      externalMetadataColumnId="Package\SQLToExcel\SalesPersons_Excel.Inputs[Excel Destination Input].ExternalColumns[EmailAddress]"
+                      lineageId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].Columns[EmailAddress]" />
+                    <inputColumn
+                      refId="Package\SQLToExcel\SalesPersons_Excel.Inputs[Excel Destination Input].Columns[EmailPromotion]"
+                      cachedDataType="i4"
+                      cachedName="EmailPromotion"
+                      externalMetadataColumnId="Package\SQLToExcel\SalesPersons_Excel.Inputs[Excel Destination Input].ExternalColumns[EmailPromotion]"
+                      lineageId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].Columns[EmailPromotion]" />
+                    <inputColumn
+                      refId="Package\SQLToExcel\SalesPersons_Excel.Inputs[Excel Destination Input].Columns[AddressLine1]"
+                      cachedDataType="wstr"
+                      cachedLength="60"
+                      cachedName="AddressLine1"
+                      externalMetadataColumnId="Package\SQLToExcel\SalesPersons_Excel.Inputs[Excel Destination Input].ExternalColumns[AddressLine1]"
+                      lineageId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].Columns[AddressLine1]" />
+                    <inputColumn
+                      refId="Package\SQLToExcel\SalesPersons_Excel.Inputs[Excel Destination Input].Columns[AddressLine2]"
+                      cachedDataType="wstr"
+                      cachedLength="60"
+                      cachedName="AddressLine2"
+                      externalMetadataColumnId="Package\SQLToExcel\SalesPersons_Excel.Inputs[Excel Destination Input].ExternalColumns[AddressLine2]"
+                      lineageId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].Columns[AddressLine2]" />
+                    <inputColumn
+                      refId="Package\SQLToExcel\SalesPersons_Excel.Inputs[Excel Destination Input].Columns[City]"
+                      cachedDataType="wstr"
+                      cachedLength="30"
+                      cachedName="City"
+                      externalMetadataColumnId="Package\SQLToExcel\SalesPersons_Excel.Inputs[Excel Destination Input].ExternalColumns[City]"
+                      lineageId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].Columns[City]" />
+                    <inputColumn
+                      refId="Package\SQLToExcel\SalesPersons_Excel.Inputs[Excel Destination Input].Columns[StateProvinceName]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="StateProvinceName"
+                      externalMetadataColumnId="Package\SQLToExcel\SalesPersons_Excel.Inputs[Excel Destination Input].ExternalColumns[StateProvinceName]"
+                      lineageId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].Columns[StateProvinceName]" />
+                    <inputColumn
+                      refId="Package\SQLToExcel\SalesPersons_Excel.Inputs[Excel Destination Input].Columns[PostalCode]"
+                      cachedDataType="wstr"
+                      cachedLength="15"
+                      cachedName="PostalCode"
+                      externalMetadataColumnId="Package\SQLToExcel\SalesPersons_Excel.Inputs[Excel Destination Input].ExternalColumns[PostalCode]"
+                      lineageId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].Columns[PostalCode]" />
+                    <inputColumn
+                      refId="Package\SQLToExcel\SalesPersons_Excel.Inputs[Excel Destination Input].Columns[CountryRegionName]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="CountryRegionName"
+                      externalMetadataColumnId="Package\SQLToExcel\SalesPersons_Excel.Inputs[Excel Destination Input].ExternalColumns[CountryRegionName]"
+                      lineageId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].Columns[CountryRegionName]" />
+                    <inputColumn
+                      refId="Package\SQLToExcel\SalesPersons_Excel.Inputs[Excel Destination Input].Columns[TerritoryName]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="TerritoryName"
+                      externalMetadataColumnId="Package\SQLToExcel\SalesPersons_Excel.Inputs[Excel Destination Input].ExternalColumns[TerritoryName]"
+                      lineageId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].Columns[TerritoryName]" />
+                    <inputColumn
+                      refId="Package\SQLToExcel\SalesPersons_Excel.Inputs[Excel Destination Input].Columns[TerritoryGroup]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="TerritoryGroup"
+                      externalMetadataColumnId="Package\SQLToExcel\SalesPersons_Excel.Inputs[Excel Destination Input].ExternalColumns[TerritoryGroup]"
+                      lineageId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].Columns[TerritoryGroup]" />
+                    <inputColumn
+                      refId="Package\SQLToExcel\SalesPersons_Excel.Inputs[Excel Destination Input].Columns[SalesQuota]"
+                      cachedDataType="cy"
+                      cachedName="SalesQuota"
+                      externalMetadataColumnId="Package\SQLToExcel\SalesPersons_Excel.Inputs[Excel Destination Input].ExternalColumns[SalesQuota]"
+                      lineageId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].Columns[SalesQuota]" />
+                    <inputColumn
+                      refId="Package\SQLToExcel\SalesPersons_Excel.Inputs[Excel Destination Input].Columns[SalesYTD]"
+                      cachedDataType="cy"
+                      cachedName="SalesYTD"
+                      externalMetadataColumnId="Package\SQLToExcel\SalesPersons_Excel.Inputs[Excel Destination Input].ExternalColumns[SalesYTD]"
+                      lineageId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].Columns[SalesYTD]" />
+                    <inputColumn
+                      refId="Package\SQLToExcel\SalesPersons_Excel.Inputs[Excel Destination Input].Columns[SalesLastYear]"
+                      cachedDataType="cy"
+                      cachedName="SalesLastYear"
+                      externalMetadataColumnId="Package\SQLToExcel\SalesPersons_Excel.Inputs[Excel Destination Input].ExternalColumns[SalesLastYear]"
+                      lineageId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].Columns[SalesLastYear]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\SQLToExcel\SalesPersons_Excel.Inputs[Excel Destination Input].ExternalColumns[BusinessEntityID]"
+                      dataType="r8"
+                      name="BusinessEntityID" />
+                    <externalMetadataColumn
+                      refId="Package\SQLToExcel\SalesPersons_Excel.Inputs[Excel Destination Input].ExternalColumns[Title]"
+                      dataType="nText"
+                      name="Title" />
+                    <externalMetadataColumn
+                      refId="Package\SQLToExcel\SalesPersons_Excel.Inputs[Excel Destination Input].ExternalColumns[FirstName]"
+                      dataType="nText"
+                      name="FirstName" />
+                    <externalMetadataColumn
+                      refId="Package\SQLToExcel\SalesPersons_Excel.Inputs[Excel Destination Input].ExternalColumns[MiddleName]"
+                      dataType="nText"
+                      name="MiddleName" />
+                    <externalMetadataColumn
+                      refId="Package\SQLToExcel\SalesPersons_Excel.Inputs[Excel Destination Input].ExternalColumns[LastName]"
+                      dataType="nText"
+                      name="LastName" />
+                    <externalMetadataColumn
+                      refId="Package\SQLToExcel\SalesPersons_Excel.Inputs[Excel Destination Input].ExternalColumns[Suffix]"
+                      dataType="nText"
+                      name="Suffix" />
+                    <externalMetadataColumn
+                      refId="Package\SQLToExcel\SalesPersons_Excel.Inputs[Excel Destination Input].ExternalColumns[JobTitle]"
+                      dataType="nText"
+                      name="JobTitle" />
+                    <externalMetadataColumn
+                      refId="Package\SQLToExcel\SalesPersons_Excel.Inputs[Excel Destination Input].ExternalColumns[PhoneNumber]"
+                      dataType="nText"
+                      name="PhoneNumber" />
+                    <externalMetadataColumn
+                      refId="Package\SQLToExcel\SalesPersons_Excel.Inputs[Excel Destination Input].ExternalColumns[PhoneNumberType]"
+                      dataType="nText"
+                      name="PhoneNumberType" />
+                    <externalMetadataColumn
+                      refId="Package\SQLToExcel\SalesPersons_Excel.Inputs[Excel Destination Input].ExternalColumns[EmailAddress]"
+                      dataType="nText"
+                      name="EmailAddress" />
+                    <externalMetadataColumn
+                      refId="Package\SQLToExcel\SalesPersons_Excel.Inputs[Excel Destination Input].ExternalColumns[EmailPromotion]"
+                      dataType="r8"
+                      name="EmailPromotion" />
+                    <externalMetadataColumn
+                      refId="Package\SQLToExcel\SalesPersons_Excel.Inputs[Excel Destination Input].ExternalColumns[AddressLine1]"
+                      dataType="nText"
+                      name="AddressLine1" />
+                    <externalMetadataColumn
+                      refId="Package\SQLToExcel\SalesPersons_Excel.Inputs[Excel Destination Input].ExternalColumns[AddressLine2]"
+                      dataType="nText"
+                      name="AddressLine2" />
+                    <externalMetadataColumn
+                      refId="Package\SQLToExcel\SalesPersons_Excel.Inputs[Excel Destination Input].ExternalColumns[City]"
+                      dataType="nText"
+                      name="City" />
+                    <externalMetadataColumn
+                      refId="Package\SQLToExcel\SalesPersons_Excel.Inputs[Excel Destination Input].ExternalColumns[StateProvinceName]"
+                      dataType="nText"
+                      name="StateProvinceName" />
+                    <externalMetadataColumn
+                      refId="Package\SQLToExcel\SalesPersons_Excel.Inputs[Excel Destination Input].ExternalColumns[PostalCode]"
+                      dataType="nText"
+                      name="PostalCode" />
+                    <externalMetadataColumn
+                      refId="Package\SQLToExcel\SalesPersons_Excel.Inputs[Excel Destination Input].ExternalColumns[CountryRegionName]"
+                      dataType="nText"
+                      name="CountryRegionName" />
+                    <externalMetadataColumn
+                      refId="Package\SQLToExcel\SalesPersons_Excel.Inputs[Excel Destination Input].ExternalColumns[TerritoryName]"
+                      dataType="nText"
+                      name="TerritoryName" />
+                    <externalMetadataColumn
+                      refId="Package\SQLToExcel\SalesPersons_Excel.Inputs[Excel Destination Input].ExternalColumns[TerritoryGroup]"
+                      dataType="nText"
+                      name="TerritoryGroup" />
+                    <externalMetadataColumn
+                      refId="Package\SQLToExcel\SalesPersons_Excel.Inputs[Excel Destination Input].ExternalColumns[SalesQuota]"
+                      dataType="cy"
+                      name="SalesQuota" />
+                    <externalMetadataColumn
+                      refId="Package\SQLToExcel\SalesPersons_Excel.Inputs[Excel Destination Input].ExternalColumns[SalesYTD]"
+                      dataType="cy"
+                      name="SalesYTD" />
+                    <externalMetadataColumn
+                      refId="Package\SQLToExcel\SalesPersons_Excel.Inputs[Excel Destination Input].ExternalColumns[SalesLastYear]"
+                      dataType="cy"
+                      name="SalesLastYear" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\SQLToExcel\SalesPersons_Excel.Outputs[Excel Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Excel Destination Error Output"
+                  synchronousInputId="Package\SQLToExcel\SalesPersons_Excel.Inputs[Excel Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\SQLToExcel\SalesPersons_Excel.Outputs[Excel Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\SQLToExcel\SalesPersons_Excel.Outputs[Excel Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\SQLToExcel\SalesPersons_Excel.Outputs[Excel Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\SQLToExcel\SalesPersons_Excel.Outputs[Excel Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\SQLToExcel\SalesPerson_SQL"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="SalesPerson_SQL"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[Sales].[vSalesPerson]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\SQLToExcel\SalesPerson_SQL.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[MSI\SQLEXPRESS.AdventureWorks2017.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[MSI\SQLEXPRESS.AdventureWorks2017.sa]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].Columns[BusinessEntityID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].ExternalColumns[BusinessEntityID]"
+                      lineageId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].Columns[BusinessEntityID]"
+                      name="BusinessEntityID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].Columns[Title]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].ExternalColumns[Title]"
+                      length="8"
+                      lineageId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].Columns[Title]"
+                      name="Title"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].Columns[FirstName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].ExternalColumns[FirstName]"
+                      length="50"
+                      lineageId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].Columns[FirstName]"
+                      name="FirstName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].Columns[MiddleName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].ExternalColumns[MiddleName]"
+                      length="50"
+                      lineageId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].Columns[MiddleName]"
+                      name="MiddleName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].Columns[LastName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].ExternalColumns[LastName]"
+                      length="50"
+                      lineageId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].Columns[LastName]"
+                      name="LastName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].Columns[Suffix]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].ExternalColumns[Suffix]"
+                      length="10"
+                      lineageId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].Columns[Suffix]"
+                      name="Suffix"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].Columns[JobTitle]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].ExternalColumns[JobTitle]"
+                      length="50"
+                      lineageId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].Columns[JobTitle]"
+                      name="JobTitle"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].Columns[PhoneNumber]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].ExternalColumns[PhoneNumber]"
+                      length="25"
+                      lineageId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].Columns[PhoneNumber]"
+                      name="PhoneNumber"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].Columns[PhoneNumberType]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].ExternalColumns[PhoneNumberType]"
+                      length="50"
+                      lineageId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].Columns[PhoneNumberType]"
+                      name="PhoneNumberType"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].Columns[EmailAddress]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].ExternalColumns[EmailAddress]"
+                      length="50"
+                      lineageId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].Columns[EmailAddress]"
+                      name="EmailAddress"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].Columns[EmailPromotion]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].ExternalColumns[EmailPromotion]"
+                      lineageId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].Columns[EmailPromotion]"
+                      name="EmailPromotion"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].Columns[AddressLine1]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].ExternalColumns[AddressLine1]"
+                      length="60"
+                      lineageId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].Columns[AddressLine1]"
+                      name="AddressLine1"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].Columns[AddressLine2]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].ExternalColumns[AddressLine2]"
+                      length="60"
+                      lineageId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].Columns[AddressLine2]"
+                      name="AddressLine2"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].Columns[City]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].ExternalColumns[City]"
+                      length="30"
+                      lineageId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].Columns[City]"
+                      name="City"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].Columns[StateProvinceName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].ExternalColumns[StateProvinceName]"
+                      length="50"
+                      lineageId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].Columns[StateProvinceName]"
+                      name="StateProvinceName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].Columns[PostalCode]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].ExternalColumns[PostalCode]"
+                      length="15"
+                      lineageId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].Columns[PostalCode]"
+                      name="PostalCode"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].Columns[CountryRegionName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].ExternalColumns[CountryRegionName]"
+                      length="50"
+                      lineageId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].Columns[CountryRegionName]"
+                      name="CountryRegionName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].Columns[TerritoryName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].ExternalColumns[TerritoryName]"
+                      length="50"
+                      lineageId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].Columns[TerritoryName]"
+                      name="TerritoryName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].Columns[TerritoryGroup]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].ExternalColumns[TerritoryGroup]"
+                      length="50"
+                      lineageId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].Columns[TerritoryGroup]"
+                      name="TerritoryGroup"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].Columns[SalesQuota]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].ExternalColumns[SalesQuota]"
+                      lineageId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].Columns[SalesQuota]"
+                      name="SalesQuota"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].Columns[SalesYTD]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].ExternalColumns[SalesYTD]"
+                      lineageId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].Columns[SalesYTD]"
+                      name="SalesYTD"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].Columns[SalesLastYear]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].ExternalColumns[SalesLastYear]"
+                      lineageId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].Columns[SalesLastYear]"
+                      name="SalesLastYear"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].ExternalColumns[BusinessEntityID]"
+                      dataType="i4"
+                      name="BusinessEntityID" />
+                    <externalMetadataColumn
+                      refId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].ExternalColumns[Title]"
+                      dataType="wstr"
+                      length="8"
+                      name="Title" />
+                    <externalMetadataColumn
+                      refId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].ExternalColumns[FirstName]"
+                      dataType="wstr"
+                      length="50"
+                      name="FirstName" />
+                    <externalMetadataColumn
+                      refId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].ExternalColumns[MiddleName]"
+                      dataType="wstr"
+                      length="50"
+                      name="MiddleName" />
+                    <externalMetadataColumn
+                      refId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].ExternalColumns[LastName]"
+                      dataType="wstr"
+                      length="50"
+                      name="LastName" />
+                    <externalMetadataColumn
+                      refId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].ExternalColumns[Suffix]"
+                      dataType="wstr"
+                      length="10"
+                      name="Suffix" />
+                    <externalMetadataColumn
+                      refId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].ExternalColumns[JobTitle]"
+                      dataType="wstr"
+                      length="50"
+                      name="JobTitle" />
+                    <externalMetadataColumn
+                      refId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].ExternalColumns[PhoneNumber]"
+                      dataType="wstr"
+                      length="25"
+                      name="PhoneNumber" />
+                    <externalMetadataColumn
+                      refId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].ExternalColumns[PhoneNumberType]"
+                      dataType="wstr"
+                      length="50"
+                      name="PhoneNumberType" />
+                    <externalMetadataColumn
+                      refId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].ExternalColumns[EmailAddress]"
+                      dataType="wstr"
+                      length="50"
+                      name="EmailAddress" />
+                    <externalMetadataColumn
+                      refId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].ExternalColumns[EmailPromotion]"
+                      dataType="i4"
+                      name="EmailPromotion" />
+                    <externalMetadataColumn
+                      refId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].ExternalColumns[AddressLine1]"
+                      dataType="wstr"
+                      length="60"
+                      name="AddressLine1" />
+                    <externalMetadataColumn
+                      refId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].ExternalColumns[AddressLine2]"
+                      dataType="wstr"
+                      length="60"
+                      name="AddressLine2" />
+                    <externalMetadataColumn
+                      refId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].ExternalColumns[City]"
+                      dataType="wstr"
+                      length="30"
+                      name="City" />
+                    <externalMetadataColumn
+                      refId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].ExternalColumns[StateProvinceName]"
+                      dataType="wstr"
+                      length="50"
+                      name="StateProvinceName" />
+                    <externalMetadataColumn
+                      refId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].ExternalColumns[PostalCode]"
+                      dataType="wstr"
+                      length="15"
+                      name="PostalCode" />
+                    <externalMetadataColumn
+                      refId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].ExternalColumns[CountryRegionName]"
+                      dataType="wstr"
+                      length="50"
+                      name="CountryRegionName" />
+                    <externalMetadataColumn
+                      refId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].ExternalColumns[TerritoryName]"
+                      dataType="wstr"
+                      length="50"
+                      name="TerritoryName" />
+                    <externalMetadataColumn
+                      refId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].ExternalColumns[TerritoryGroup]"
+                      dataType="wstr"
+                      length="50"
+                      name="TerritoryGroup" />
+                    <externalMetadataColumn
+                      refId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].ExternalColumns[SalesQuota]"
+                      dataType="cy"
+                      name="SalesQuota" />
+                    <externalMetadataColumn
+                      refId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].ExternalColumns[SalesYTD]"
+                      dataType="cy"
+                      name="SalesYTD" />
+                    <externalMetadataColumn
+                      refId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output].ExternalColumns[SalesLastYear]"
+                      dataType="cy"
+                      name="SalesLastYear" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Error Output].Columns[BusinessEntityID]"
+                      dataType="i4"
+                      lineageId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Error Output].Columns[BusinessEntityID]"
+                      name="BusinessEntityID" />
+                    <outputColumn
+                      refId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Error Output].Columns[Title]"
+                      dataType="wstr"
+                      length="8"
+                      lineageId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Error Output].Columns[Title]"
+                      name="Title" />
+                    <outputColumn
+                      refId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Error Output].Columns[FirstName]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Error Output].Columns[FirstName]"
+                      name="FirstName" />
+                    <outputColumn
+                      refId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Error Output].Columns[MiddleName]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Error Output].Columns[MiddleName]"
+                      name="MiddleName" />
+                    <outputColumn
+                      refId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Error Output].Columns[LastName]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Error Output].Columns[LastName]"
+                      name="LastName" />
+                    <outputColumn
+                      refId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Error Output].Columns[Suffix]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Error Output].Columns[Suffix]"
+                      name="Suffix" />
+                    <outputColumn
+                      refId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Error Output].Columns[JobTitle]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Error Output].Columns[JobTitle]"
+                      name="JobTitle" />
+                    <outputColumn
+                      refId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Error Output].Columns[PhoneNumber]"
+                      dataType="wstr"
+                      length="25"
+                      lineageId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Error Output].Columns[PhoneNumber]"
+                      name="PhoneNumber" />
+                    <outputColumn
+                      refId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Error Output].Columns[PhoneNumberType]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Error Output].Columns[PhoneNumberType]"
+                      name="PhoneNumberType" />
+                    <outputColumn
+                      refId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Error Output].Columns[EmailAddress]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Error Output].Columns[EmailAddress]"
+                      name="EmailAddress" />
+                    <outputColumn
+                      refId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Error Output].Columns[EmailPromotion]"
+                      dataType="i4"
+                      lineageId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Error Output].Columns[EmailPromotion]"
+                      name="EmailPromotion" />
+                    <outputColumn
+                      refId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Error Output].Columns[AddressLine1]"
+                      dataType="wstr"
+                      length="60"
+                      lineageId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Error Output].Columns[AddressLine1]"
+                      name="AddressLine1" />
+                    <outputColumn
+                      refId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Error Output].Columns[AddressLine2]"
+                      dataType="wstr"
+                      length="60"
+                      lineageId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Error Output].Columns[AddressLine2]"
+                      name="AddressLine2" />
+                    <outputColumn
+                      refId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Error Output].Columns[City]"
+                      dataType="wstr"
+                      length="30"
+                      lineageId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Error Output].Columns[City]"
+                      name="City" />
+                    <outputColumn
+                      refId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Error Output].Columns[StateProvinceName]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Error Output].Columns[StateProvinceName]"
+                      name="StateProvinceName" />
+                    <outputColumn
+                      refId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Error Output].Columns[PostalCode]"
+                      dataType="wstr"
+                      length="15"
+                      lineageId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Error Output].Columns[PostalCode]"
+                      name="PostalCode" />
+                    <outputColumn
+                      refId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Error Output].Columns[CountryRegionName]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Error Output].Columns[CountryRegionName]"
+                      name="CountryRegionName" />
+                    <outputColumn
+                      refId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Error Output].Columns[TerritoryName]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Error Output].Columns[TerritoryName]"
+                      name="TerritoryName" />
+                    <outputColumn
+                      refId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Error Output].Columns[TerritoryGroup]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Error Output].Columns[TerritoryGroup]"
+                      name="TerritoryGroup" />
+                    <outputColumn
+                      refId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Error Output].Columns[SalesQuota]"
+                      dataType="cy"
+                      lineageId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Error Output].Columns[SalesQuota]"
+                      name="SalesQuota" />
+                    <outputColumn
+                      refId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Error Output].Columns[SalesYTD]"
+                      dataType="cy"
+                      lineageId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Error Output].Columns[SalesYTD]"
+                      name="SalesYTD" />
+                    <outputColumn
+                      refId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Error Output].Columns[SalesLastYear]"
+                      dataType="cy"
+                      lineageId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Error Output].Columns[SalesLastYear]"
+                      name="SalesLastYear" />
+                    <outputColumn
+                      refId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\SQLToExcel.Paths[OLE DB Source Output]"
+              endId="Package\SQLToExcel\SalesPersons_Excel.Inputs[Excel Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\SQLToExcel\SalesPerson_SQL.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="164,41.6"
+          Id="Package\ExcelToSQLServer"
+          TopLeft="63.5714296540439,35.1764710815717" />
+        <NodeLayout
+          Size="159.2,41.6"
+          Id="Package\SQLToExcel"
+          TopLeft="62.6428581159944,93.4411777039301" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\ExcelToSQLServer">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="129.6,41.6"
+          Id="Package\ExcelToSQLServer\Dino_Excel"
+          TopLeft="126.428573581637,183.529414338637" />
+        <NodeLayout
+          Size="118.4,41.6"
+          Id="Package\ExcelToSQLServer\Dio_SQL"
+          TopLeft="345.714291601765,180.470590766326" />
+        <EdgeLayout
+          Id="Package\ExcelToSQLServer.Paths[Excel Source Output]"
+          TopLeft="256.028573581637,202.800002552482">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="89.685718020128,0"
+              Start="0,0"
+              End="82.185718020128,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="82.185718020128,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\ExcelToSQLServer\Dino_Excel">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\ExcelToSQLServer\Dio_SQL">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\SQLToExcel">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="159.2,41.6"
+          Id="Package\SQLToExcel\SalesPerson_SQL"
+          TopLeft="197,108" />
+        <NodeLayout
+          Size="169.6,41.6"
+          Id="Package\SQLToExcel\SalesPersons_Excel"
+          TopLeft="420,113" />
+        <EdgeLayout
+          Id="Package\SQLToExcel.Paths[OLE DB Source Output]"
+          TopLeft="356.2,131.3">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="63.8,0"
+              Start="0,0"
+              End="56.3,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="56.3,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\SQLToExcel\SalesPerson_SQL">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">View</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\SQLToExcel\SalesPersons_Excel">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

@@ -1,0 +1,2397 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="10/4/2021 8:16:32 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="MSI"
+  DTS:CreatorName="MSI\1prab"
+  DTS:DTSID="{B7D7B57A-66C2-45CC-8237-7795736F450E}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.170"
+  DTS:LocaleID="16393"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="7"
+  DTS:VersionGUID="{6AF0B741-E762-462A-959C-685B0770B355}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Lunch Connection]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{C90A0685-D0D6-4024-9F96-AC4DDD81FF0B}"
+      DTS:ObjectName="Excel Lunch Connection">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\1prab\Documents\Downloads\SSIS Excel\Lunch menu.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Songs Data Connection]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{7F236DE2-7387-48AC-9117-960CAA8FDD99}"
+      DTS:ObjectName="Excel Songs Data Connection">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\1prab\Documents\Downloads\SSIS Excel\Million-sellers.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SQL Lunch Connection]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{FBD11BC3-728B-4FF9-97FF-DFFAFC363D74}"
+      DTS:ObjectName="SQL Lunch Connection">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=MSI\SQLEXPRESS;User ID=sa;Initial Catalog=Dino_DB;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATAbnV6TfFEaLlSQVwvMrVwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACd+yFzBgHmP6a/WQ+yfNrvykB7HEcl8ouF6+lc0qBS4wAAAAAOgAAAAAIAACAAAAD92XrQnJ8ADoKLXxAXvu8nZi8Ybp/bFvXAP0rsW2g1OxAAAABKPs/tuEFz/9KQ9Ow0Xzg5QAAAAMwXHtqb0zDXHwwZu52Kapo6GiaX7Y+zQkxXG5FsClzhjvRNtqIZ360QVy3dqWf48RQ3GZRcULxVURjk4EkGyh0</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SQL Songs Data Connection]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{F841CBF3-C27C-447A-8A3E-DEF68110A5E0}"
+      DTS:ObjectName="SQL Songs Data Connection">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=MSI\SQLEXPRESS;User ID=sa;Initial Catalog=Dino_DB;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATAbnV6TfFEaLlSQVwvMrVwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADTfJakJrvFS54bbN0kCSDeXhiyTjbaC9pZ01Xq8pzlDAAAAAAOgAAAAAIAACAAAAA1u/NApy1IPqpEYsdQMYDkaf1abvR1GbnyJ1z5il3B9xAAAACr+UCTOBQN+fjNTJM/XVlRQAAAAIpm1ogDgleVd/eCJr9EXxhX+l73pr5DjuXB+iyEQHE6CzGLqOJLGzgiwPgHzY6RkyLhFyyGEmxDm8B7UOi9uIU</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[TV Program Data]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{322DD1F8-A1E4-449D-9709-7628FCBD1169}"
+      DTS:ObjectName="TV Program Data">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=MSI\SQLEXPRESS;User ID=sa;Initial Catalog=Dino_DB;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATAbnV6TfFEaLlSQVwvMrVwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADMbYDKwd0RdBj55oVDVqME0W3Xy4ULb1Mx8/yov6/g3wAAAAAOgAAAAAIAACAAAADXm7WDEgUjROBMpv84f+EsRAuliC2PbKvaOlKDk4gC/RAAAAABJ/CrEnHK8N4npOa0xywEQAAAAKBiyd+CdqMfzjSDuRzb7xe/j/9IlZJv1pnM3OYPwXSr0rDRfXup0mj+BR7K8wTpSPyb1D/mLzkoWPdoG8pwB7U</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[TV Programs Data CSV Connection]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{3078CD22-2EAE-45C5-AB8D-E063B1E544A7}"
+      DTS:ObjectName="TV Programs Data CSV Connection">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="16393"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\1prab\Documents\Downloads\SSIS Excel\TV programs.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TV program"
+              DTS:DTSID="{F94A112D-B1ED-4453-835F-EDA0D774D863}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Wise Owl rating"
+              DTS:DTSID="{B54D1F30-782D-47D5-8A34-75CF010C5198}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[TV Programs Excel Connection]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{27490164-D247-496F-A46B-1C40094F046B}"
+      DTS:ObjectName="TV Programs Excel Connection">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\1prab\Documents\Downloads\SSIS Excel\TV programs.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Conversion Errors Task"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{B89B8EBE-7069-4902-B9D9-67CF49D67E1E}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Conversion Errors Task"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Conversion Errors Task\Convert Id to Integer"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Convert Id to Integer"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data Conversion Errors Task\Convert Id to Integer.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Conversion Errors Task\Convert Id to Integer.Inputs[Data Conversion Input].Columns[Item id]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Item id"
+                      lineageId="Package\Data Conversion Errors Task\Excel Lunch Data.Outputs[Excel Source Output].Columns[Item id]" />
+                    <inputColumn
+                      refId="Package\Data Conversion Errors Task\Convert Id to Integer.Inputs[Data Conversion Input].Columns[Item name]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Item name"
+                      lineageId="Package\Data Conversion Errors Task\Excel Lunch Data.Outputs[Excel Source Output].Columns[Item name]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Conversion Errors Task\Convert Id to Integer.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\Data Conversion Errors Task\Convert Id to Integer.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Conversion Errors Task\Convert Id to Integer.Outputs[Data Conversion Output].Columns[ItemName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\Data Conversion Errors Task\Convert Id to Integer.Outputs[Data Conversion Output].Columns[ItemName]"
+                      name="ItemName"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Conversion Errors Task\Excel Lunch Data.Outputs[Excel Source Output].Columns[Item name]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Conversion Errors Task\Convert Id to Integer.Outputs[Data Conversion Output].Columns[ItemId]"
+                      dataType="i1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Conversion Errors Task\Convert Id to Integer.Outputs[Data Conversion Output].Columns[ItemId]"
+                      name="ItemId"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Conversion Errors Task\Excel Lunch Data.Outputs[Excel Source Output].Columns[Item id]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Conversion Errors Task\Convert Id to Integer.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\Data Conversion Errors Task\Convert Id to Integer.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Conversion Errors Task\Convert Id to Integer.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Conversion Errors Task\Convert Id to Integer.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Conversion Errors Task\Convert Id to Integer.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Conversion Errors Task\Convert Id to Integer.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Conversion Errors Task\Excel Lunch Data"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="Excel Lunch Data"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">Lunch$</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Conversion Errors Task\Excel Lunch Data.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Excel Lunch Connection]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Lunch Connection]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Conversion Errors Task\Excel Lunch Data.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Conversion Errors Task\Excel Lunch Data.Outputs[Excel Source Output].Columns[Item id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Conversion Errors Task\Excel Lunch Data.Outputs[Excel Source Output].ExternalColumns[Item id]"
+                      length="255"
+                      lineageId="Package\Data Conversion Errors Task\Excel Lunch Data.Outputs[Excel Source Output].Columns[Item id]"
+                      name="Item id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Conversion Errors Task\Excel Lunch Data.Outputs[Excel Source Output].Columns[Item name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Conversion Errors Task\Excel Lunch Data.Outputs[Excel Source Output].ExternalColumns[Item name]"
+                      length="255"
+                      lineageId="Package\Data Conversion Errors Task\Excel Lunch Data.Outputs[Excel Source Output].Columns[Item name]"
+                      name="Item name"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Conversion Errors Task\Excel Lunch Data.Outputs[Excel Source Output].ExternalColumns[Item id]"
+                      dataType="wstr"
+                      length="255"
+                      name="Item id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Conversion Errors Task\Excel Lunch Data.Outputs[Excel Source Output].ExternalColumns[Item name]"
+                      dataType="wstr"
+                      length="255"
+                      name="Item name" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Conversion Errors Task\Excel Lunch Data.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Conversion Errors Task\Excel Lunch Data.Outputs[Excel Source Error Output].Columns[Item id]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Conversion Errors Task\Excel Lunch Data.Outputs[Excel Source Error Output].Columns[Item id]"
+                      name="Item id" />
+                    <outputColumn
+                      refId="Package\Data Conversion Errors Task\Excel Lunch Data.Outputs[Excel Source Error Output].Columns[Item name]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Conversion Errors Task\Excel Lunch Data.Outputs[Excel Source Error Output].Columns[Item name]"
+                      name="Item name" />
+                    <outputColumn
+                      refId="Package\Data Conversion Errors Task\Excel Lunch Data.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Conversion Errors Task\Excel Lunch Data.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Conversion Errors Task\Excel Lunch Data.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Conversion Errors Task\Excel Lunch Data.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Conversion Errors Task\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[tblBushTuckerItem]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Conversion Errors Task\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[SQL Lunch Connection]"
+                  connectionManagerRefId="Package.ConnectionManagers[SQL Lunch Connection]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Conversion Errors Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Conversion Errors Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ItemId]"
+                      cachedDataType="i1"
+                      cachedName="ItemId"
+                      externalMetadataColumnId="Package\Data Conversion Errors Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[BushTuckerItem]"
+                      lineageId="Package\Data Conversion Errors Task\Convert Id to Integer.Outputs[Data Conversion Output].Columns[ItemId]" />
+                    <inputColumn
+                      refId="Package\Data Conversion Errors Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ItemName]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="ItemName"
+                      externalMetadataColumnId="Package\Data Conversion Errors Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[BushTuckerName]"
+                      lineageId="Package\Data Conversion Errors Task\Convert Id to Integer.Outputs[Data Conversion Output].Columns[ItemName]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Conversion Errors Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[BushTuckerItem]"
+                      dataType="i4"
+                      name="BushTuckerItem" />
+                    <externalMetadataColumn
+                      refId="Package\Data Conversion Errors Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[BushTuckerName]"
+                      dataType="wstr"
+                      length="255"
+                      name="BushTuckerName" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Conversion Errors Task\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Conversion Errors Task\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Conversion Errors Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Conversion Errors Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Conversion Errors Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Conversion Errors Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Conversion Errors Task\Union All"
+              componentClassID="Microsoft.UnionAll"
+              contactInfo="Union All;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Combines rows from multiple data flows without sorting. For example, add rows back to a data flow after correction of errors. If sorting is important, we recommend using the Merge transformation."
+              name="Union All"
+              version="1">
+              <inputs>
+                <input
+                  refId="Package\Data Conversion Errors Task\Union All.Inputs[Union All Input 1]"
+                  name="Union All Input 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Conversion Errors Task\Union All.Inputs[Union All Input 1].Columns[Item id]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Item id"
+                      lineageId="Package\Data Conversion Errors Task\Excel Lunch Data.Outputs[Excel Source Output].Columns[Item id]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Conversion Errors Task\Union All.Outputs[Union All Output 1].Columns[Item id]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Conversion Errors Task\Union All.Inputs[Union All Input 1].Columns[Item name]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Item name"
+                      lineageId="Package\Data Conversion Errors Task\Excel Lunch Data.Outputs[Excel Source Output].Columns[Item name]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Conversion Errors Task\Union All.Outputs[Union All Output 1].Columns[Item name]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Conversion Errors Task\Union All.Inputs[Union All Input 1].Columns[ErrorCode]"
+                      cachedDataType="i4"
+                      cachedName="ErrorCode"
+                      lineageId="Package\Data Conversion Errors Task\Convert Id to Integer.Outputs[Data Conversion Error Output].Columns[ErrorCode]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Conversion Errors Task\Union All.Outputs[Union All Output 1].Columns[ErrorCode]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Conversion Errors Task\Union All.Inputs[Union All Input 1].Columns[ErrorColumn]"
+                      cachedDataType="i4"
+                      cachedName="ErrorColumn"
+                      lineageId="Package\Data Conversion Errors Task\Convert Id to Integer.Outputs[Data Conversion Error Output].Columns[ErrorColumn]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Conversion Errors Task\Union All.Outputs[Union All Output 1].Columns[ErrorColumn]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Data Conversion Errors Task\Union All.Inputs[Union All Input 2]"
+                  dangling="true"
+                  hasSideEffects="true"
+                  name="Union All Input 2">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Conversion Errors Task\Union All.Outputs[Union All Output 1]"
+                  name="Union All Output 1">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Conversion Errors Task\Union All.Outputs[Union All Output 1].Columns[Item id]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Conversion Errors Task\Union All.Outputs[Union All Output 1].Columns[Item id]"
+                      name="Item id" />
+                    <outputColumn
+                      refId="Package\Data Conversion Errors Task\Union All.Outputs[Union All Output 1].Columns[Item name]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Conversion Errors Task\Union All.Outputs[Union All Output 1].Columns[Item name]"
+                      name="Item name" />
+                    <outputColumn
+                      refId="Package\Data Conversion Errors Task\Union All.Outputs[Union All Output 1].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Conversion Errors Task\Union All.Outputs[Union All Output 1].Columns[ErrorCode]"
+                      name="ErrorCode" />
+                    <outputColumn
+                      refId="Package\Data Conversion Errors Task\Union All.Outputs[Union All Output 1].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Conversion Errors Task\Union All.Outputs[Union All Output 1].Columns[ErrorColumn]"
+                      name="ErrorColumn" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Conversion Errors Task.Paths[Data Conversion Error Output]"
+              endId="Package\Data Conversion Errors Task\Union All.Inputs[Union All Input 1]"
+              name="Data Conversion Error Output"
+              startId="Package\Data Conversion Errors Task\Convert Id to Integer.Outputs[Data Conversion Error Output]" />
+            <path
+              refId="Package\Data Conversion Errors Task.Paths[Data Conversion Output]"
+              endId="Package\Data Conversion Errors Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\Data Conversion Errors Task\Convert Id to Integer.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\Data Conversion Errors Task.Paths[Excel Source Output]"
+              endId="Package\Data Conversion Errors Task\Convert Id to Integer.Inputs[Data Conversion Input]"
+              name="Excel Source Output"
+              startId="Package\Data Conversion Errors Task\Excel Lunch Data.Outputs[Excel Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Merge Excel &amp; CSV For SQL"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{82A8D888-E590-4A60-9598-7E19DF9CCCC0}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Merge Excel &amp; CSV For SQL"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Merge Excel &amp; CSV For SQL\CSV Data"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="16393"
+              name="CSV Data"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Merge Excel &amp; CSV For SQL\CSV Data.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[TV Programs Data CSV Connection]"
+                  connectionManagerRefId="Package.ConnectionManagers[TV Programs Data CSV Connection]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Merge Excel &amp; CSV For SQL\CSV Data.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Merge Excel &amp; CSV For SQL\CSV Data.Outputs[Flat File Source Output].Columns[TV program]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Merge Excel &amp; CSV For SQL\CSV Data.Outputs[Flat File Source Output].ExternalColumns[TV program]"
+                      length="50"
+                      lineageId="Package\Merge Excel &amp; CSV For SQL\CSV Data.Outputs[Flat File Source Output].Columns[TV program]"
+                      name="TV program"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Merge Excel &amp; CSV For SQL\CSV Data.Outputs[Flat File Source Output].Columns[Wise Owl rating]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Merge Excel &amp; CSV For SQL\CSV Data.Outputs[Flat File Source Output].ExternalColumns[Wise Owl rating]"
+                      length="50"
+                      lineageId="Package\Merge Excel &amp; CSV For SQL\CSV Data.Outputs[Flat File Source Output].Columns[Wise Owl rating]"
+                      name="Wise Owl rating"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Merge Excel &amp; CSV For SQL\CSV Data.Outputs[Flat File Source Output].ExternalColumns[TV program]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="TV program" />
+                    <externalMetadataColumn
+                      refId="Package\Merge Excel &amp; CSV For SQL\CSV Data.Outputs[Flat File Source Output].ExternalColumns[Wise Owl rating]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Wise Owl rating" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Merge Excel &amp; CSV For SQL\CSV Data.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Merge Excel &amp; CSV For SQL\CSV Data.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Merge Excel &amp; CSV For SQL\CSV Data.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Merge Excel &amp; CSV For SQL\CSV Data.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Merge Excel &amp; CSV For SQL\CSV Data.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Merge Excel &amp; CSV For SQL\CSV Data.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Merge Excel &amp; CSV For SQL\CSV Data.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Merge Excel &amp; CSV For SQL\Data Conversion"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Merge Excel &amp; CSV For SQL\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Merge Excel &amp; CSV For SQL\Data Conversion.Inputs[Data Conversion Input].Columns[Program]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Program"
+                      lineageId="Package\Merge Excel &amp; CSV For SQL\Excel Data.Outputs[Excel Source Output].Columns[Program]" />
+                    <inputColumn
+                      refId="Package\Merge Excel &amp; CSV For SQL\Data Conversion.Inputs[Data Conversion Input].Columns[Rating]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Rating"
+                      lineageId="Package\Merge Excel &amp; CSV For SQL\Excel Data.Outputs[Excel Source Output].Columns[Rating]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Merge Excel &amp; CSV For SQL\Data Conversion.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\Merge Excel &amp; CSV For SQL\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Merge Excel &amp; CSV For SQL\Data Conversion.Outputs[Data Conversion Output].Columns[ProgramName]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\Merge Excel &amp; CSV For SQL\Data Conversion.Outputs[Data Conversion Output].Columns[ProgramName]"
+                      name="ProgramName"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Merge Excel &amp; CSV For SQL\Excel Data.Outputs[Excel Source Output].Columns[Program]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Merge Excel &amp; CSV For SQL\Data Conversion.Outputs[Data Conversion Output].Columns[WiseOwlRating]"
+                      dataType="i1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Merge Excel &amp; CSV For SQL\Data Conversion.Outputs[Data Conversion Output].Columns[WiseOwlRating]"
+                      name="WiseOwlRating"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Merge Excel &amp; CSV For SQL\Excel Data.Outputs[Excel Source Output].Columns[Rating]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Merge Excel &amp; CSV For SQL\Data Conversion.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\Merge Excel &amp; CSV For SQL\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Merge Excel &amp; CSV For SQL\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Merge Excel &amp; CSV For SQL\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Merge Excel &amp; CSV For SQL\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Merge Excel &amp; CSV For SQL\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Merge Excel &amp; CSV For SQL\Data Conversion 1"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion 1"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Merge Excel &amp; CSV For SQL\Data Conversion 1.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Merge Excel &amp; CSV For SQL\Data Conversion 1.Inputs[Data Conversion Input].Columns[TV program]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="TV program"
+                      lineageId="Package\Merge Excel &amp; CSV For SQL\CSV Data.Outputs[Flat File Source Output].Columns[TV program]" />
+                    <inputColumn
+                      refId="Package\Merge Excel &amp; CSV For SQL\Data Conversion 1.Inputs[Data Conversion Input].Columns[Wise Owl rating]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Wise Owl rating"
+                      lineageId="Package\Merge Excel &amp; CSV For SQL\CSV Data.Outputs[Flat File Source Output].Columns[Wise Owl rating]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Merge Excel &amp; CSV For SQL\Data Conversion 1.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\Merge Excel &amp; CSV For SQL\Data Conversion 1.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Merge Excel &amp; CSV For SQL\Data Conversion 1.Outputs[Data Conversion Output].Columns[ProgramName]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Merge Excel &amp; CSV For SQL\Data Conversion 1.Outputs[Data Conversion Output].Columns[ProgramName]"
+                      name="ProgramName"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Merge Excel &amp; CSV For SQL\CSV Data.Outputs[Flat File Source Output].Columns[TV program]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Merge Excel &amp; CSV For SQL\Data Conversion 1.Outputs[Data Conversion Output].Columns[WiseOwlRating]"
+                      dataType="i1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Merge Excel &amp; CSV For SQL\Data Conversion 1.Outputs[Data Conversion Output].Columns[WiseOwlRating]"
+                      name="WiseOwlRating"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Merge Excel &amp; CSV For SQL\CSV Data.Outputs[Flat File Source Output].Columns[Wise Owl rating]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Merge Excel &amp; CSV For SQL\Data Conversion 1.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\Merge Excel &amp; CSV For SQL\Data Conversion 1.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Merge Excel &amp; CSV For SQL\Data Conversion 1.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Merge Excel &amp; CSV For SQL\Data Conversion 1.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Merge Excel &amp; CSV For SQL\Data Conversion 1.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Merge Excel &amp; CSV For SQL\Data Conversion 1.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Merge Excel &amp; CSV For SQL\Data To SQL"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Data To SQL"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[TvPrograms]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Merge Excel &amp; CSV For SQL\Data To SQL.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[TV Program Data]"
+                  connectionManagerRefId="Package.ConnectionManagers[TV Program Data]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Merge Excel &amp; CSV For SQL\Data To SQL.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Merge Excel &amp; CSV For SQL\Data To SQL.Inputs[OLE DB Destination Input].Columns[ProgramName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="ProgramName"
+                      externalMetadataColumnId="Package\Merge Excel &amp; CSV For SQL\Data To SQL.Inputs[OLE DB Destination Input].ExternalColumns[ProgramName]"
+                      lineageId="Package\Merge Excel &amp; CSV For SQL\Union All.Outputs[Union All Output 1].Columns[ProgramName]" />
+                    <inputColumn
+                      refId="Package\Merge Excel &amp; CSV For SQL\Data To SQL.Inputs[OLE DB Destination Input].Columns[WiseOwlRating]"
+                      cachedDataType="i1"
+                      cachedName="WiseOwlRating"
+                      externalMetadataColumnId="Package\Merge Excel &amp; CSV For SQL\Data To SQL.Inputs[OLE DB Destination Input].ExternalColumns[OwlRating]"
+                      lineageId="Package\Merge Excel &amp; CSV For SQL\Union All.Outputs[Union All Output 1].Columns[WiseOwlRating]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Merge Excel &amp; CSV For SQL\Data To SQL.Inputs[OLE DB Destination Input].ExternalColumns[ProgramId]"
+                      dataType="i4"
+                      name="ProgramId" />
+                    <externalMetadataColumn
+                      refId="Package\Merge Excel &amp; CSV For SQL\Data To SQL.Inputs[OLE DB Destination Input].ExternalColumns[ProgramName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="ProgramName" />
+                    <externalMetadataColumn
+                      refId="Package\Merge Excel &amp; CSV For SQL\Data To SQL.Inputs[OLE DB Destination Input].ExternalColumns[OwlRating]"
+                      dataType="ui1"
+                      name="OwlRating" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Merge Excel &amp; CSV For SQL\Data To SQL.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Merge Excel &amp; CSV For SQL\Data To SQL.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Merge Excel &amp; CSV For SQL\Data To SQL.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Merge Excel &amp; CSV For SQL\Data To SQL.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Merge Excel &amp; CSV For SQL\Data To SQL.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Merge Excel &amp; CSV For SQL\Data To SQL.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Merge Excel &amp; CSV For SQL\Excel Data"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="Excel Data"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">'Programs from Excel$'</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Merge Excel &amp; CSV For SQL\Excel Data.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[TV Programs Excel Connection]"
+                  connectionManagerRefId="Package.ConnectionManagers[TV Programs Excel Connection]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Merge Excel &amp; CSV For SQL\Excel Data.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Merge Excel &amp; CSV For SQL\Excel Data.Outputs[Excel Source Output].Columns[Program]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Merge Excel &amp; CSV For SQL\Excel Data.Outputs[Excel Source Output].ExternalColumns[Program]"
+                      length="255"
+                      lineageId="Package\Merge Excel &amp; CSV For SQL\Excel Data.Outputs[Excel Source Output].Columns[Program]"
+                      name="Program"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Merge Excel &amp; CSV For SQL\Excel Data.Outputs[Excel Source Output].Columns[Rating]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Merge Excel &amp; CSV For SQL\Excel Data.Outputs[Excel Source Output].ExternalColumns[Rating]"
+                      length="255"
+                      lineageId="Package\Merge Excel &amp; CSV For SQL\Excel Data.Outputs[Excel Source Output].Columns[Rating]"
+                      name="Rating"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Merge Excel &amp; CSV For SQL\Excel Data.Outputs[Excel Source Output].ExternalColumns[Program]"
+                      dataType="wstr"
+                      length="255"
+                      name="Program" />
+                    <externalMetadataColumn
+                      refId="Package\Merge Excel &amp; CSV For SQL\Excel Data.Outputs[Excel Source Output].ExternalColumns[Rating]"
+                      dataType="wstr"
+                      length="255"
+                      name="Rating" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Merge Excel &amp; CSV For SQL\Excel Data.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Merge Excel &amp; CSV For SQL\Excel Data.Outputs[Excel Source Error Output].Columns[Program]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Merge Excel &amp; CSV For SQL\Excel Data.Outputs[Excel Source Error Output].Columns[Program]"
+                      name="Program" />
+                    <outputColumn
+                      refId="Package\Merge Excel &amp; CSV For SQL\Excel Data.Outputs[Excel Source Error Output].Columns[Rating]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Merge Excel &amp; CSV For SQL\Excel Data.Outputs[Excel Source Error Output].Columns[Rating]"
+                      name="Rating" />
+                    <outputColumn
+                      refId="Package\Merge Excel &amp; CSV For SQL\Excel Data.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Merge Excel &amp; CSV For SQL\Excel Data.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Merge Excel &amp; CSV For SQL\Excel Data.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Merge Excel &amp; CSV For SQL\Excel Data.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Merge Excel &amp; CSV For SQL\Union All"
+              componentClassID="Microsoft.UnionAll"
+              contactInfo="Union All;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Combines rows from multiple data flows without sorting. For example, add rows back to a data flow after correction of errors. If sorting is important, we recommend using the Merge transformation."
+              name="Union All"
+              version="1">
+              <inputs>
+                <input
+                  refId="Package\Merge Excel &amp; CSV For SQL\Union All.Inputs[Union All Input 1]"
+                  name="Union All Input 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Merge Excel &amp; CSV For SQL\Union All.Inputs[Union All Input 1].Columns[ProgramName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="ProgramName"
+                      lineageId="Package\Merge Excel &amp; CSV For SQL\Data Conversion.Outputs[Data Conversion Output].Columns[ProgramName]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Merge Excel &amp; CSV For SQL\Union All.Outputs[Union All Output 1].Columns[ProgramName]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Merge Excel &amp; CSV For SQL\Union All.Inputs[Union All Input 1].Columns[WiseOwlRating]"
+                      cachedDataType="i1"
+                      cachedName="WiseOwlRating"
+                      lineageId="Package\Merge Excel &amp; CSV For SQL\Data Conversion.Outputs[Data Conversion Output].Columns[WiseOwlRating]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Merge Excel &amp; CSV For SQL\Union All.Outputs[Union All Output 1].Columns[WiseOwlRating]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Merge Excel &amp; CSV For SQL\Union All.Inputs[Union All Input 1].Columns[Program]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Program"
+                      lineageId="Package\Merge Excel &amp; CSV For SQL\Excel Data.Outputs[Excel Source Output].Columns[Program]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Merge Excel &amp; CSV For SQL\Union All.Outputs[Union All Output 1].Columns[Program]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Merge Excel &amp; CSV For SQL\Union All.Inputs[Union All Input 1].Columns[Rating]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Rating"
+                      lineageId="Package\Merge Excel &amp; CSV For SQL\Excel Data.Outputs[Excel Source Output].Columns[Rating]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Merge Excel &amp; CSV For SQL\Union All.Outputs[Union All Output 1].Columns[Rating]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Merge Excel &amp; CSV For SQL\Union All.Inputs[Union All Input 2]"
+                  hasSideEffects="true"
+                  name="Union All Input 2">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Merge Excel &amp; CSV For SQL\Union All.Inputs[Union All Input 2].Columns[ProgramName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ProgramName"
+                      lineageId="Package\Merge Excel &amp; CSV For SQL\Data Conversion 1.Outputs[Data Conversion Output].Columns[ProgramName]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Merge Excel &amp; CSV For SQL\Union All.Outputs[Union All Output 1].Columns[ProgramName]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Merge Excel &amp; CSV For SQL\Union All.Inputs[Union All Input 2].Columns[WiseOwlRating]"
+                      cachedDataType="i1"
+                      cachedName="WiseOwlRating"
+                      lineageId="Package\Merge Excel &amp; CSV For SQL\Data Conversion 1.Outputs[Data Conversion Output].Columns[WiseOwlRating]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Merge Excel &amp; CSV For SQL\Union All.Outputs[Union All Output 1].Columns[WiseOwlRating]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Merge Excel &amp; CSV For SQL\Union All.Inputs[Union All Input 3]"
+                  dangling="true"
+                  hasSideEffects="true"
+                  name="Union All Input 3">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Merge Excel &amp; CSV For SQL\Union All.Outputs[Union All Output 1]"
+                  name="Union All Output 1">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Merge Excel &amp; CSV For SQL\Union All.Outputs[Union All Output 1].Columns[Program]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Merge Excel &amp; CSV For SQL\Union All.Outputs[Union All Output 1].Columns[Program]"
+                      name="Program" />
+                    <outputColumn
+                      refId="Package\Merge Excel &amp; CSV For SQL\Union All.Outputs[Union All Output 1].Columns[Rating]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Merge Excel &amp; CSV For SQL\Union All.Outputs[Union All Output 1].Columns[Rating]"
+                      name="Rating" />
+                    <outputColumn
+                      refId="Package\Merge Excel &amp; CSV For SQL\Union All.Outputs[Union All Output 1].Columns[ProgramName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\Merge Excel &amp; CSV For SQL\Union All.Outputs[Union All Output 1].Columns[ProgramName]"
+                      name="ProgramName" />
+                    <outputColumn
+                      refId="Package\Merge Excel &amp; CSV For SQL\Union All.Outputs[Union All Output 1].Columns[WiseOwlRating]"
+                      dataType="i1"
+                      lineageId="Package\Merge Excel &amp; CSV For SQL\Union All.Outputs[Union All Output 1].Columns[WiseOwlRating]"
+                      name="WiseOwlRating" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Merge Excel &amp; CSV For SQL.Paths[Data Conversion Output]"
+              endId="Package\Merge Excel &amp; CSV For SQL\Union All.Inputs[Union All Input 1]"
+              name="Data Conversion Output"
+              startId="Package\Merge Excel &amp; CSV For SQL\Data Conversion.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\Merge Excel &amp; CSV For SQL.Paths[Data Conversion Output1]"
+              endId="Package\Merge Excel &amp; CSV For SQL\Union All.Inputs[Union All Input 2]"
+              name="Data Conversion Output"
+              startId="Package\Merge Excel &amp; CSV For SQL\Data Conversion 1.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\Merge Excel &amp; CSV For SQL.Paths[Excel Source Output]"
+              endId="Package\Merge Excel &amp; CSV For SQL\Data Conversion.Inputs[Data Conversion Input]"
+              name="Excel Source Output"
+              startId="Package\Merge Excel &amp; CSV For SQL\Excel Data.Outputs[Excel Source Output]" />
+            <path
+              refId="Package\Merge Excel &amp; CSV For SQL.Paths[Flat File Source Output]"
+              endId="Package\Merge Excel &amp; CSV For SQL\Data Conversion 1.Inputs[Data Conversion Input]"
+              name="Flat File Source Output"
+              startId="Package\Merge Excel &amp; CSV For SQL\CSV Data.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Merge Excel &amp; CSV For SQL.Paths[Union All Output 1]"
+              endId="Package\Merge Excel &amp; CSV For SQL\Data To SQL.Inputs[OLE DB Destination Input]"
+              name="Union All Output 1"
+              startId="Package\Merge Excel &amp; CSV For SQL\Union All.Outputs[Union All Output 1]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Songs Data For SQL"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{5611A995-0E0A-4716-9A4F-56263A382646}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Songs Data For SQL"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Songs Data For SQL\Convert Unicode To String"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Convert Unicode To String"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Songs Data For SQL\Convert Unicode To String.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Songs Data For SQL\Convert Unicode To String.Inputs[Data Conversion Input].Columns[Artist]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Artist"
+                      lineageId="Package\Songs Data For SQL\Songs Data.Outputs[Excel Source Output].Columns[Artist]" />
+                    <inputColumn
+                      refId="Package\Songs Data For SQL\Convert Unicode To String.Inputs[Data Conversion Input].Columns[Title]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Title"
+                      lineageId="Package\Songs Data For SQL\Songs Data.Outputs[Excel Source Output].Columns[Title]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Songs Data For SQL\Convert Unicode To String.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\Songs Data For SQL\Convert Unicode To String.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Songs Data For SQL\Convert Unicode To String.Outputs[Data Conversion Output].Columns[Artist]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\Songs Data For SQL\Convert Unicode To String.Outputs[Data Conversion Output].Columns[Artist]"
+                      name="Artist"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Songs Data For SQL\Songs Data.Outputs[Excel Source Output].Columns[Artist]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Songs Data For SQL\Convert Unicode To String.Outputs[Data Conversion Output].Columns[Title]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\Songs Data For SQL\Convert Unicode To String.Outputs[Data Conversion Output].Columns[Title]"
+                      name="Title"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Songs Data For SQL\Songs Data.Outputs[Excel Source Output].Columns[Title]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Songs Data For SQL\Convert Unicode To String.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\Songs Data For SQL\Convert Unicode To String.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Songs Data For SQL\Convert Unicode To String.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Songs Data For SQL\Convert Unicode To String.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Songs Data For SQL\Convert Unicode To String.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Songs Data For SQL\Convert Unicode To String.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Songs Data For SQL\Songs Data"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="Songs Data"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">'Million-sellers$'</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Songs Data For SQL\Songs Data.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Excel Songs Data Connection]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Songs Data Connection]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Songs Data For SQL\Songs Data.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Songs Data For SQL\Songs Data.Outputs[Excel Source Output].Columns[Artist]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Songs Data For SQL\Songs Data.Outputs[Excel Source Output].ExternalColumns[Artist]"
+                      length="255"
+                      lineageId="Package\Songs Data For SQL\Songs Data.Outputs[Excel Source Output].Columns[Artist]"
+                      name="Artist"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Songs Data For SQL\Songs Data.Outputs[Excel Source Output].Columns[Rank]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Songs Data For SQL\Songs Data.Outputs[Excel Source Output].ExternalColumns[Rank]"
+                      lineageId="Package\Songs Data For SQL\Songs Data.Outputs[Excel Source Output].Columns[Rank]"
+                      name="Rank"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Songs Data For SQL\Songs Data.Outputs[Excel Source Output].Columns[Sales]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Songs Data For SQL\Songs Data.Outputs[Excel Source Output].ExternalColumns[Sales]"
+                      lineageId="Package\Songs Data For SQL\Songs Data.Outputs[Excel Source Output].Columns[Sales]"
+                      name="Sales"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Songs Data For SQL\Songs Data.Outputs[Excel Source Output].Columns[Title]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Songs Data For SQL\Songs Data.Outputs[Excel Source Output].ExternalColumns[Title]"
+                      length="255"
+                      lineageId="Package\Songs Data For SQL\Songs Data.Outputs[Excel Source Output].Columns[Title]"
+                      name="Title"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Songs Data For SQL\Songs Data.Outputs[Excel Source Output].Columns[Year]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Songs Data For SQL\Songs Data.Outputs[Excel Source Output].ExternalColumns[Year]"
+                      lineageId="Package\Songs Data For SQL\Songs Data.Outputs[Excel Source Output].Columns[Year]"
+                      name="Year"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Songs Data For SQL\Songs Data.Outputs[Excel Source Output].ExternalColumns[Artist]"
+                      dataType="wstr"
+                      length="255"
+                      name="Artist" />
+                    <externalMetadataColumn
+                      refId="Package\Songs Data For SQL\Songs Data.Outputs[Excel Source Output].ExternalColumns[Rank]"
+                      dataType="r8"
+                      name="Rank" />
+                    <externalMetadataColumn
+                      refId="Package\Songs Data For SQL\Songs Data.Outputs[Excel Source Output].ExternalColumns[Sales]"
+                      dataType="r8"
+                      name="Sales" />
+                    <externalMetadataColumn
+                      refId="Package\Songs Data For SQL\Songs Data.Outputs[Excel Source Output].ExternalColumns[Title]"
+                      dataType="wstr"
+                      length="255"
+                      name="Title" />
+                    <externalMetadataColumn
+                      refId="Package\Songs Data For SQL\Songs Data.Outputs[Excel Source Output].ExternalColumns[Year]"
+                      dataType="r8"
+                      name="Year" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Songs Data For SQL\Songs Data.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Songs Data For SQL\Songs Data.Outputs[Excel Source Error Output].Columns[Artist]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Songs Data For SQL\Songs Data.Outputs[Excel Source Error Output].Columns[Artist]"
+                      name="Artist" />
+                    <outputColumn
+                      refId="Package\Songs Data For SQL\Songs Data.Outputs[Excel Source Error Output].Columns[Rank]"
+                      dataType="r8"
+                      lineageId="Package\Songs Data For SQL\Songs Data.Outputs[Excel Source Error Output].Columns[Rank]"
+                      name="Rank" />
+                    <outputColumn
+                      refId="Package\Songs Data For SQL\Songs Data.Outputs[Excel Source Error Output].Columns[Sales]"
+                      dataType="r8"
+                      lineageId="Package\Songs Data For SQL\Songs Data.Outputs[Excel Source Error Output].Columns[Sales]"
+                      name="Sales" />
+                    <outputColumn
+                      refId="Package\Songs Data For SQL\Songs Data.Outputs[Excel Source Error Output].Columns[Title]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Songs Data For SQL\Songs Data.Outputs[Excel Source Error Output].Columns[Title]"
+                      name="Title" />
+                    <outputColumn
+                      refId="Package\Songs Data For SQL\Songs Data.Outputs[Excel Source Error Output].Columns[Year]"
+                      dataType="r8"
+                      lineageId="Package\Songs Data For SQL\Songs Data.Outputs[Excel Source Error Output].Columns[Year]"
+                      name="Year" />
+                    <outputColumn
+                      refId="Package\Songs Data For SQL\Songs Data.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Songs Data For SQL\Songs Data.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Songs Data For SQL\Songs Data.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Songs Data For SQL\Songs Data.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Songs Data For SQL\SQL Songs Data"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="SQL Songs Data"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[MillionSellers]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Songs Data For SQL\SQL Songs Data.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[SQL Songs Data Connection]"
+                  connectionManagerRefId="Package.ConnectionManagers[SQL Songs Data Connection]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Songs Data For SQL\SQL Songs Data.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Songs Data For SQL\SQL Songs Data.Inputs[OLE DB Destination Input].Columns[Sales]"
+                      cachedDataType="r8"
+                      cachedName="Sales"
+                      externalMetadataColumnId="Package\Songs Data For SQL\SQL Songs Data.Inputs[OLE DB Destination Input].ExternalColumns[Sales]"
+                      lineageId="Package\Songs Data For SQL\Songs Data.Outputs[Excel Source Output].Columns[Sales]" />
+                    <inputColumn
+                      refId="Package\Songs Data For SQL\SQL Songs Data.Inputs[OLE DB Destination Input].Columns[Year]"
+                      cachedDataType="r8"
+                      cachedName="Year"
+                      externalMetadataColumnId="Package\Songs Data For SQL\SQL Songs Data.Inputs[OLE DB Destination Input].ExternalColumns[SongYear]"
+                      lineageId="Package\Songs Data For SQL\Songs Data.Outputs[Excel Source Output].Columns[Year]" />
+                    <inputColumn
+                      refId="Package\Songs Data For SQL\SQL Songs Data.Inputs[OLE DB Destination Input].Columns[Artist]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Artist"
+                      externalMetadataColumnId="Package\Songs Data For SQL\SQL Songs Data.Inputs[OLE DB Destination Input].ExternalColumns[Artist]"
+                      lineageId="Package\Songs Data For SQL\Convert Unicode To String.Outputs[Data Conversion Output].Columns[Artist]" />
+                    <inputColumn
+                      refId="Package\Songs Data For SQL\SQL Songs Data.Inputs[OLE DB Destination Input].Columns[Title]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Title"
+                      externalMetadataColumnId="Package\Songs Data For SQL\SQL Songs Data.Inputs[OLE DB Destination Input].ExternalColumns[Title]"
+                      lineageId="Package\Songs Data For SQL\Convert Unicode To String.Outputs[Data Conversion Output].Columns[Title]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Songs Data For SQL\SQL Songs Data.Inputs[OLE DB Destination Input].ExternalColumns[Artist]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="Artist" />
+                    <externalMetadataColumn
+                      refId="Package\Songs Data For SQL\SQL Songs Data.Inputs[OLE DB Destination Input].ExternalColumns[Sales]"
+                      dataType="numeric"
+                      name="Sales"
+                      precision="10"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Songs Data For SQL\SQL Songs Data.Inputs[OLE DB Destination Input].ExternalColumns[Title]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="Title" />
+                    <externalMetadataColumn
+                      refId="Package\Songs Data For SQL\SQL Songs Data.Inputs[OLE DB Destination Input].ExternalColumns[SongYear]"
+                      dataType="i4"
+                      name="SongYear" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Songs Data For SQL\SQL Songs Data.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Songs Data For SQL\SQL Songs Data.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Songs Data For SQL\SQL Songs Data.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Songs Data For SQL\SQL Songs Data.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Songs Data For SQL\SQL Songs Data.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Songs Data For SQL\SQL Songs Data.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Songs Data For SQL.Paths[Data Conversion Output]"
+              endId="Package\Songs Data For SQL\SQL Songs Data.Inputs[OLE DB Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\Songs Data For SQL\Convert Unicode To String.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\Songs Data For SQL.Paths[Excel Source Output]"
+              endId="Package\Songs Data For SQL\Convert Unicode To String.Inputs[Data Conversion Input]"
+              name="Excel Source Output"
+              startId="Package\Songs Data For SQL\Songs Data.Outputs[Excel Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="208,41.6"
+          Id="Package\Merge Excel &amp; CSV For SQL"
+          TopLeft="374.785720063716,58.4411767923296" />
+        <NodeLayout
+          Size="172.8,41.6"
+          Id="Package\Songs Data For SQL"
+          TopLeft="86.9285728152918,58.264706622358" />
+        <NodeLayout
+          Size="212,41.6"
+          Id="Package\Data Conversion Errors Task"
+          TopLeft="664.071439786834,57.5000007292804" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Merge Excel &amp; CSV For SQL">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="128,41.6"
+          Id="Package\Merge Excel &amp; CSV For SQL\Excel Data"
+          TopLeft="168.5,75.5" />
+        <NodeLayout
+          Size="122.4,41.6"
+          Id="Package\Merge Excel &amp; CSV For SQL\CSV Data"
+          TopLeft="341,76" />
+        <NodeLayout
+          Size="155.2,41.6"
+          Id="Package\Merge Excel &amp; CSV For SQL\Data Conversion"
+          TopLeft="159.5,145.5" />
+        <EdgeLayout
+          Id="Package\Merge Excel &amp; CSV For SQL.Paths[Excel Source Output]"
+          TopLeft="234.8,117.1">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,28.4"
+              Start="0,0"
+              End="0,20.9">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="164.8,41.6"
+          Id="Package\Merge Excel &amp; CSV For SQL\Data Conversion 1"
+          TopLeft="342.727272727273,146.363636363636" />
+        <EdgeLayout
+          Id="Package\Merge Excel &amp; CSV For SQL.Paths[Flat File Source Output]"
+          TopLeft="402.2,117.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="22.9272727272726,28.7636363636363"
+              Start="0,0"
+              End="22.9272727272726,21.2636363636363">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,10.3818181818182" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,10.3818181818182"
+                    Point2="0,14.3818181818182"
+                    Point3="4,14.3818181818182" />
+                  <mssgle:LineSegment
+                    End="18.9272727272726,14.3818181818182" />
+                  <mssgle:CubicBezierSegment
+                    Point1="18.9272727272726,14.3818181818182"
+                    Point2="22.9272727272726,14.3818181818182"
+                    Point3="22.9272727272726,18.3818181818182" />
+                  <mssgle:LineSegment
+                    End="22.9272727272726,21.2636363636363" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="120,41.6"
+          Id="Package\Merge Excel &amp; CSV For SQL\Union All"
+          TopLeft="272.772727272727,230.954545454545" />
+        <EdgeLayout
+          Id="Package\Merge Excel &amp; CSV For SQL.Paths[Data Conversion Output]"
+          TopLeft="237.1,187.1">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="95.6727272727273,43.8545454545455"
+              Start="0,0"
+              End="95.6727272727273,36.3545454545455">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.9272727272727" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,17.9272727272727"
+                    Point2="0,21.9272727272727"
+                    Point3="4,21.9272727272727" />
+                  <mssgle:LineSegment
+                    End="91.6727272727273,21.9272727272727" />
+                  <mssgle:CubicBezierSegment
+                    Point1="91.6727272727273,21.9272727272727"
+                    Point2="95.6727272727273,21.9272727272727"
+                    Point3="95.6727272727273,25.9272727272727" />
+                  <mssgle:LineSegment
+                    End="95.6727272727273,36.3545454545455" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Merge Excel &amp; CSV For SQL.Paths[Data Conversion Output1]"
+          TopLeft="425.127272727273,187.963636363636">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-73.6878787878788,42.9909090909092"
+              Start="0,0"
+              End="-73.6878787878788,35.4909090909092">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.4551435406699" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,21.4551435406699"
+                    Point2="0,25.4551435406699"
+                    Point3="-4,25.4551435406699" />
+                  <mssgle:LineSegment
+                    End="-69.6878787878788,25.4551435406699" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-69.6878787878788,25.4551435406699"
+                    Point2="-73.6878787878788,25.4551435406699"
+                    Point3="-73.6878787878788,29.4551435406699" />
+                  <mssgle:LineSegment
+                    End="-73.6878787878788,35.4909090909092" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="137.6,41.6"
+          Id="Package\Merge Excel &amp; CSV For SQL\Data To SQL"
+          TopLeft="251.818181818182,330" />
+        <EdgeLayout
+          Id="Package\Merge Excel &amp; CSV For SQL.Paths[Union All Output 1]"
+          TopLeft="332.772727272727,272.554545454545">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-12.1545454545454,57.4454545454545"
+              Start="0,0"
+              End="-12.1545454545454,49.9454545454545">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.7227272727273" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,24.7227272727273"
+                    Point2="0,28.7227272727273"
+                    Point3="-4,28.7227272727273" />
+                  <mssgle:LineSegment
+                    End="-8.15454545454543,28.7227272727273" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-8.15454545454543,28.7227272727273"
+                    Point2="-12.1545454545454,28.7227272727273"
+                    Point3="-12.1545454545454,32.7227272727273" />
+                  <mssgle:LineSegment
+                    End="-12.1545454545454,49.9454545454545" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Merge Excel &amp; CSV For SQL\Data To SQL">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Merge Excel &amp; CSV For SQL\Excel Data">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Songs Data For SQL">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="132,41.6"
+          Id="Package\Songs Data For SQL\Songs Data"
+          TopLeft="109.071430335239,35.3235298300284" />
+        <NodeLayout
+          Size="154.4,41.6"
+          Id="Package\Songs Data For SQL\SQL Songs Data"
+          TopLeft="102.85714460879,167.470590584006" />
+        <NodeLayout
+          Size="202.4,41.6"
+          Id="Package\Songs Data For SQL\Convert Unicode To String"
+          TopLeft="100.500001106943,99.7352950185228" />
+        <EdgeLayout
+          Id="Package\Songs Data For SQL.Paths[Excel Source Output]"
+          TopLeft="175.071430335239,76.9235298300285">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="26.6285707717039,22.8117651884944"
+              Start="0,0"
+              End="26.6285707717039,15.3117651884944">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,7.40588259424718" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,7.40588259424718"
+                    Point2="0,11.4058825942472"
+                    Point3="4,11.4058825942472" />
+                  <mssgle:LineSegment
+                    End="22.6285707717039,11.4058825942472" />
+                  <mssgle:CubicBezierSegment
+                    Point1="22.6285707717039,11.4058825942472"
+                    Point2="26.6285707717039,11.4058825942472"
+                    Point3="26.6285707717039,15.4058825942472" />
+                  <mssgle:LineSegment
+                    End="26.6285707717039,15.3117651884944" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Songs Data For SQL.Paths[Data Conversion Output]"
+          TopLeft="201.700001106943,141.335295018523">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-21.6428564981538,26.1352955654831"
+              Start="0,0"
+              End="-21.6428564981538,18.6352955654831">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,9.06764778274157" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,9.06764778274157"
+                    Point2="0,13.0676477827416"
+                    Point3="-4,13.0676477827416" />
+                  <mssgle:LineSegment
+                    End="-17.6428564981538,13.0676477827416" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-17.6428564981538,13.0676477827416"
+                    Point2="-21.6428564981538,13.0676477827416"
+                    Point3="-21.6428564981538,17.0676477827416" />
+                  <mssgle:LineSegment
+                    End="-21.6428564981538,18.6352955654831" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Songs Data For SQL\SQL Songs Data">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Songs Data For SQL\Songs Data">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Data Conversion Errors Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="159.2,41.6"
+          Id="Package\Data Conversion Errors Task\Excel Lunch Data"
+          TopLeft="138.35714460879,38.5588235723106" />
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\Data Conversion Errors Task\OLE DB Destination"
+          TopLeft="32.8571434166968,206.470591130966" />
+        <NodeLayout
+          Size="326.4,41.6"
+          Id="Package\Data Conversion Errors Task\Convert Id to Integer"
+          TopLeft="41.2142853007024,123.617647873902" />
+        <EdgeLayout
+          Id="Package\Data Conversion Errors Task.Paths[Excel Source Output]"
+          TopLeft="217.95714460879,80.1588235723106">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-13.5428593080872,43.458824301591"
+              Start="0,0"
+              End="-13.5428593080872,35.958824301591">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.7294121507955" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,17.7294121507955"
+                    Point2="0,21.7294121507955"
+                    Point3="-4,21.7294121507955" />
+                  <mssgle:LineSegment
+                    End="-9.5428593080872,21.7294121507955" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-9.5428593080872,21.7294121507955"
+                    Point2="-13.5428593080872,21.7294121507955"
+                    Point3="-13.5428593080872,25.7294121507955" />
+                  <mssgle:LineSegment
+                    End="-13.5428593080872,35.958824301591" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Conversion Errors Task.Paths[Data Conversion Output]"
+          TopLeft="204.414285300702,165.217647873902">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-86.3571418840056,41.2529432570646"
+              Start="0,0"
+              End="-86.3571418840056,33.7529432570646">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.6264716285323" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.6264716285323"
+                    Point2="0,20.6264716285323"
+                    Point3="-4,20.6264716285323" />
+                  <mssgle:LineSegment
+                    End="-82.3571418840056,20.6264716285323" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-82.3571418840056,20.6264716285323"
+                    Point2="-86.3571418840056,20.6264716285323"
+                    Point3="-86.3571418840056,24.6264716285323" />
+                  <mssgle:LineSegment
+                    End="-86.3571418840056,33.7529432570646" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="120,41.6"
+          Id="Package\Data Conversion Errors Task\Union All"
+          TopLeft="255.714290069074,208.764708810199" />
+        <EdgeLayout
+          Id="Package\Data Conversion Errors Task.Paths[Data Conversion Error Output]"
+          TopLeft="257.480951967369,165.217647873902">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="58.2333381017052,43.5470609362975"
+              Start="0,0"
+              End="58.2333381017052,36.0470609362975">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13.5462791870155" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13.5462791870155"
+                    Point2="0,17.5462791870155"
+                    Point3="4,17.5462791870155" />
+                  <mssgle:LineSegment
+                    End="54.2333381017052,17.5462791870155" />
+                  <mssgle:CubicBezierSegment
+                    Point1="54.2333381017052,17.5462791870155"
+                    Point2="58.2333381017052,17.5462791870155"
+                    Point3="58.2333381017052,21.5462791870155" />
+                  <mssgle:LineSegment
+                    End="58.2333381017052,36.0470609362975" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-45.8383700116474,22.5462791870155,149.910078125,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Conversion Errors Task\Excel Lunch Data">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Conversion Errors Task\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

@@ -1,0 +1,2631 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="10/12/2021 12:52:27 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="MSI"
+  DTS:CreatorName="MSI\1prab"
+  DTS:DTSID="{1F3D9C68-EFE5-41E1-A64C-AB32EC8C7897}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.170"
+  DTS:LocaleID="16393"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="108"
+  DTS:VersionGUID="{3DD96D6B-A654-46CE-82E7-AB09E474C553}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Ado Shopping Con]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{BC4D2C06-FA2A-469A-9D70-5656D69349F8}"
+      DTS:ObjectName="Ado Shopping Con">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=MSI\SQLEXPRESS;User ID=sa;Initial Catalog=Dino_DB;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATAbnV6TfFEaLlSQVwvMrVwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADCXKdoGLuKWDxNaRPU/47h0aDH1zie6XM1IAL8+jzubwAAAAAOgAAAAAIAACAAAACTqEo/DlymsjzuyBVWcxTph0M+rLnzO8hHp9qYgZRldxAAAADLnhd1hj/oO929bc1MdQVMQAAAAEKEfkk1jWNAaUT8Y5MxPashIjHrYy2pYMpiZ4J/qFRkb8ZMzPoBolh9lf9MpFZVuVNtRRpNjR0jIcLvVseU2ww</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[AdoShopping Con]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{E7B3EAAC-FC10-4E5F-AD31-76389662AD16}"
+      DTS:ObjectName="AdoShopping Con">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\1prab\Documents\Downloads\SSIS Excel\Shopping.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[AdoShopping Pre State Con]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{28CE5E78-546C-4319-BF06-0D5005C14DEC}"
+      DTS:ObjectName="AdoShopping Pre State Con">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=MSI\SQLEXPRESS;User ID=sa;Initial Catalog=Dino_DB;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATAbnV6TfFEaLlSQVwvMrVwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADEhCCj1NylB1P0Hwh57R7cRc2y58ZEdgQAM9frcmBfbAAAAAAOgAAAAAIAACAAAABNqrAWDGxt7d0ysASXM8GUeR5qxmrx9OCPHC62cDvchRAAAAAwNzoxbPJDf02tCiHuETWqQAAAABq0ggBCLJT+2jH3fFwMuSgZSKTCzf9Wpe1K3PkNMuO/WQElJmVALZ5eK4gaYoE6b8i/JxUGhy/xwuHIVLEGZPM</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Big Bang Episodes Data Con]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{C90FD177-1B63-4B01-A91A-28A93243B079}"
+      DTS:ObjectName="Big Bang Episodes Data Con">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[User::BigFilePath]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="16393"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\1prab\Documents\Downloads\SSIS Excel\Foreach Files\Season\Big bang theory season 7.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Title"
+              DTS:DTSID="{833A08C9-2057-41C3-9E08-B1E04A52D468}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Episode number"
+              DTS:DTSID="{E6A74E9D-2AD6-460C-B42A-E161315A0CCC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Series number"
+              DTS:DTSID="{451849EB-288B-406A-9048-E21BAAC905F4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="First aired"
+              DTS:DTSID="{0A485A67-65E4-4BA6-A499-6F722221E8A9}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Big Bang Episodes Merged Data Con]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{CEA2EBB8-D6C1-491A-BE15-3701E163AFC4}"
+      DTS:ObjectName="Big Bang Episodes Merged Data Con">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=MSI\SQLEXPRESS;User ID=sa;Initial Catalog=Dino_DB;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATAbnV6TfFEaLlSQVwvMrVwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAA563uGqKcDukCeiwdvO498wV2iRk0sNmMZ2cGNNmfImQAAAAAOgAAAAAIAACAAAABRbbvPx4ilLsh5ErgWccsLol2TfBsUjUKDJjxxPoZwSRAAAABsZ3GrzxE0Gh9xkFJDSKT1QAAAAI/e84OSGcFWjNXN2qgXkI9nQjZGzRDRAouL2LWs2aWEII27nkbYIUHLhQhaAsCsF/1NDJaZRXXcc7fB0ggRksM</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Big Bang Episodes Pre State Con]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{1F6F711E-A1C4-49A3-80CE-5F4FC541F221}"
+      DTS:ObjectName="Big Bang Episodes Pre State Con">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=MSI\SQLEXPRESS;User ID=sa;Initial Catalog=Dino_DB;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATAbnV6TfFEaLlSQVwvMrVwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADmeWVbfl0KEH3EOfdI5J16Rm5NieiJCiXGE8ilUWaXcQAAAAAOgAAAAAIAACAAAAB4Qa57Di1rtA0juwRSbEWvIHjP1qMK8SH0+tgZETa9OxAAAACXMPj7Jjc45coCFo2aHxGzQAAAACcp0OZ/Sqxk9ZTOoMWtFC/6wZGg8NSA0aeCBo/0CygJ8zl9lTjJDnKm9D3TI1AjPnAp/WR4ZjCVJTaZv0FroK0</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Bush Trucker Data Con]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{C6E18077-7029-49A9-913A-B7FFAEE2E8B7}"
+      DTS:ObjectName="Bush Trucker Data Con">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=MSI\SQLEXPRESS;User ID=sa;Initial Catalog=Dino_DB;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATAbnV6TfFEaLlSQVwvMrVwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAOTEOaW+dWncUsPnCB2EhJmDVAopZMd5FhqE7iGyhFZQAAAAAOgAAAAAIAACAAAABYzxEIf1NZOmi9Fk9zkwNVwbqe5hvtfo5KL+SOul+s+BAAAABRHv/72K7WmZPjbVn67fdvQAAAAMdyFalu2GU3w1cdZjUGNUxp2inpkt5ZK2A0cM4snYmNRK1nJqGlrxnuQRTIXgNWufBgGvdj5Si3hnllX6dwkdA</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[BushTuckerData Pre State Con]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{07268D69-40C4-4CD8-9B22-E173292BC95C}"
+      DTS:ObjectName="BushTuckerData Pre State Con">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=MSI\SQLEXPRESS;User ID=sa;Initial Catalog=Dino_DB;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATAbnV6TfFEaLlSQVwvMrVwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABZnCVExxsNvgyJd2RM4Uti8TMGvRavsfgJA89e3KwFLAAAAAAOgAAAAAIAACAAAAAgAAk+b0jOF+PqRN45vjNxCMS5Lx5+OuXJ604t+iHzYxAAAAC9PATs3gIVet1IzROUrCpMQAAAALyONLX/45zXkqu1O3SxhpXK4U8hgoIzgxRrTNFjx78VS5grlipvTnG+J0uo1ke3hJuBMnXVnqP9Zjei2TpiTAk</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[BushTuckerImports Reader Con]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{01E23587-C630-4E5B-9C02-C1AC276A5162}"
+      DTS:ObjectName="BushTuckerImports Reader Con">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=MSI\SQLEXPRESS;User ID=sa;Initial Catalog=Dino_DB;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATAbnV6TfFEaLlSQVwvMrVwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABMXP6+lBxv9bOx2ud1n18ltDg0rnBWXHZQKucsMhKBHwAAAAAOgAAAAAIAACAAAADrtwhmt7xVx+5vpFqR+6fVWLVasKOygatRB/TYOrrfGxAAAABnToAnig7ikDYjuSaqHAKvQAAAAEVEHIL44tqMPiDclUgzoHNSn9XNmfy+bDdYRjjIYRWVRYsBcFIWiMTQGDGodyBeqPMcNkMe3jg/fwHfbRQ8FPc</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Data Connection]"
+      DTS:CreationName="ADO.NET:OLEDB"
+      DTS:DTSID="{7D40A64A-D191-4855-949A-6F3CD2C2218E}"
+      DTS:ObjectName="Data Connection">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=C:\Users\1prab\Documents\Downloads\SSIS Excel\Shopping.xlsx;Provider=Microsoft.ACE.OLEDB.12.0;Extended Properties=&quot;Excel 12.0;HDR=YES;&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Playlist Con]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{C66CA697-A3D5-4836-AB1C-4DAD411D0388}"
+      DTS:ObjectName="Playlist Con">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=MSI\SQLEXPRESS;User ID=sa;Initial Catalog=Dino_DB;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATAbnV6TfFEaLlSQVwvMrVwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAD13kQM5y1iKYBqkFYh3YCeYwNhbOQaENkVu3vqbOLysAAAAAAOgAAAAAIAACAAAADxaKBa7uicWT1HiAjdRkP10WmRhWYZJFzZiw5+XHuKdhAAAAABtVjFEHElYeAjPn/OTFwMQAAAAAVDxfIS4X1vL0ov6DUpNevHjZv7X7hYgsX8aCYPBcpHRLReRCISFCHszFUHlpWgvKhxjT6EzP6pyq7btlxPQ2Y</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[PlayList Data Con]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{7A476E9A-8950-4AC9-9591-BC4173929A76}"
+      DTS:ObjectName="PlayList Data Con">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\1prab\Documents\Downloads\SSIS Excel\Foreach Files\Anyone.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Playlist Pre State Con]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{99E974DA-9164-4AB1-8A2D-4FE02C498D8F}"
+      DTS:ObjectName="Playlist Pre State Con">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=MSI\SQLEXPRESS;User ID=sa;Initial Catalog=Dino_DB;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATAbnV6TfFEaLlSQVwvMrVwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAyWS992IyF4rqsDGYOzJzdK9Z6LQpt6T7Sly61/FowDAAAAAAOgAAAAAIAACAAAAC31MoSGk3tCsdMLDnGONNINJ2Pdh12zu1MFLHuQtY0FBAAAADU6CmuoXlW3o7hcg/Z2ZeOQAAAABdeXQH17OETmMHyTKLH6eZej1v98tNJjwjPg/DhkBgXIaxlg5HYMqHgfxNIFBlkleIq9GAKmZJY8Rc4dNGdVKU</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Trails Data Con]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{B274F628-8D5E-4168-9EB9-177223F3A8D0}"
+      DTS:ObjectName="Trails Data Con">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\1prab\Documents\Downloads\SSIS Excel\Foreach Files\Trails\C.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{5FAC31D0-203B-417B-80D3-0C65485E7D32}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="BigFilePath">
+      <DTS:VariableValue
+        DTS:DataType="8">C:\Users\1prab\Documents\Downloads\SSIS Excel\Foreach Files\Season\Big bang theory season 7.csv</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{7D305819-5CD0-4CE8-BBD9-5BACFABA9650}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="FilePath">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{E601F287-8685-4F29-9EAF-D85BCAE02DE4}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="Letter">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{E42587CD-C926-4153-ADA5-371DD996F053}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="Letters">
+      <DTS:VariableValue
+        DTS:DataSubType="ManagedSerializable"
+        DTS:DataType="13">
+        <SOAP-ENV:Envelope xmlns:clr="http://schemas.microsoft.com/soap/encoding/clr/1.0" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+          <SOAP-ENV:Body>
+            <xsd:anyType
+              id="ref-1"></xsd:anyType>
+          </SOAP-ENV:Body>
+        </SOAP-ENV:Envelope>
+      </DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{4EC4ED05-42B1-4554-A334-E1BC7DE12928}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="SheetName">
+      <DTS:VariableValue
+        DTS:DataType="8">January$</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{55B18C7E-5203-424F-8502-5028F4E81F44}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="TailFilePath">
+      <DTS:VariableValue
+        DTS:DataType="8">C:\Users\1prab\Documents\Downloads\SSIS Excel\Foreach Files\Trails\A.xlsx</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Loop Over Big Bang Episodes"
+      DTS:CreationName="STOCK:FOREACHLOOP"
+      DTS:Description="Foreach Loop Container"
+      DTS:DTSID="{6656C751-9FCD-498C-A3D0-00BAE3F7F168}"
+      DTS:ExecutableType="STOCK:FOREACHLOOP"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Loop Over Big Bang Episodes">
+      <DTS:ForEachEnumerator
+        DTS:CreationName="Microsoft.ForEachFileEnumerator"
+        DTS:DTSID="{C4B9AD75-FC36-4003-BA90-F34686A3860E}"
+        DTS:ObjectName="{C4B9AD75-FC36-4003-BA90-F34686A3860E}">
+        <DTS:ObjectData>
+          <ForEachFileEnumeratorProperties>
+            <FEFEProperty
+              Folder="C:\Users\1prab\Documents\Downloads\SSIS Excel\Foreach Files\Season" />
+            <FEFEProperty
+              FileSpec="*.*" />
+            <FEFEProperty
+              FileNameRetrievalType="0" />
+            <FEFEProperty
+              Recurse="0" />
+          </ForEachFileEnumeratorProperties>
+        </DTS:ObjectData>
+      </DTS:ForEachEnumerator>
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Loop Over Big Bang Episodes\Looping Over Files"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{0468E46A-9040-47DC-AE71-D58E8324C1C2}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Looping Over Files"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\Loop Over Big Bang Episodes\Looping Over Files\BigBangMergedEpisodes"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB Destination"
+                  name="BigBangMergedEpisodes"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[dbo].[BigBangEpisodesMerged]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">3</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Loop Over Big Bang Episodes\Looping Over Files\BigBangMergedEpisodes.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[Big Bang Episodes Merged Data Con]"
+                      connectionManagerRefId="Package.ConnectionManagers[Big Bang Episodes Merged Data Con]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Loop Over Big Bang Episodes\Looping Over Files\BigBangMergedEpisodes.Inputs[OLE DB Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Loop Over Big Bang Episodes\Looping Over Files\BigBangMergedEpisodes.Inputs[OLE DB Destination Input].Columns[Title]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Title"
+                          cachedSortKeyPosition="1"
+                          externalMetadataColumnId="Package\Loop Over Big Bang Episodes\Looping Over Files\BigBangMergedEpisodes.Inputs[OLE DB Destination Input].ExternalColumns[Title]"
+                          lineageId="Package\Loop Over Big Bang Episodes\Looping Over Files\Sorting By Titles (Ascending).Outputs[Sort Output].Columns[Title]" />
+                        <inputColumn
+                          refId="Package\Loop Over Big Bang Episodes\Looping Over Files\BigBangMergedEpisodes.Inputs[OLE DB Destination Input].Columns[Series number]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Series number"
+                          externalMetadataColumnId="Package\Loop Over Big Bang Episodes\Looping Over Files\BigBangMergedEpisodes.Inputs[OLE DB Destination Input].ExternalColumns[SeasonNumber]"
+                          lineageId="Package\Loop Over Big Bang Episodes\Looping Over Files\Sorting By Titles (Ascending).Outputs[Sort Output].Columns[Series number]" />
+                        <inputColumn
+                          refId="Package\Loop Over Big Bang Episodes\Looping Over Files\BigBangMergedEpisodes.Inputs[OLE DB Destination Input].Columns[Episode number]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Episode number"
+                          externalMetadataColumnId="Package\Loop Over Big Bang Episodes\Looping Over Files\BigBangMergedEpisodes.Inputs[OLE DB Destination Input].ExternalColumns[EpisodeNumber]"
+                          lineageId="Package\Loop Over Big Bang Episodes\Looping Over Files\Sorting By Titles (Ascending).Outputs[Sort Output].Columns[Episode number]" />
+                        <inputColumn
+                          refId="Package\Loop Over Big Bang Episodes\Looping Over Files\BigBangMergedEpisodes.Inputs[OLE DB Destination Input].Columns[First aired]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="First aired"
+                          externalMetadataColumnId="Package\Loop Over Big Bang Episodes\Looping Over Files\BigBangMergedEpisodes.Inputs[OLE DB Destination Input].ExternalColumns[DateBroadcast]"
+                          lineageId="Package\Loop Over Big Bang Episodes\Looping Over Files\Sorting By Titles (Ascending).Outputs[Sort Output].Columns[First aired]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Loop Over Big Bang Episodes\Looping Over Files\BigBangMergedEpisodes.Inputs[OLE DB Destination Input].ExternalColumns[SeasonNumber]"
+                          dataType="i4"
+                          name="SeasonNumber" />
+                        <externalMetadataColumn
+                          refId="Package\Loop Over Big Bang Episodes\Looping Over Files\BigBangMergedEpisodes.Inputs[OLE DB Destination Input].ExternalColumns[EpisodeNumber]"
+                          dataType="i4"
+                          name="EpisodeNumber" />
+                        <externalMetadataColumn
+                          refId="Package\Loop Over Big Bang Episodes\Looping Over Files\BigBangMergedEpisodes.Inputs[OLE DB Destination Input].ExternalColumns[DateBroadcast]"
+                          dataType="dbDate"
+                          name="DateBroadcast" />
+                        <externalMetadataColumn
+                          refId="Package\Loop Over Big Bang Episodes\Looping Over Files\BigBangMergedEpisodes.Inputs[OLE DB Destination Input].ExternalColumns[Title]"
+                          codePage="1252"
+                          dataType="str"
+                          length="255"
+                          name="Title" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Loop Over Big Bang Episodes\Looping Over Files\BigBangMergedEpisodes.Outputs[OLE DB Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Destination Error Output"
+                      synchronousInputId="Package\Loop Over Big Bang Episodes\Looping Over Files\BigBangMergedEpisodes.Inputs[OLE DB Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Loop Over Big Bang Episodes\Looping Over Files\BigBangMergedEpisodes.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Loop Over Big Bang Episodes\Looping Over Files\BigBangMergedEpisodes.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Loop Over Big Bang Episodes\Looping Over Files\BigBangMergedEpisodes.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Loop Over Big Bang Episodes\Looping Over Files\BigBangMergedEpisodes.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Loop Over Big Bang Episodes\Looping Over Files\Current Source"
+                  componentClassID="Microsoft.FlatFileSource"
+                  contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Flat File Source"
+                  localeId="16393"
+                  name="Current Source"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether zero-length columns are treated as null."
+                      name="RetainNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                      name="FileNameColumnName"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Loop Over Big Bang Episodes\Looping Over Files\Current Source.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[Big Bang Episodes Data Con]"
+                      connectionManagerRefId="Package.ConnectionManagers[Big Bang Episodes Data Con]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Loop Over Big Bang Episodes\Looping Over Files\Current Source.Outputs[Flat File Source Output]"
+                      name="Flat File Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Loop Over Big Bang Episodes\Looping Over Files\Current Source.Outputs[Flat File Source Output].Columns[Title]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Loop Over Big Bang Episodes\Looping Over Files\Current Source.Outputs[Flat File Source Output].ExternalColumns[Title]"
+                          length="50"
+                          lineageId="Package\Loop Over Big Bang Episodes\Looping Over Files\Current Source.Outputs[Flat File Source Output].Columns[Title]"
+                          name="Title"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Loop Over Big Bang Episodes\Looping Over Files\Current Source.Outputs[Flat File Source Output].Columns[Episode number]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Loop Over Big Bang Episodes\Looping Over Files\Current Source.Outputs[Flat File Source Output].ExternalColumns[Episode number]"
+                          length="50"
+                          lineageId="Package\Loop Over Big Bang Episodes\Looping Over Files\Current Source.Outputs[Flat File Source Output].Columns[Episode number]"
+                          name="Episode number"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Loop Over Big Bang Episodes\Looping Over Files\Current Source.Outputs[Flat File Source Output].Columns[Series number]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Loop Over Big Bang Episodes\Looping Over Files\Current Source.Outputs[Flat File Source Output].ExternalColumns[Series number]"
+                          length="50"
+                          lineageId="Package\Loop Over Big Bang Episodes\Looping Over Files\Current Source.Outputs[Flat File Source Output].Columns[Series number]"
+                          name="Series number"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Loop Over Big Bang Episodes\Looping Over Files\Current Source.Outputs[Flat File Source Output].Columns[First aired]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Loop Over Big Bang Episodes\Looping Over Files\Current Source.Outputs[Flat File Source Output].ExternalColumns[First aired]"
+                          length="50"
+                          lineageId="Package\Loop Over Big Bang Episodes\Looping Over Files\Current Source.Outputs[Flat File Source Output].Columns[First aired]"
+                          name="First aired"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Loop Over Big Bang Episodes\Looping Over Files\Current Source.Outputs[Flat File Source Output].ExternalColumns[Title]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Title" />
+                        <externalMetadataColumn
+                          refId="Package\Loop Over Big Bang Episodes\Looping Over Files\Current Source.Outputs[Flat File Source Output].ExternalColumns[Episode number]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Episode number" />
+                        <externalMetadataColumn
+                          refId="Package\Loop Over Big Bang Episodes\Looping Over Files\Current Source.Outputs[Flat File Source Output].ExternalColumns[Series number]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Series number" />
+                        <externalMetadataColumn
+                          refId="Package\Loop Over Big Bang Episodes\Looping Over Files\Current Source.Outputs[Flat File Source Output].ExternalColumns[First aired]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="First aired" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Loop Over Big Bang Episodes\Looping Over Files\Current Source.Outputs[Flat File Source Error Output]"
+                      isErrorOut="true"
+                      name="Flat File Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Loop Over Big Bang Episodes\Looping Over Files\Current Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          codePage="1252"
+                          dataType="text"
+                          description="Flat File Source Error Output Column"
+                          lineageId="Package\Loop Over Big Bang Episodes\Looping Over Files\Current Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          name="Flat File Source Error Output Column" />
+                        <outputColumn
+                          refId="Package\Loop Over Big Bang Episodes\Looping Over Files\Current Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Loop Over Big Bang Episodes\Looping Over Files\Current Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Loop Over Big Bang Episodes\Looping Over Files\Current Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Loop Over Big Bang Episodes\Looping Over Files\Current Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Loop Over Big Bang Episodes\Looping Over Files\Sorting By Titles (Ascending)"
+                  componentClassID="Microsoft.Sort"
+                  contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+                  name="Sorting By Titles (Ascending)"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                      name="EliminateDuplicates">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the maximum number of threads to use for sorting."
+                      expressionType="Notify"
+                      name="MaximumThreads">-1</property>
+                  </properties>
+                  <inputs>
+                    <input
+                      refId="Package\Loop Over Big Bang Episodes\Looping Over Files\Sorting By Titles (Ascending).Inputs[Sort Input]"
+                      name="Sort Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Loop Over Big Bang Episodes\Looping Over Files\Sorting By Titles (Ascending).Inputs[Sort Input].Columns[Title]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Title"
+                          lineageId="Package\Loop Over Big Bang Episodes\Looping Over Files\Current Source.Outputs[Flat File Source Output].Columns[Title]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">1</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Loop Over Big Bang Episodes\Looping Over Files\Sorting By Titles (Ascending).Inputs[Sort Input].Columns[Episode number]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Episode number"
+                          lineageId="Package\Loop Over Big Bang Episodes\Looping Over Files\Current Source.Outputs[Flat File Source Output].Columns[Episode number]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Loop Over Big Bang Episodes\Looping Over Files\Sorting By Titles (Ascending).Inputs[Sort Input].Columns[Series number]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Series number"
+                          lineageId="Package\Loop Over Big Bang Episodes\Looping Over Files\Current Source.Outputs[Flat File Source Output].Columns[Series number]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Loop Over Big Bang Episodes\Looping Over Files\Sorting By Titles (Ascending).Inputs[Sort Input].Columns[First aired]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="First aired"
+                          lineageId="Package\Loop Over Big Bang Episodes\Looping Over Files\Current Source.Outputs[Flat File Source Output].Columns[First aired]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Loop Over Big Bang Episodes\Looping Over Files\Sorting By Titles (Ascending).Outputs[Sort Output]"
+                      isSorted="true"
+                      name="Sort Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Loop Over Big Bang Episodes\Looping Over Files\Sorting By Titles (Ascending).Outputs[Sort Output].Columns[Title]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          lineageId="Package\Loop Over Big Bang Episodes\Looping Over Files\Sorting By Titles (Ascending).Outputs[Sort Output].Columns[Title]"
+                          name="Title"
+                          sortKeyPosition="1">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Loop Over Big Bang Episodes\Looping Over Files\Current Source.Outputs[Flat File Source Output].Columns[Title]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Loop Over Big Bang Episodes\Looping Over Files\Sorting By Titles (Ascending).Outputs[Sort Output].Columns[Episode number]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          lineageId="Package\Loop Over Big Bang Episodes\Looping Over Files\Sorting By Titles (Ascending).Outputs[Sort Output].Columns[Episode number]"
+                          name="Episode number">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Loop Over Big Bang Episodes\Looping Over Files\Current Source.Outputs[Flat File Source Output].Columns[Episode number]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Loop Over Big Bang Episodes\Looping Over Files\Sorting By Titles (Ascending).Outputs[Sort Output].Columns[Series number]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          lineageId="Package\Loop Over Big Bang Episodes\Looping Over Files\Sorting By Titles (Ascending).Outputs[Sort Output].Columns[Series number]"
+                          name="Series number">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Loop Over Big Bang Episodes\Looping Over Files\Current Source.Outputs[Flat File Source Output].Columns[Series number]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Loop Over Big Bang Episodes\Looping Over Files\Sorting By Titles (Ascending).Outputs[Sort Output].Columns[First aired]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          lineageId="Package\Loop Over Big Bang Episodes\Looping Over Files\Sorting By Titles (Ascending).Outputs[Sort Output].Columns[First aired]"
+                          name="First aired">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Loop Over Big Bang Episodes\Looping Over Files\Current Source.Outputs[Flat File Source Output].Columns[First aired]}</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\Loop Over Big Bang Episodes\Looping Over Files.Paths[Flat File Source Output]"
+                  endId="Package\Loop Over Big Bang Episodes\Looping Over Files\Sorting By Titles (Ascending).Inputs[Sort Input]"
+                  name="Flat File Source Output"
+                  startId="Package\Loop Over Big Bang Episodes\Looping Over Files\Current Source.Outputs[Flat File Source Output]" />
+                <path
+                  refId="Package\Loop Over Big Bang Episodes\Looping Over Files.Paths[Sort Output]"
+                  endId="Package\Loop Over Big Bang Episodes\Looping Over Files\BigBangMergedEpisodes.Inputs[OLE DB Destination Input]"
+                  name="Sort Output"
+                  startId="Package\Loop Over Big Bang Episodes\Looping Over Files\Sorting By Titles (Ascending).Outputs[Sort Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:ForEachVariableMappings>
+        <DTS:ForEachVariableMapping
+          DTS:CreationName=""
+          DTS:DTSID="{5685ABA1-309C-4BE3-94C8-7765AAE8A4B4}"
+          DTS:ObjectName="{5685ABA1-309C-4BE3-94C8-7765AAE8A4B4}"
+          DTS:ValueIndex="0"
+          DTS:VariableName="User::BigFilePath" />
+      </DTS:ForEachVariableMappings>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Loop Over Excel Sheets"
+      DTS:CreationName="STOCK:FOREACHLOOP"
+      DTS:Description="Foreach Loop Container"
+      DTS:DTSID="{1423F2BA-1B12-4051-88CB-0413686ABC47}"
+      DTS:ExecutableType="STOCK:FOREACHLOOP"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Loop Over Excel Sheets">
+      <DTS:ForEachEnumerator
+        DTS:CreationName="Microsoft.ForEachSchemaRowsetEnumerator"
+        DTS:DTSID="{C7EB06FA-1AD8-453C-A9C8-D17D9C4FB8B5}"
+        DTS:ObjectName="{C7EB06FA-1AD8-453C-A9C8-D17D9C4FB8B5}">
+        <DTS:ObjectData>
+          <FEESchemaRowset
+            Connection="Data Connection"
+            Schema="c8b52229-5cf3-11ce-ade5-00aa0044773d" />
+        </DTS:ObjectData>
+      </DTS:ForEachEnumerator>
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Loop Over Excel Sheets\Looping Over Excel Sheets"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{507676DA-85DB-48C6-9572-97DC1137D2E9}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Looping Over Excel Sheets"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\Loop Over Excel Sheets\Looping Over Excel Sheets\Destination"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB Destination"
+                  name="Destination"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[dbo].[AdoShopping]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">0</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                      name="FastLoadOptions"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Loop Over Excel Sheets\Looping Over Excel Sheets\Destination.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[Ado Shopping Con]"
+                      connectionManagerRefId="Package.ConnectionManagers[Ado Shopping Con]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Loop Over Excel Sheets\Looping Over Excel Sheets\Destination.Inputs[OLE DB Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Loop Over Excel Sheets\Looping Over Excel Sheets\Destination.Inputs[OLE DB Destination Input].Columns[Spending]"
+                          cachedDataType="r8"
+                          cachedName="Spending"
+                          externalMetadataColumnId="Package\Loop Over Excel Sheets\Looping Over Excel Sheets\Destination.Inputs[OLE DB Destination Input].ExternalColumns[Spending]"
+                          lineageId="Package\Loop Over Excel Sheets\Looping Over Excel Sheets\Source.Outputs[Excel Source Output].Columns[Spending]" />
+                        <inputColumn
+                          refId="Package\Loop Over Excel Sheets\Looping Over Excel Sheets\Destination.Inputs[OLE DB Destination Input].Columns[Supermarket]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="Supermarket"
+                          externalMetadataColumnId="Package\Loop Over Excel Sheets\Looping Over Excel Sheets\Destination.Inputs[OLE DB Destination Input].ExternalColumns[ShopName]"
+                          lineageId="Package\Loop Over Excel Sheets\Looping Over Excel Sheets\Source.Outputs[Excel Source Output].Columns[Supermarket]" />
+                        <inputColumn
+                          refId="Package\Loop Over Excel Sheets\Looping Over Excel Sheets\Destination.Inputs[OLE DB Destination Input].Columns[Shopping date]"
+                          cachedDataType="date"
+                          cachedName="Shopping date"
+                          externalMetadataColumnId="Package\Loop Over Excel Sheets\Looping Over Excel Sheets\Destination.Inputs[OLE DB Destination Input].ExternalColumns[ShopDate]"
+                          lineageId="Package\Loop Over Excel Sheets\Looping Over Excel Sheets\Source.Outputs[Excel Source Output].Columns[Shopping date]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Loop Over Excel Sheets\Looping Over Excel Sheets\Destination.Inputs[OLE DB Destination Input].ExternalColumns[ShopName]"
+                          dataType="wstr"
+                          length="255"
+                          name="ShopName" />
+                        <externalMetadataColumn
+                          refId="Package\Loop Over Excel Sheets\Looping Over Excel Sheets\Destination.Inputs[OLE DB Destination Input].ExternalColumns[ShopDate]"
+                          dataType="dbDate"
+                          name="ShopDate" />
+                        <externalMetadataColumn
+                          refId="Package\Loop Over Excel Sheets\Looping Over Excel Sheets\Destination.Inputs[OLE DB Destination Input].ExternalColumns[Spending]"
+                          dataType="numeric"
+                          name="Spending"
+                          precision="10"
+                          scale="2" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Loop Over Excel Sheets\Looping Over Excel Sheets\Destination.Outputs[OLE DB Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Destination Error Output"
+                      synchronousInputId="Package\Loop Over Excel Sheets\Looping Over Excel Sheets\Destination.Inputs[OLE DB Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Loop Over Excel Sheets\Looping Over Excel Sheets\Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Loop Over Excel Sheets\Looping Over Excel Sheets\Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Loop Over Excel Sheets\Looping Over Excel Sheets\Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Loop Over Excel Sheets\Looping Over Excel Sheets\Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Loop Over Excel Sheets\Looping Over Excel Sheets\Source"
+                  componentClassID="Microsoft.ExcelSource"
+                  contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Excel Source"
+                  name="Source"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">January$</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable">User::SheetName</property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                    <property
+                      dataType="System.String"
+                      description="The variable that contains the SQL command to be executed."
+                      name="SqlCommandVariable"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">1</property>
+                    <property
+                      dataType="System.String"
+                      description="The mapping from parameters in the SQL command to variables."
+                      name="ParameterMapping"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Loop Over Excel Sheets\Looping Over Excel Sheets\Source.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[AdoShopping Con]"
+                      connectionManagerRefId="Package.ConnectionManagers[AdoShopping Con]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Loop Over Excel Sheets\Looping Over Excel Sheets\Source.Outputs[Excel Source Output]"
+                      name="Excel Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Loop Over Excel Sheets\Looping Over Excel Sheets\Source.Outputs[Excel Source Output].Columns[Shopping date]"
+                          dataType="date"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Loop Over Excel Sheets\Looping Over Excel Sheets\Source.Outputs[Excel Source Output].ExternalColumns[Shopping date]"
+                          lineageId="Package\Loop Over Excel Sheets\Looping Over Excel Sheets\Source.Outputs[Excel Source Output].Columns[Shopping date]"
+                          name="Shopping date"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Loop Over Excel Sheets\Looping Over Excel Sheets\Source.Outputs[Excel Source Output].Columns[Supermarket]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Loop Over Excel Sheets\Looping Over Excel Sheets\Source.Outputs[Excel Source Output].ExternalColumns[Supermarket]"
+                          length="255"
+                          lineageId="Package\Loop Over Excel Sheets\Looping Over Excel Sheets\Source.Outputs[Excel Source Output].Columns[Supermarket]"
+                          name="Supermarket"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Loop Over Excel Sheets\Looping Over Excel Sheets\Source.Outputs[Excel Source Output].Columns[Spending]"
+                          dataType="r8"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Loop Over Excel Sheets\Looping Over Excel Sheets\Source.Outputs[Excel Source Output].ExternalColumns[Spending]"
+                          lineageId="Package\Loop Over Excel Sheets\Looping Over Excel Sheets\Source.Outputs[Excel Source Output].Columns[Spending]"
+                          name="Spending"
+                          truncationRowDisposition="FailComponent" />
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Loop Over Excel Sheets\Looping Over Excel Sheets\Source.Outputs[Excel Source Output].ExternalColumns[Shopping date]"
+                          dataType="date"
+                          name="Shopping date" />
+                        <externalMetadataColumn
+                          refId="Package\Loop Over Excel Sheets\Looping Over Excel Sheets\Source.Outputs[Excel Source Output].ExternalColumns[Supermarket]"
+                          dataType="wstr"
+                          length="255"
+                          name="Supermarket" />
+                        <externalMetadataColumn
+                          refId="Package\Loop Over Excel Sheets\Looping Over Excel Sheets\Source.Outputs[Excel Source Output].ExternalColumns[Spending]"
+                          dataType="r8"
+                          name="Spending" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Loop Over Excel Sheets\Looping Over Excel Sheets\Source.Outputs[Excel Source Error Output]"
+                      isErrorOut="true"
+                      name="Excel Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Loop Over Excel Sheets\Looping Over Excel Sheets\Source.Outputs[Excel Source Error Output].Columns[Shopping date]"
+                          dataType="date"
+                          lineageId="Package\Loop Over Excel Sheets\Looping Over Excel Sheets\Source.Outputs[Excel Source Error Output].Columns[Shopping date]"
+                          name="Shopping date" />
+                        <outputColumn
+                          refId="Package\Loop Over Excel Sheets\Looping Over Excel Sheets\Source.Outputs[Excel Source Error Output].Columns[Supermarket]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Loop Over Excel Sheets\Looping Over Excel Sheets\Source.Outputs[Excel Source Error Output].Columns[Supermarket]"
+                          name="Supermarket" />
+                        <outputColumn
+                          refId="Package\Loop Over Excel Sheets\Looping Over Excel Sheets\Source.Outputs[Excel Source Error Output].Columns[Spending]"
+                          dataType="r8"
+                          lineageId="Package\Loop Over Excel Sheets\Looping Over Excel Sheets\Source.Outputs[Excel Source Error Output].Columns[Spending]"
+                          name="Spending" />
+                        <outputColumn
+                          refId="Package\Loop Over Excel Sheets\Looping Over Excel Sheets\Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Loop Over Excel Sheets\Looping Over Excel Sheets\Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Loop Over Excel Sheets\Looping Over Excel Sheets\Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Loop Over Excel Sheets\Looping Over Excel Sheets\Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\Loop Over Excel Sheets\Looping Over Excel Sheets.Paths[Excel Source Output]"
+                  endId="Package\Loop Over Excel Sheets\Looping Over Excel Sheets\Destination.Inputs[OLE DB Destination Input]"
+                  name="Excel Source Output"
+                  startId="Package\Loop Over Excel Sheets\Looping Over Excel Sheets\Source.Outputs[Excel Source Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:ForEachVariableMappings>
+        <DTS:ForEachVariableMapping
+          DTS:CreationName=""
+          DTS:DTSID="{F2EF02F9-435D-491B-A251-2F7C91E3C31C}"
+          DTS:ObjectName="{F2EF02F9-435D-491B-A251-2F7C91E3C31C}"
+          DTS:ValueIndex="2"
+          DTS:VariableName="User::SheetName" />
+      </DTS:ForEachVariableMappings>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Loop Over Playlist"
+      DTS:CreationName="STOCK:FOREACHLOOP"
+      DTS:Description="Foreach Loop Container"
+      DTS:DTSID="{3ED04383-2302-4495-9B5F-02A97CCEA174}"
+      DTS:ExecutableType="STOCK:FOREACHLOOP"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Loop Over Playlist">
+      <DTS:ForEachEnumerator
+        DTS:CreationName="Microsoft.ForEachFileEnumerator"
+        DTS:DTSID="{CC4FE8EA-A8B0-4639-8D15-CECE35B64A09}"
+        DTS:ObjectName="{CC4FE8EA-A8B0-4639-8D15-CECE35B64A09}">
+        <DTS:ObjectData>
+          <ForEachFileEnumeratorProperties>
+            <FEFEProperty
+              Folder="C:\Users\1prab\Documents\Downloads\SSIS Excel\Foreach Files" />
+            <FEFEProperty
+              FileSpec="*.*" />
+            <FEFEProperty
+              FileNameRetrievalType="0" />
+            <FEFEProperty
+              Recurse="0" />
+          </ForEachFileEnumeratorProperties>
+        </DTS:ObjectData>
+      </DTS:ForEachEnumerator>
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Loop Over Playlist\Looping Over Files"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{7C3A59A4-569B-48EA-BD5C-70258B596021}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Looping Over Files"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\Loop Over Playlist\Looping Over Files\Current Source"
+                  componentClassID="Microsoft.ExcelSource"
+                  contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Excel Source"
+                  name="Current Source"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">Songs$</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                    <property
+                      dataType="System.String"
+                      description="The variable that contains the SQL command to be executed."
+                      name="SqlCommandVariable"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">0</property>
+                    <property
+                      dataType="System.String"
+                      description="The mapping from parameters in the SQL command to variables."
+                      name="ParameterMapping"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Loop Over Playlist\Looping Over Files\Current Source.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[PlayList Data Con]"
+                      connectionManagerRefId="Package.ConnectionManagers[PlayList Data Con]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Loop Over Playlist\Looping Over Files\Current Source.Outputs[Excel Source Output]"
+                      name="Excel Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Loop Over Playlist\Looping Over Files\Current Source.Outputs[Excel Source Output].Columns[Artist]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Loop Over Playlist\Looping Over Files\Current Source.Outputs[Excel Source Output].ExternalColumns[Artist]"
+                          length="255"
+                          lineageId="Package\Loop Over Playlist\Looping Over Files\Current Source.Outputs[Excel Source Output].Columns[Artist]"
+                          name="Artist"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Loop Over Playlist\Looping Over Files\Current Source.Outputs[Excel Source Output].Columns[Song]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Loop Over Playlist\Looping Over Files\Current Source.Outputs[Excel Source Output].ExternalColumns[Song]"
+                          length="255"
+                          lineageId="Package\Loop Over Playlist\Looping Over Files\Current Source.Outputs[Excel Source Output].Columns[Song]"
+                          name="Song"
+                          truncationRowDisposition="FailComponent" />
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Loop Over Playlist\Looping Over Files\Current Source.Outputs[Excel Source Output].ExternalColumns[Artist]"
+                          dataType="wstr"
+                          length="255"
+                          name="Artist" />
+                        <externalMetadataColumn
+                          refId="Package\Loop Over Playlist\Looping Over Files\Current Source.Outputs[Excel Source Output].ExternalColumns[Song]"
+                          dataType="wstr"
+                          length="255"
+                          name="Song" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Loop Over Playlist\Looping Over Files\Current Source.Outputs[Excel Source Error Output]"
+                      isErrorOut="true"
+                      name="Excel Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Loop Over Playlist\Looping Over Files\Current Source.Outputs[Excel Source Error Output].Columns[Artist]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Loop Over Playlist\Looping Over Files\Current Source.Outputs[Excel Source Error Output].Columns[Artist]"
+                          name="Artist" />
+                        <outputColumn
+                          refId="Package\Loop Over Playlist\Looping Over Files\Current Source.Outputs[Excel Source Error Output].Columns[Song]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Loop Over Playlist\Looping Over Files\Current Source.Outputs[Excel Source Error Output].Columns[Song]"
+                          name="Song" />
+                        <outputColumn
+                          refId="Package\Loop Over Playlist\Looping Over Files\Current Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Loop Over Playlist\Looping Over Files\Current Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Loop Over Playlist\Looping Over Files\Current Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Loop Over Playlist\Looping Over Files\Current Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Loop Over Playlist\Looping Over Files\Derived Column"
+                  componentClassID="Microsoft.DerivedColumn"
+                  contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+                  name="Derived Column"
+                  usesDispositions="true">
+                  <inputs>
+                    <input
+                      refId="Package\Loop Over Playlist\Looping Over Files\Derived Column.Inputs[Derived Column Input]"
+                      description="Input to the Derived Column Transformation"
+                      name="Derived Column Input">
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Loop Over Playlist\Looping Over Files\Derived Column.Outputs[Derived Column Output]"
+                      description="Default Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      name="Derived Column Output"
+                      synchronousInputId="Package\Loop Over Playlist\Looping Over Files\Derived Column.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Loop Over Playlist\Looping Over Files\Derived Column.Outputs[Derived Column Output].Columns[TargetMarket]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          length="50"
+                          lineageId="Package\Loop Over Playlist\Looping Over Files\Derived Column.Outputs[Derived Column Output].Columns[TargetMarket]"
+                          name="TargetMarket"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">[REPLACE]([RIGHT](@[User::FilePath],[FINDSTRING]([REVERSE](@[User::FilePath]),"\\",1) - 1),".xlsx","")</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">REPLACE(RIGHT(@[User::FilePath],FINDSTRING(REVERSE(@[User::FilePath]),"\\",1) - 1),".xlsx","")</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Loop Over Playlist\Looping Over Files\Derived Column.Outputs[Derived Column Error Output]"
+                      description="Error Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Derived Column Error Output"
+                      synchronousInputId="Package\Loop Over Playlist\Looping Over Files\Derived Column.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Loop Over Playlist\Looping Over Files\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Loop Over Playlist\Looping Over Files\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Loop Over Playlist\Looping Over Files\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Loop Over Playlist\Looping Over Files\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Loop Over Playlist\Looping Over Files\OLE DB Destination"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB Destination"
+                  name="OLE DB Destination"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[dbo].[PlayList]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">0</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Loop Over Playlist\Looping Over Files\OLE DB Destination.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[Playlist Con]"
+                      connectionManagerRefId="Package.ConnectionManagers[Playlist Con]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Loop Over Playlist\Looping Over Files\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Loop Over Playlist\Looping Over Files\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Artist]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="Artist"
+                          externalMetadataColumnId="Package\Loop Over Playlist\Looping Over Files\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Artist]"
+                          lineageId="Package\Loop Over Playlist\Looping Over Files\Current Source.Outputs[Excel Source Output].Columns[Artist]" />
+                        <inputColumn
+                          refId="Package\Loop Over Playlist\Looping Over Files\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Song]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="Song"
+                          externalMetadataColumnId="Package\Loop Over Playlist\Looping Over Files\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Song]"
+                          lineageId="Package\Loop Over Playlist\Looping Over Files\Current Source.Outputs[Excel Source Output].Columns[Song]" />
+                        <inputColumn
+                          refId="Package\Loop Over Playlist\Looping Over Files\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[TargetMarket]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="TargetMarket"
+                          externalMetadataColumnId="Package\Loop Over Playlist\Looping Over Files\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TargetMarket]"
+                          lineageId="Package\Loop Over Playlist\Looping Over Files\Derived Column.Outputs[Derived Column Output].Columns[TargetMarket]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Loop Over Playlist\Looping Over Files\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Artist]"
+                          dataType="wstr"
+                          length="255"
+                          name="Artist" />
+                        <externalMetadataColumn
+                          refId="Package\Loop Over Playlist\Looping Over Files\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Song]"
+                          dataType="wstr"
+                          length="255"
+                          name="Song" />
+                        <externalMetadataColumn
+                          refId="Package\Loop Over Playlist\Looping Over Files\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TargetMarket]"
+                          dataType="nText"
+                          name="TargetMarket" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Loop Over Playlist\Looping Over Files\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Destination Error Output"
+                      synchronousInputId="Package\Loop Over Playlist\Looping Over Files\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Loop Over Playlist\Looping Over Files\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Loop Over Playlist\Looping Over Files\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Loop Over Playlist\Looping Over Files\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Loop Over Playlist\Looping Over Files\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\Loop Over Playlist\Looping Over Files.Paths[Derived Column Output]"
+                  endId="Package\Loop Over Playlist\Looping Over Files\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  name="Derived Column Output"
+                  startId="Package\Loop Over Playlist\Looping Over Files\Derived Column.Outputs[Derived Column Output]" />
+                <path
+                  refId="Package\Loop Over Playlist\Looping Over Files.Paths[Excel Source Output]"
+                  endId="Package\Loop Over Playlist\Looping Over Files\Derived Column.Inputs[Derived Column Input]"
+                  name="Excel Source Output"
+                  startId="Package\Loop Over Playlist\Looping Over Files\Current Source.Outputs[Excel Source Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:ForEachVariableMappings>
+        <DTS:ForEachVariableMapping
+          DTS:CreationName=""
+          DTS:DTSID="{57FCCD0C-15FF-45BD-BEC0-523E10DF0DB6}"
+          DTS:ObjectName="{57FCCD0C-15FF-45BD-BEC0-523E10DF0DB6}"
+          DTS:ValueIndex="0"
+          DTS:VariableName="User::FilePath" />
+      </DTS:ForEachVariableMappings>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Loop Over Trials (Row Wise)"
+      DTS:CreationName="STOCK:FOREACHLOOP"
+      DTS:Description="Foreach Loop Container"
+      DTS:DTSID="{4388C93F-1014-474D-AB8F-0993398AAAEA}"
+      DTS:ExecutableType="STOCK:FOREACHLOOP"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Loop Over Trials (Row Wise)">
+      <DTS:ForEachEnumerator
+        DTS:CreationName="Microsoft.ForEachADOEnumerator"
+        DTS:DTSID="{56941A23-1F80-46A5-A2A3-6E96214E7942}"
+        DTS:ObjectName="{56941A23-1F80-46A5-A2A3-6E96214E7942}">
+        <DTS:ObjectData>
+          <FEEADO
+            EnumType="EnumerateRowsInFirstTable"
+            VarName="User::Letters" />
+        </DTS:ObjectData>
+      </DTS:ForEachEnumerator>
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Loop Over Trials (Row Wise)\Looping Over Trials"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{957CAC69-C14E-4A1A-B9A6-7823E8531EAD}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Looping Over Trials"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\Loop Over Trials (Row Wise)\Looping Over Trials\Bush Tucker Data"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB Destination"
+                  name="Bush Tucker Data"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[dbo].[BushtuckerData]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">3</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Loop Over Trials (Row Wise)\Looping Over Trials\Bush Tucker Data.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[Bush Trucker Data Con]"
+                      connectionManagerRefId="Package.ConnectionManagers[Bush Trucker Data Con]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Loop Over Trials (Row Wise)\Looping Over Trials\Bush Tucker Data.Inputs[OLE DB Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Loop Over Trials (Row Wise)\Looping Over Trials\Bush Tucker Data.Inputs[OLE DB Destination Input].Columns[Item id]"
+                          cachedDataType="r8"
+                          cachedName="Item id"
+                          externalMetadataColumnId="Package\Loop Over Trials (Row Wise)\Looping Over Trials\Bush Tucker Data.Inputs[OLE DB Destination Input].ExternalColumns[ItemId]"
+                          lineageId="Package\Loop Over Trials (Row Wise)\Looping Over Trials\Current Source.Outputs[Excel Source Output].Columns[Item id]" />
+                        <inputColumn
+                          refId="Package\Loop Over Trials (Row Wise)\Looping Over Trials\Bush Tucker Data.Inputs[OLE DB Destination Input].Columns[Item name]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="Item name"
+                          externalMetadataColumnId="Package\Loop Over Trials (Row Wise)\Looping Over Trials\Bush Tucker Data.Inputs[OLE DB Destination Input].ExternalColumns[ItemName]"
+                          lineageId="Package\Loop Over Trials (Row Wise)\Looping Over Trials\Current Source.Outputs[Excel Source Output].Columns[Item name]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Loop Over Trials (Row Wise)\Looping Over Trials\Bush Tucker Data.Inputs[OLE DB Destination Input].ExternalColumns[ItemId]"
+                          dataType="i4"
+                          name="ItemId" />
+                        <externalMetadataColumn
+                          refId="Package\Loop Over Trials (Row Wise)\Looping Over Trials\Bush Tucker Data.Inputs[OLE DB Destination Input].ExternalColumns[ItemName]"
+                          dataType="wstr"
+                          length="255"
+                          name="ItemName" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Loop Over Trials (Row Wise)\Looping Over Trials\Bush Tucker Data.Outputs[OLE DB Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Destination Error Output"
+                      synchronousInputId="Package\Loop Over Trials (Row Wise)\Looping Over Trials\Bush Tucker Data.Inputs[OLE DB Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Loop Over Trials (Row Wise)\Looping Over Trials\Bush Tucker Data.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Loop Over Trials (Row Wise)\Looping Over Trials\Bush Tucker Data.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Loop Over Trials (Row Wise)\Looping Over Trials\Bush Tucker Data.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Loop Over Trials (Row Wise)\Looping Over Trials\Bush Tucker Data.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Loop Over Trials (Row Wise)\Looping Over Trials\Current Source"
+                  componentClassID="Microsoft.ExcelSource"
+                  contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Excel Source"
+                  name="Current Source"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">Meals$</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                    <property
+                      dataType="System.String"
+                      description="The variable that contains the SQL command to be executed."
+                      name="SqlCommandVariable"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">0</property>
+                    <property
+                      dataType="System.String"
+                      description="The mapping from parameters in the SQL command to variables."
+                      name="ParameterMapping"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Loop Over Trials (Row Wise)\Looping Over Trials\Current Source.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[Trails Data Con]"
+                      connectionManagerRefId="Package.ConnectionManagers[Trails Data Con]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Loop Over Trials (Row Wise)\Looping Over Trials\Current Source.Outputs[Excel Source Output]"
+                      name="Excel Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Loop Over Trials (Row Wise)\Looping Over Trials\Current Source.Outputs[Excel Source Output].Columns[Item id]"
+                          dataType="r8"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Loop Over Trials (Row Wise)\Looping Over Trials\Current Source.Outputs[Excel Source Output].ExternalColumns[Item id]"
+                          lineageId="Package\Loop Over Trials (Row Wise)\Looping Over Trials\Current Source.Outputs[Excel Source Output].Columns[Item id]"
+                          name="Item id"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Loop Over Trials (Row Wise)\Looping Over Trials\Current Source.Outputs[Excel Source Output].Columns[Item name]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Loop Over Trials (Row Wise)\Looping Over Trials\Current Source.Outputs[Excel Source Output].ExternalColumns[Item name]"
+                          length="255"
+                          lineageId="Package\Loop Over Trials (Row Wise)\Looping Over Trials\Current Source.Outputs[Excel Source Output].Columns[Item name]"
+                          name="Item name"
+                          truncationRowDisposition="FailComponent" />
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Loop Over Trials (Row Wise)\Looping Over Trials\Current Source.Outputs[Excel Source Output].ExternalColumns[Item id]"
+                          dataType="r8"
+                          name="Item id" />
+                        <externalMetadataColumn
+                          refId="Package\Loop Over Trials (Row Wise)\Looping Over Trials\Current Source.Outputs[Excel Source Output].ExternalColumns[Item name]"
+                          dataType="wstr"
+                          length="255"
+                          name="Item name" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Loop Over Trials (Row Wise)\Looping Over Trials\Current Source.Outputs[Excel Source Error Output]"
+                      isErrorOut="true"
+                      name="Excel Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Loop Over Trials (Row Wise)\Looping Over Trials\Current Source.Outputs[Excel Source Error Output].Columns[Item id]"
+                          dataType="r8"
+                          lineageId="Package\Loop Over Trials (Row Wise)\Looping Over Trials\Current Source.Outputs[Excel Source Error Output].Columns[Item id]"
+                          name="Item id" />
+                        <outputColumn
+                          refId="Package\Loop Over Trials (Row Wise)\Looping Over Trials\Current Source.Outputs[Excel Source Error Output].Columns[Item name]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Loop Over Trials (Row Wise)\Looping Over Trials\Current Source.Outputs[Excel Source Error Output].Columns[Item name]"
+                          name="Item name" />
+                        <outputColumn
+                          refId="Package\Loop Over Trials (Row Wise)\Looping Over Trials\Current Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Loop Over Trials (Row Wise)\Looping Over Trials\Current Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Loop Over Trials (Row Wise)\Looping Over Trials\Current Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Loop Over Trials (Row Wise)\Looping Over Trials\Current Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\Loop Over Trials (Row Wise)\Looping Over Trials.Paths[Excel Source Output]"
+                  endId="Package\Loop Over Trials (Row Wise)\Looping Over Trials\Bush Tucker Data.Inputs[OLE DB Destination Input]"
+                  name="Excel Source Output"
+                  startId="Package\Loop Over Trials (Row Wise)\Looping Over Trials\Current Source.Outputs[Excel Source Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:ForEachVariableMappings>
+        <DTS:ForEachVariableMapping
+          DTS:CreationName=""
+          DTS:DTSID="{169540BF-B352-40A5-9A7F-A4F907BE38A2}"
+          DTS:ObjectName="{169540BF-B352-40A5-9A7F-A4F907BE38A2}"
+          DTS:ValueIndex="0"
+          DTS:VariableName="User::Letter" />
+      </DTS:ForEachVariableMappings>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SELECT ImportLetter FROM BushtuckerImports"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{38FCCC7E-5B05-42FE-ABBC-D4DA3544A7CD}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SELECT ImportLetter FROM BushtuckerImports"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="3">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{01E23587-C630-4E5B-9C02-C1AC276A5162}"
+          SQLTask:SqlStatementSource="SELECT ImportLetter FROM BushtuckerImports"
+          SQLTask:ResultType="ResultSetType_Rowset" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="0"
+            SQLTask:DtsVariableName="User::Letters" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\TRUNCATE TABLE AdoShopping"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{1c94649e-348b-4439-abfb-9d5c83628eea}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="TRUNCATE TABLE AdoShopping"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{28CE5E78-546C-4319-BF06-0D5005C14DEC}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE AdoShopping" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\TRUNCATE TABLE BigBangEpisodesMerged"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{FCAE641E-2AE6-4F85-99E5-FCB027A61EED}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="TRUNCATE TABLE BigBangEpisodesMerged"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{1F6F711E-A1C4-49A3-80CE-5F4FC541F221}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE BigBangEpisodesMerged" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\TRUNCATE TABLE BushtuckerData"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{32ED0FB8-EEFE-47B4-A800-1F15A8F019C5}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="TRUNCATE TABLE BushtuckerData"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="3">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{07268D69-40C4-4CD8-9B22-E173292BC95C}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE BushtuckerData" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\TRUNCATE TABLE PLAYLIST"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{5EF07409-15CE-4435-9319-7DA345EFFD13}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="TRUNCATE TABLE PLAYLIST"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="2">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{99E974DA-9164-4AB1-8A2D-4FE02C498D8F}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE PLAYLIST" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{093E79AC-416C-465C-9BB6-7D97EC441672}"
+      DTS:From="Package\TRUNCATE TABLE PLAYLIST"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Loop Over Playlist" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{A6C9370E-BB6F-471D-82F8-01740B4C4F2F}"
+      DTS:From="Package\TRUNCATE TABLE BigBangEpisodesMerged"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Loop Over Big Bang Episodes" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{11DA47BA-2788-4056-9DCA-DA6E67C374CD}"
+      DTS:From="Package\TRUNCATE TABLE BushtuckerData"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\SELECT ImportLetter FROM BushtuckerImports" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{918B336B-DB6D-42F0-86C9-F5CE9648937A}"
+      DTS:From="Package\SELECT ImportLetter FROM BushtuckerImports"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 3"
+      DTS:To="Package\Loop Over Trials (Row Wise)" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 4]"
+      DTS:CreationName=""
+      DTS:DTSID="{6E4B4D91-A010-4ABA-ADF4-EA2EED7E03D5}"
+      DTS:From="Package\TRUNCATE TABLE AdoShopping"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 4"
+      DTS:To="Package\Loop Over Excel Sheets" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="165.6,41.6"
+          Id="Package\Loop Over Big Bang Episodes\Looping Over Files"
+          TopLeft="26.2000074080061,18.0588255778318" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="212,83.2"
+          Size="212,126.4"
+          Id="Package\Loop Over Big Bang Episodes"
+          TopLeft="309.285719552819,101.705883779328" />
+        <NodeLayout
+          Size="203.2,41.6"
+          Id="Package\Loop Over Excel Sheets\Looping Over Excel Sheets"
+          TopLeft="21.5428736132022,28.2941202317143" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="245.6,124.8"
+          Size="245.6,168"
+          Id="Package\Loop Over Excel Sheets"
+          TopLeft="945.714301819705,113.176472175493" />
+        <NodeLayout
+          Size="165.6,41.6"
+          Id="Package\Loop Over Playlist\Looping Over Files"
+          TopLeft="17.371429739193,12.8117681056158" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="204.8,73.6"
+          Size="204.8,116.8"
+          Id="Package\Loop Over Playlist"
+          TopLeft="46.4285722192453,108.588236817027" />
+        <NodeLayout
+          Size="169.6,41.6"
+          Id="Package\Loop Over Trials (Row Wise)\Looping Over Trials"
+          TopLeft="11.8285847362208,15.3058845086081" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="236.8,112"
+          Size="236.8,155.2"
+          Id="Package\Loop Over Trials (Row Wise)"
+          TopLeft="597.14286731214,189.647061483258" />
+        <NodeLayout
+          Size="300.8,41.6"
+          Id="Package\SELECT ImportLetter FROM BushtuckerImports"
+          TopLeft="584.071437402648,106.029412333116" />
+        <NodeLayout
+          Size="228.8,41.6"
+          Id="Package\TRUNCATE TABLE AdoShopping"
+          TopLeft="935.000015922956,28.2941180438731" />
+        <NodeLayout
+          Size="281.6,41.6"
+          Id="Package\TRUNCATE TABLE BigBangEpisodesMerged"
+          TopLeft="279.285719041922,31.3529416161838" />
+        <NodeLayout
+          Size="241.6,41.6"
+          Id="Package\TRUNCATE TABLE BushtuckerData"
+          TopLeft="582.642866460645,33.9705882138448" />
+        <NodeLayout
+          Size="212.8,41.6"
+          Id="Package\TRUNCATE TABLE PLAYLIST"
+          TopLeft="46.9285721340958,27.6764708992519" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="151.078572176671,69.2764708992519">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,39.3117659177749"
+              Start="0,0"
+              End="0,31.8117659177749">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.8117659177749" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="417.68571929737,72.9529416161838">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,28.7529421631441"
+              Start="0,0"
+              End="0,21.2529421631441">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.2529421631441" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="703.442866460645,75.5705882138447">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="31.0285709420029,30.4588241192709"
+              Start="0,0"
+              End="31.0285709420029,22.9588241192709">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,11.2294120596355" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,11.2294120596355"
+                    Point2="0,15.2294120596355"
+                    Point3="4,15.2294120596355" />
+                  <mssgle:LineSegment
+                    End="27.0285709420029,15.2294120596355" />
+                  <mssgle:CubicBezierSegment
+                    Point1="27.0285709420029,15.2294120596355"
+                    Point2="31.0285709420029,15.2294120596355"
+                    Point3="31.0285709420029,19.2294120596355" />
+                  <mssgle:LineSegment
+                    End="31.0285709420029,22.9588241192709" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="734.471437402648,147.629412333116">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-18.9285700905079,42.0176491501422"
+              Start="0,0"
+              End="-18.9285700905079,34.5176491501422">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.0088245750711" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,17.0088245750711"
+                    Point2="0,21.0088245750711"
+                    Point3="-4,21.0088245750711" />
+                  <mssgle:LineSegment
+                    End="-14.9285700905079,21.0088245750711" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-14.9285700905079,21.0088245750711"
+                    Point2="-18.9285700905079,21.0088245750711"
+                    Point3="-18.9285700905079,25.0088245750711" />
+                  <mssgle:LineSegment
+                    End="-18.9285700905079,34.5176491501422" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 4]"
+          TopLeft="1049.40001592296,69.8941180438731">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="19.1142858967489,43.2823541316199"
+              Start="0,0"
+              End="19.1142858967489,35.7823541316199">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.64117706581" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,17.64117706581"
+                    Point2="0,21.64117706581"
+                    Point3="4,21.64117706581" />
+                  <mssgle:LineSegment
+                    End="15.1142858967489,21.64117706581" />
+                  <mssgle:CubicBezierSegment
+                    Point1="15.1142858967489,21.64117706581"
+                    Point2="19.1142858967489,21.64117706581"
+                    Point3="19.1142858967489,25.64117706581" />
+                  <mssgle:LineSegment
+                    End="19.1142858967489,35.7823541316199" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Loop Over Big Bang Episodes\Looping Over Files">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="148.8,41.6"
+          Id="Package\Loop Over Big Bang Episodes\Looping Over Files\Current Source"
+          TopLeft="39.5,5.5" />
+        <NodeLayout
+          Size="214.4,41.6"
+          Id="Package\Loop Over Big Bang Episodes\Looping Over Files\Sorting By Titles (Ascending)"
+          TopLeft="67,106" />
+        <NodeLayout
+          Size="192.8,41.6"
+          Id="Package\Loop Over Big Bang Episodes\Looping Over Files\BigBangMergedEpisodes"
+          TopLeft="45,204" />
+        <EdgeLayout
+          Id="Package\Loop Over Big Bang Episodes\Looping Over Files.Paths[Sort Output]"
+          TopLeft="174.2,147.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-32.8,56.4"
+              Start="0,0"
+              End="-32.8,48.9">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.2" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,24.2"
+                    Point2="0,28.2"
+                    Point3="-4,28.2" />
+                  <mssgle:LineSegment
+                    End="-28.8,28.2" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-28.8,28.2"
+                    Point2="-32.8,28.2"
+                    Point3="-32.8,32.2" />
+                  <mssgle:LineSegment
+                    End="-32.8,48.9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Loop Over Big Bang Episodes\Looping Over Files.Paths[Flat File Source Output]"
+          TopLeft="113.9,47.1">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="60.3,58.9"
+              Start="0,0"
+              End="60.3,51.4">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.45" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,25.45"
+                    Point2="0,29.45"
+                    Point3="4,29.45" />
+                  <mssgle:LineSegment
+                    End="56.3,29.45" />
+                  <mssgle:CubicBezierSegment
+                    Point1="56.3,29.45"
+                    Point2="60.3,29.45"
+                    Point3="60.3,33.45" />
+                  <mssgle:LineSegment
+                    End="60.3,51.4" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Loop Over Big Bang Episodes\Looping Over Files\BigBangMergedEpisodes">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Loop Over Excel Sheets\Looping Over Excel Sheets">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="110.4,41.6"
+          Id="Package\Loop Over Excel Sheets\Looping Over Excel Sheets\Source"
+          TopLeft="129,35" />
+        <NodeLayout
+          Size="131.2,41.6"
+          Id="Package\Loop Over Excel Sheets\Looping Over Excel Sheets\Destination"
+          TopLeft="119,172" />
+        <EdgeLayout
+          Id="Package\Loop Over Excel Sheets\Looping Over Excel Sheets.Paths[Excel Source Output]"
+          TopLeft="184.4,76.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,95.4"
+              Start="0,0"
+              End="0,87.9">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,87.9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Loop Over Excel Sheets\Looping Over Excel Sheets\Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Loop Over Excel Sheets\Looping Over Excel Sheets\Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Loop Over Playlist\Looping Over Files">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\Loop Over Playlist\Looping Over Files\OLE DB Destination"
+          TopLeft="52.1428580308447,169.000002370161" />
+        <NodeLayout
+          Size="148.8,41.6"
+          Id="Package\Loop Over Playlist\Looping Over Files\Current Source"
+          TopLeft="51.4285723043948,19.882353220019" />
+        <NodeLayout
+          Size="152.8,41.6"
+          Id="Package\Loop Over Playlist\Looping Over Files\Derived Column"
+          TopLeft="57.1428581159943,95.5882366347066" />
+        <EdgeLayout
+          Id="Package\Loop Over Playlist\Looping Over Files.Paths[Excel Source Output]"
+          TopLeft="129.685715210195,61.482353220019">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,34.1058834146876"
+              Start="0,0"
+              End="0,26.6058834146876">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.6058834146876" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Loop Over Playlist\Looping Over Files.Paths[Derived Column Output]"
+          TopLeft="135.44285807342,137.188236634707">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,31.8117657354544"
+              Start="0,0"
+              End="0,24.3117657354544">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.3117657354544" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Loop Over Playlist\Looping Over Files\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Loop Over Playlist\Looping Over Files\Current Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Loop Over Trials (Row Wise)\Looping Over Trials">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="148.8,41.6"
+          Id="Package\Loop Over Trials (Row Wise)\Looping Over Trials\Current Source"
+          TopLeft="85.5,22.5" />
+        <NodeLayout
+          Size="161.6,41.6"
+          Id="Package\Loop Over Trials (Row Wise)\Looping Over Trials\Bush Tucker Data"
+          TopLeft="80,133" />
+        <EdgeLayout
+          Id="Package\Loop Over Trials (Row Wise)\Looping Over Trials.Paths[Excel Source Output]"
+          TopLeft="160.35,64.1">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,68.9"
+              Start="0,0"
+              End="0,61.4">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,61.4" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Loop Over Trials (Row Wise)\Looping Over Trials\Bush Tucker Data">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Loop Over Trials (Row Wise)\Looping Over Trials\Current Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

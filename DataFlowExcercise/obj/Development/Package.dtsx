@@ -1,0 +1,2666 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="10/5/2021 3:12:41 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="MSI"
+  DTS:CreatorName="MSI\1prab"
+  DTS:DTSID="{B911F9A1-BBCA-4E5D-AFDD-CC75277D28DD}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.170"
+  DTS:LocaleID="16393"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="7"
+  DTS:VersionGUID="{AC3D5B47-30FB-475F-AE00-8B19F7A1D917}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Big bang theory season 10 Con]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{42344A1E-A5B0-4B73-972F-B22F1D3CB713}"
+      DTS:ObjectName="Big bang theory season 10 Con">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="16393"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\1prab\Documents\Downloads\SSIS Excel\Big bang theory season 10.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Title"
+              DTS:DTSID="{758A6D7C-8CD9-4DFB-A35D-E49AD9313EC9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Episode number"
+              DTS:DTSID="{B6A48058-584E-4FA4-98D0-B772FB660FF8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Series number"
+              DTS:DTSID="{5843F03A-6119-4CEB-B4EA-A68651ED8980}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="First aired"
+              DTS:DTSID="{9C7CE48D-4805-4B55-A038-939A04C748A4}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Big bang theory season 7 Con]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{E3F5D58E-81E7-4541-ACF5-FE8D3180C87F}"
+      DTS:ObjectName="Big bang theory season 7 Con">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="16393"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\1prab\Documents\Downloads\SSIS Excel\Big bang theory season 7.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Title"
+              DTS:DTSID="{EDEB7012-427E-4D2B-B5B1-F50B32CCC99E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Episode number"
+              DTS:DTSID="{346B4130-D6FD-4E66-B7C7-AD1A06DBFFFA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Series number"
+              DTS:DTSID="{A8E4130F-82E2-4AA3-91BF-F4E259464079}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="First aired"
+              DTS:DTSID="{C6BB2846-6475-4455-AE7F-90B07AAD0735}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Big bang theory season 8 Con]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{364C4450-9BE3-41EF-B344-3A3B4CCA4C4A}"
+      DTS:ObjectName="Big bang theory season 8 Con">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="16393"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\1prab\Documents\Downloads\SSIS Excel\Big bang theory season 8.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Title"
+              DTS:DTSID="{E3724302-F1A2-47CE-93B4-5502029547C8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Episode number"
+              DTS:DTSID="{86EE8243-377D-4BC5-B22B-C297A91AD0BA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Series number"
+              DTS:DTSID="{37E51D5A-EC7D-45EF-B9A6-0C373B1149EF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="First aired"
+              DTS:DTSID="{45FD2065-4A2F-4177-A100-351157AE43A0}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Big bang theory season 9 Con]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{F5F9AB26-A7BD-40A1-A5C5-AB2BD7D0FD88}"
+      DTS:ObjectName="Big bang theory season 9 Con">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="16393"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\1prab\Documents\Downloads\SSIS Excel\Big bang theory season 9.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Title"
+              DTS:DTSID="{F1073B4F-6FCD-42CE-A0DD-D37C096A2FF2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Episode number"
+              DTS:DTSID="{BC839435-6252-45BF-80AE-155AF2C4710D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Series number"
+              DTS:DTSID="{E94A6D4D-F937-42FC-BA68-EDAE542AA9A0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="First aired"
+              DTS:DTSID="{747A7E39-0952-4F65-BBAC-CBE221040B09}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Food Lyrics Con]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{871D83EC-B9AE-4079-BEDF-C12750F014CE}"
+      DTS:ObjectName="Excel Food Lyrics Con">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\1prab\Documents\Downloads\SSIS Excel\Songs for foodies.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{31CBBB4B-4B63-4B3A-8214-3C32C23F859A}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="16393"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\1prab\Documents\Downloads\SSIS Excel\GrandPrixEventsFromSQL.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="GrandPrixId"
+              DTS:DTSID="{FB3A25AE-1983-4424-844D-046886990001}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Round"
+              DTS:DTSID="{19A11698-FA53-4761-8FD5-71C75E39BF36}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="VenueName"
+              DTS:DTSID="{DC2F2ACF-13F1-493A-8D06-25A82101F32C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Season"
+              DTS:DTSID="{9E00D518-0F75-44AF-A90C-4D1534D643EE}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SQL Big Bang Episodes Con]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{7AB5CDD5-CD38-4615-BF3F-C32441383186}"
+      DTS:ObjectName="SQL Big Bang Episodes Con">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=MSI\SQLEXPRESS;User ID=sa;Initial Catalog=Dino_DB;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATAbnV6TfFEaLlSQVwvMrVwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAo5aVFJtdNdmnJpIssUd8miJr8LnvOBcsHd9GCzEpRFwAAAAAOgAAAAAIAACAAAADc4S6hQ2wZepgxiTLQpBDymvZ7llxaNSxttoLaWAimgRAAAACMcy/H+EXOcJA9+KwTAo0FQAAAAF97jCHvmLIG9rGJpjKTeWIXEmrstSMl68ng85SUGEjJs50aFdDSQt996FOXwoeYZVWE8Ytip8fQlZA+yDxn0YY</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SQL Big Bang Pre State Con]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{D970FEA7-48D2-47F1-A4D5-FD6524C342D9}"
+      DTS:ObjectName="SQL Big Bang Pre State Con">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=MSI\SQLEXPRESS;User ID=sa;Initial Catalog=Dino_DB;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATAbnV6TfFEaLlSQVwvMrVwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABZoA2kU+exkOblr9BSBpWEqixI+XNc3/UVFuxNyLFnzwAAAAAOgAAAAAIAACAAAADc2g5vh8g2WppSg6s/X880QhTGl15Yitaz1MCMQu4DmRAAAADz/H+4tqfGM4e+5qz2zFe0QAAAAOhkgJm7ri5xGek788D9rjLM7SAGSi4ut9kz/FM7WbG12XuCLYDPRASTSk2HTa5RycroRPZKtJmV+bz5L/2ChA4</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SQL Food Lyrics Con]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{4FFE68E1-A80E-4E2D-855B-303CAFD5173E}"
+      DTS:ObjectName="SQL Food Lyrics Con">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=MSI\SQLEXPRESS;User ID=sa;Initial Catalog=Dino_DB;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATAbnV6TfFEaLlSQVwvMrVwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABM298xrkGRyJC4qfrLnr9MbrJj6JiM3GRHPyDgb9vNbQAAAAAOgAAAAAIAACAAAAAE5Bmn0bbQwNmlfBBMfML27RkZKxn2OBB/e1jji0pbuhAAAAAWYb+AgK8hR35O9T62NgrHQAAAAPvpZF4tKADumOSVgHaMGYp1K8rbVShwrc6O5ufE76fMPJTKtStH77yq/Y3fK3xg58eM5OfSDaIloXVrWGSXGGE</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SQL Food Lyrics Pre State Con]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{6F0639A8-8E79-407E-B0F1-4A920D0DFDA9}"
+      DTS:ObjectName="SQL Food Lyrics Pre State Con">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=MSI\SQLEXPRESS;User ID=sa;Initial Catalog=Dino_DB;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATAbnV6TfFEaLlSQVwvMrVwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADvLpJlm1/vseRXpjdUwtZWRyjT9XdWOmftKTycL6DMlgAAAAAOgAAAAAIAACAAAABrAbfbbJUF5TW2KfgED+iB8FZxM3LTiOKbeitpipinHxAAAAAKvtuV6o2e9fJZ4OM5eWQaQAAAAEc1UTe3ScUCBptXNNOVm7k5ljNgGaB6zCUZNmSp2tSwVJAXayMDljQ3WtbYrFe/nja5UKGC3LUd9ggXVmT/M+0</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SQL Grand Prix Events Con]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{E619BE76-22B7-4DBF-9D86-D3DA6AAEDC91}"
+      DTS:ObjectName="SQL Grand Prix Events Con">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=MSI\SQLEXPRESS;User ID=sa;Initial Catalog=Dino_DB;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATAbnV6TfFEaLlSQVwvMrVwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABuAcBhyMq20gLhpdtt3txDHoPe44pCDkNodpgCq0RUOwAAAAAOgAAAAAIAACAAAAA8HiH4gGxDNTiQsv2w0T80ZC1ZDZuaSA9+8tL1CJqhkhAAAAA1o/lIcNv3s4k7IO5ULtA6QAAAAC/3NmBuRQ+YlUEVFdkMDY2WKzBzk8eczAso0nVckzD8sdlW5NRJGVoFqhCmJ3zziQ+Cm3lZtSADeAFVYnsIpMs</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Big Bang Data Task"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{256796F0-45B1-4A57-B24E-E8055EE9B860}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Big Bang Data Task"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Big Bang Data Task\Big bang theory season 10"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="16393"
+              name="Big bang theory season 10"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Big Bang Data Task\Big bang theory season 10.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Big bang theory season 10 Con]"
+                  connectionManagerRefId="Package.ConnectionManagers[Big bang theory season 10 Con]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Big Bang Data Task\Big bang theory season 10.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Big Bang Data Task\Big bang theory season 10.Outputs[Flat File Source Output].Columns[Title]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Big Bang Data Task\Big bang theory season 10.Outputs[Flat File Source Output].ExternalColumns[Title]"
+                      length="50"
+                      lineageId="Package\Big Bang Data Task\Big bang theory season 10.Outputs[Flat File Source Output].Columns[Title]"
+                      name="Title"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Big Bang Data Task\Big bang theory season 10.Outputs[Flat File Source Output].Columns[Episode number]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Big Bang Data Task\Big bang theory season 10.Outputs[Flat File Source Output].ExternalColumns[Episode number]"
+                      length="50"
+                      lineageId="Package\Big Bang Data Task\Big bang theory season 10.Outputs[Flat File Source Output].Columns[Episode number]"
+                      name="Episode number"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Big Bang Data Task\Big bang theory season 10.Outputs[Flat File Source Output].Columns[Series number]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Big Bang Data Task\Big bang theory season 10.Outputs[Flat File Source Output].ExternalColumns[Series number]"
+                      length="50"
+                      lineageId="Package\Big Bang Data Task\Big bang theory season 10.Outputs[Flat File Source Output].Columns[Series number]"
+                      name="Series number"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Big Bang Data Task\Big bang theory season 10.Outputs[Flat File Source Output].Columns[First aired]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Big Bang Data Task\Big bang theory season 10.Outputs[Flat File Source Output].ExternalColumns[First aired]"
+                      length="50"
+                      lineageId="Package\Big Bang Data Task\Big bang theory season 10.Outputs[Flat File Source Output].Columns[First aired]"
+                      name="First aired"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Big Bang Data Task\Big bang theory season 10.Outputs[Flat File Source Output].ExternalColumns[Title]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Title" />
+                    <externalMetadataColumn
+                      refId="Package\Big Bang Data Task\Big bang theory season 10.Outputs[Flat File Source Output].ExternalColumns[Episode number]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Episode number" />
+                    <externalMetadataColumn
+                      refId="Package\Big Bang Data Task\Big bang theory season 10.Outputs[Flat File Source Output].ExternalColumns[Series number]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Series number" />
+                    <externalMetadataColumn
+                      refId="Package\Big Bang Data Task\Big bang theory season 10.Outputs[Flat File Source Output].ExternalColumns[First aired]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="First aired" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Big Bang Data Task\Big bang theory season 10.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Big Bang Data Task\Big bang theory season 10.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Big Bang Data Task\Big bang theory season 10.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Big Bang Data Task\Big bang theory season 10.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Big Bang Data Task\Big bang theory season 10.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Big Bang Data Task\Big bang theory season 10.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Big Bang Data Task\Big bang theory season 10.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Big Bang Data Task\Big bang theory season 7"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="16393"
+              name="Big bang theory season 7"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Big Bang Data Task\Big bang theory season 7.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Big bang theory season 7 Con]"
+                  connectionManagerRefId="Package.ConnectionManagers[Big bang theory season 7 Con]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Big Bang Data Task\Big bang theory season 7.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Big Bang Data Task\Big bang theory season 7.Outputs[Flat File Source Output].Columns[Title]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Big Bang Data Task\Big bang theory season 7.Outputs[Flat File Source Output].ExternalColumns[Title]"
+                      length="50"
+                      lineageId="Package\Big Bang Data Task\Big bang theory season 7.Outputs[Flat File Source Output].Columns[Title]"
+                      name="Title"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Big Bang Data Task\Big bang theory season 7.Outputs[Flat File Source Output].Columns[Episode number]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Big Bang Data Task\Big bang theory season 7.Outputs[Flat File Source Output].ExternalColumns[Episode number]"
+                      length="50"
+                      lineageId="Package\Big Bang Data Task\Big bang theory season 7.Outputs[Flat File Source Output].Columns[Episode number]"
+                      name="Episode number"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Big Bang Data Task\Big bang theory season 7.Outputs[Flat File Source Output].Columns[Series number]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Big Bang Data Task\Big bang theory season 7.Outputs[Flat File Source Output].ExternalColumns[Series number]"
+                      length="50"
+                      lineageId="Package\Big Bang Data Task\Big bang theory season 7.Outputs[Flat File Source Output].Columns[Series number]"
+                      name="Series number"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Big Bang Data Task\Big bang theory season 7.Outputs[Flat File Source Output].Columns[First aired]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Big Bang Data Task\Big bang theory season 7.Outputs[Flat File Source Output].ExternalColumns[First aired]"
+                      length="50"
+                      lineageId="Package\Big Bang Data Task\Big bang theory season 7.Outputs[Flat File Source Output].Columns[First aired]"
+                      name="First aired"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Big Bang Data Task\Big bang theory season 7.Outputs[Flat File Source Output].ExternalColumns[Title]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Title" />
+                    <externalMetadataColumn
+                      refId="Package\Big Bang Data Task\Big bang theory season 7.Outputs[Flat File Source Output].ExternalColumns[Episode number]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Episode number" />
+                    <externalMetadataColumn
+                      refId="Package\Big Bang Data Task\Big bang theory season 7.Outputs[Flat File Source Output].ExternalColumns[Series number]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Series number" />
+                    <externalMetadataColumn
+                      refId="Package\Big Bang Data Task\Big bang theory season 7.Outputs[Flat File Source Output].ExternalColumns[First aired]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="First aired" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Big Bang Data Task\Big bang theory season 7.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Big Bang Data Task\Big bang theory season 7.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Big Bang Data Task\Big bang theory season 7.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Big Bang Data Task\Big bang theory season 7.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Big Bang Data Task\Big bang theory season 7.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Big Bang Data Task\Big bang theory season 7.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Big Bang Data Task\Big bang theory season 7.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Big Bang Data Task\Big bang theory season 8"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="16393"
+              name="Big bang theory season 8"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Big Bang Data Task\Big bang theory season 8.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Big bang theory season 8 Con]"
+                  connectionManagerRefId="Package.ConnectionManagers[Big bang theory season 8 Con]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Big Bang Data Task\Big bang theory season 8.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Big Bang Data Task\Big bang theory season 8.Outputs[Flat File Source Output].Columns[Title]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Big Bang Data Task\Big bang theory season 8.Outputs[Flat File Source Output].ExternalColumns[Title]"
+                      length="50"
+                      lineageId="Package\Big Bang Data Task\Big bang theory season 8.Outputs[Flat File Source Output].Columns[Title]"
+                      name="Title"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Big Bang Data Task\Big bang theory season 8.Outputs[Flat File Source Output].Columns[Episode number]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Big Bang Data Task\Big bang theory season 8.Outputs[Flat File Source Output].ExternalColumns[Episode number]"
+                      length="50"
+                      lineageId="Package\Big Bang Data Task\Big bang theory season 8.Outputs[Flat File Source Output].Columns[Episode number]"
+                      name="Episode number"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Big Bang Data Task\Big bang theory season 8.Outputs[Flat File Source Output].Columns[Series number]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Big Bang Data Task\Big bang theory season 8.Outputs[Flat File Source Output].ExternalColumns[Series number]"
+                      length="50"
+                      lineageId="Package\Big Bang Data Task\Big bang theory season 8.Outputs[Flat File Source Output].Columns[Series number]"
+                      name="Series number"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Big Bang Data Task\Big bang theory season 8.Outputs[Flat File Source Output].Columns[First aired]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Big Bang Data Task\Big bang theory season 8.Outputs[Flat File Source Output].ExternalColumns[First aired]"
+                      length="50"
+                      lineageId="Package\Big Bang Data Task\Big bang theory season 8.Outputs[Flat File Source Output].Columns[First aired]"
+                      name="First aired"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Big Bang Data Task\Big bang theory season 8.Outputs[Flat File Source Output].ExternalColumns[Title]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Title" />
+                    <externalMetadataColumn
+                      refId="Package\Big Bang Data Task\Big bang theory season 8.Outputs[Flat File Source Output].ExternalColumns[Episode number]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Episode number" />
+                    <externalMetadataColumn
+                      refId="Package\Big Bang Data Task\Big bang theory season 8.Outputs[Flat File Source Output].ExternalColumns[Series number]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Series number" />
+                    <externalMetadataColumn
+                      refId="Package\Big Bang Data Task\Big bang theory season 8.Outputs[Flat File Source Output].ExternalColumns[First aired]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="First aired" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Big Bang Data Task\Big bang theory season 8.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Big Bang Data Task\Big bang theory season 8.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Big Bang Data Task\Big bang theory season 8.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Big Bang Data Task\Big bang theory season 8.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Big Bang Data Task\Big bang theory season 8.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Big Bang Data Task\Big bang theory season 8.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Big Bang Data Task\Big bang theory season 8.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Big Bang Data Task\Big bang theory season 9"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="16393"
+              name="Big bang theory season 9"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Big Bang Data Task\Big bang theory season 9.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Big bang theory season 9 Con]"
+                  connectionManagerRefId="Package.ConnectionManagers[Big bang theory season 9 Con]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Big Bang Data Task\Big bang theory season 9.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Big Bang Data Task\Big bang theory season 9.Outputs[Flat File Source Output].Columns[Title]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Big Bang Data Task\Big bang theory season 9.Outputs[Flat File Source Output].ExternalColumns[Title]"
+                      length="50"
+                      lineageId="Package\Big Bang Data Task\Big bang theory season 9.Outputs[Flat File Source Output].Columns[Title]"
+                      name="Title"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Big Bang Data Task\Big bang theory season 9.Outputs[Flat File Source Output].Columns[Episode number]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Big Bang Data Task\Big bang theory season 9.Outputs[Flat File Source Output].ExternalColumns[Episode number]"
+                      length="50"
+                      lineageId="Package\Big Bang Data Task\Big bang theory season 9.Outputs[Flat File Source Output].Columns[Episode number]"
+                      name="Episode number"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Big Bang Data Task\Big bang theory season 9.Outputs[Flat File Source Output].Columns[Series number]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Big Bang Data Task\Big bang theory season 9.Outputs[Flat File Source Output].ExternalColumns[Series number]"
+                      length="50"
+                      lineageId="Package\Big Bang Data Task\Big bang theory season 9.Outputs[Flat File Source Output].Columns[Series number]"
+                      name="Series number"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Big Bang Data Task\Big bang theory season 9.Outputs[Flat File Source Output].Columns[First aired]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Big Bang Data Task\Big bang theory season 9.Outputs[Flat File Source Output].ExternalColumns[First aired]"
+                      length="50"
+                      lineageId="Package\Big Bang Data Task\Big bang theory season 9.Outputs[Flat File Source Output].Columns[First aired]"
+                      name="First aired"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Big Bang Data Task\Big bang theory season 9.Outputs[Flat File Source Output].ExternalColumns[Title]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Title" />
+                    <externalMetadataColumn
+                      refId="Package\Big Bang Data Task\Big bang theory season 9.Outputs[Flat File Source Output].ExternalColumns[Episode number]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Episode number" />
+                    <externalMetadataColumn
+                      refId="Package\Big Bang Data Task\Big bang theory season 9.Outputs[Flat File Source Output].ExternalColumns[Series number]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Series number" />
+                    <externalMetadataColumn
+                      refId="Package\Big Bang Data Task\Big bang theory season 9.Outputs[Flat File Source Output].ExternalColumns[First aired]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="First aired" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Big Bang Data Task\Big bang theory season 9.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Big Bang Data Task\Big bang theory season 9.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Big Bang Data Task\Big bang theory season 9.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Big Bang Data Task\Big bang theory season 9.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Big Bang Data Task\Big bang theory season 9.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Big Bang Data Task\Big bang theory season 9.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Big Bang Data Task\Big bang theory season 9.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Big Bang Data Task\SQL Big Bang Episodes Data"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="SQL Big Bang Episodes Data"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[BigBangEpisodes]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Big Bang Data Task\SQL Big Bang Episodes Data.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[SQL Big Bang Episodes Con]"
+                  connectionManagerRefId="Package.ConnectionManagers[SQL Big Bang Episodes Con]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Big Bang Data Task\SQL Big Bang Episodes Data.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Big Bang Data Task\SQL Big Bang Episodes Data.Inputs[OLE DB Destination Input].Columns[Title]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Title"
+                      externalMetadataColumnId="Package\Big Bang Data Task\SQL Big Bang Episodes Data.Inputs[OLE DB Destination Input].ExternalColumns[Title]"
+                      lineageId="Package\Big Bang Data Task\Union All.Outputs[Union All Output 1].Columns[Title]" />
+                    <inputColumn
+                      refId="Package\Big Bang Data Task\SQL Big Bang Episodes Data.Inputs[OLE DB Destination Input].Columns[Series number]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Series number"
+                      externalMetadataColumnId="Package\Big Bang Data Task\SQL Big Bang Episodes Data.Inputs[OLE DB Destination Input].ExternalColumns[SeasonNumber]"
+                      lineageId="Package\Big Bang Data Task\Union All.Outputs[Union All Output 1].Columns[Series number]" />
+                    <inputColumn
+                      refId="Package\Big Bang Data Task\SQL Big Bang Episodes Data.Inputs[OLE DB Destination Input].Columns[Episode number]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Episode number"
+                      externalMetadataColumnId="Package\Big Bang Data Task\SQL Big Bang Episodes Data.Inputs[OLE DB Destination Input].ExternalColumns[EpisodeNumber]"
+                      lineageId="Package\Big Bang Data Task\Union All.Outputs[Union All Output 1].Columns[Episode number]" />
+                    <inputColumn
+                      refId="Package\Big Bang Data Task\SQL Big Bang Episodes Data.Inputs[OLE DB Destination Input].Columns[First aired]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="First aired"
+                      externalMetadataColumnId="Package\Big Bang Data Task\SQL Big Bang Episodes Data.Inputs[OLE DB Destination Input].ExternalColumns[DateBroadcast]"
+                      lineageId="Package\Big Bang Data Task\Union All.Outputs[Union All Output 1].Columns[First aired]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Big Bang Data Task\SQL Big Bang Episodes Data.Inputs[OLE DB Destination Input].ExternalColumns[SeasonNumber]"
+                      dataType="i4"
+                      name="SeasonNumber" />
+                    <externalMetadataColumn
+                      refId="Package\Big Bang Data Task\SQL Big Bang Episodes Data.Inputs[OLE DB Destination Input].ExternalColumns[EpisodeNumber]"
+                      dataType="i4"
+                      name="EpisodeNumber" />
+                    <externalMetadataColumn
+                      refId="Package\Big Bang Data Task\SQL Big Bang Episodes Data.Inputs[OLE DB Destination Input].ExternalColumns[DateBroadcast]"
+                      dataType="dbDate"
+                      name="DateBroadcast" />
+                    <externalMetadataColumn
+                      refId="Package\Big Bang Data Task\SQL Big Bang Episodes Data.Inputs[OLE DB Destination Input].ExternalColumns[Title]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="Title" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Big Bang Data Task\SQL Big Bang Episodes Data.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Big Bang Data Task\SQL Big Bang Episodes Data.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Big Bang Data Task\SQL Big Bang Episodes Data.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Big Bang Data Task\SQL Big Bang Episodes Data.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Big Bang Data Task\SQL Big Bang Episodes Data.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Big Bang Data Task\SQL Big Bang Episodes Data.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Big Bang Data Task\Union All"
+              componentClassID="Microsoft.UnionAll"
+              contactInfo="Union All;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Combines rows from multiple data flows without sorting. For example, add rows back to a data flow after correction of errors. If sorting is important, we recommend using the Merge transformation."
+              name="Union All"
+              version="1">
+              <inputs>
+                <input
+                  refId="Package\Big Bang Data Task\Union All.Inputs[Union All Input 2]"
+                  hasSideEffects="true"
+                  name="Union All Input 2">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Big Bang Data Task\Union All.Inputs[Union All Input 2].Columns[Title]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Title"
+                      lineageId="Package\Big Bang Data Task\Big bang theory season 7.Outputs[Flat File Source Output].Columns[Title]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Big Bang Data Task\Union All.Outputs[Union All Output 1].Columns[Title]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Big Bang Data Task\Union All.Inputs[Union All Input 2].Columns[Episode number]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Episode number"
+                      lineageId="Package\Big Bang Data Task\Big bang theory season 7.Outputs[Flat File Source Output].Columns[Episode number]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Big Bang Data Task\Union All.Outputs[Union All Output 1].Columns[Episode number]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Big Bang Data Task\Union All.Inputs[Union All Input 2].Columns[Series number]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Series number"
+                      lineageId="Package\Big Bang Data Task\Big bang theory season 7.Outputs[Flat File Source Output].Columns[Series number]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Big Bang Data Task\Union All.Outputs[Union All Output 1].Columns[Series number]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Big Bang Data Task\Union All.Inputs[Union All Input 2].Columns[First aired]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="First aired"
+                      lineageId="Package\Big Bang Data Task\Big bang theory season 7.Outputs[Flat File Source Output].Columns[First aired]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Big Bang Data Task\Union All.Outputs[Union All Output 1].Columns[First aired]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Big Bang Data Task\Union All.Inputs[Union All Input 1]"
+                  hasSideEffects="true"
+                  name="Union All Input 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Big Bang Data Task\Union All.Inputs[Union All Input 1].Columns[Title]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Title"
+                      lineageId="Package\Big Bang Data Task\Big bang theory season 8.Outputs[Flat File Source Output].Columns[Title]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Big Bang Data Task\Union All.Outputs[Union All Output 1].Columns[Title]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Big Bang Data Task\Union All.Inputs[Union All Input 1].Columns[Episode number]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Episode number"
+                      lineageId="Package\Big Bang Data Task\Big bang theory season 8.Outputs[Flat File Source Output].Columns[Episode number]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Big Bang Data Task\Union All.Outputs[Union All Output 1].Columns[Episode number]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Big Bang Data Task\Union All.Inputs[Union All Input 1].Columns[Series number]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Series number"
+                      lineageId="Package\Big Bang Data Task\Big bang theory season 8.Outputs[Flat File Source Output].Columns[Series number]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Big Bang Data Task\Union All.Outputs[Union All Output 1].Columns[Series number]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Big Bang Data Task\Union All.Inputs[Union All Input 1].Columns[First aired]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="First aired"
+                      lineageId="Package\Big Bang Data Task\Big bang theory season 8.Outputs[Flat File Source Output].Columns[First aired]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Big Bang Data Task\Union All.Outputs[Union All Output 1].Columns[First aired]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Big Bang Data Task\Union All.Inputs[Union All Input 3]"
+                  hasSideEffects="true"
+                  name="Union All Input 3">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Big Bang Data Task\Union All.Inputs[Union All Input 3].Columns[Title]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Title"
+                      lineageId="Package\Big Bang Data Task\Big bang theory season 9.Outputs[Flat File Source Output].Columns[Title]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Big Bang Data Task\Union All.Outputs[Union All Output 1].Columns[Title]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Big Bang Data Task\Union All.Inputs[Union All Input 3].Columns[Episode number]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Episode number"
+                      lineageId="Package\Big Bang Data Task\Big bang theory season 9.Outputs[Flat File Source Output].Columns[Episode number]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Big Bang Data Task\Union All.Outputs[Union All Output 1].Columns[Episode number]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Big Bang Data Task\Union All.Inputs[Union All Input 3].Columns[Series number]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Series number"
+                      lineageId="Package\Big Bang Data Task\Big bang theory season 9.Outputs[Flat File Source Output].Columns[Series number]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Big Bang Data Task\Union All.Outputs[Union All Output 1].Columns[Series number]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Big Bang Data Task\Union All.Inputs[Union All Input 3].Columns[First aired]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="First aired"
+                      lineageId="Package\Big Bang Data Task\Big bang theory season 9.Outputs[Flat File Source Output].Columns[First aired]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Big Bang Data Task\Union All.Outputs[Union All Output 1].Columns[First aired]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Big Bang Data Task\Union All.Inputs[Union All Input 4]"
+                  hasSideEffects="true"
+                  name="Union All Input 4">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Big Bang Data Task\Union All.Inputs[Union All Input 4].Columns[Title]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Title"
+                      lineageId="Package\Big Bang Data Task\Big bang theory season 10.Outputs[Flat File Source Output].Columns[Title]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Big Bang Data Task\Union All.Outputs[Union All Output 1].Columns[Title]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Big Bang Data Task\Union All.Inputs[Union All Input 4].Columns[Episode number]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Episode number"
+                      lineageId="Package\Big Bang Data Task\Big bang theory season 10.Outputs[Flat File Source Output].Columns[Episode number]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Big Bang Data Task\Union All.Outputs[Union All Output 1].Columns[Episode number]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Big Bang Data Task\Union All.Inputs[Union All Input 4].Columns[Series number]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Series number"
+                      lineageId="Package\Big Bang Data Task\Big bang theory season 10.Outputs[Flat File Source Output].Columns[Series number]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Big Bang Data Task\Union All.Outputs[Union All Output 1].Columns[Series number]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Big Bang Data Task\Union All.Inputs[Union All Input 4].Columns[First aired]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="First aired"
+                      lineageId="Package\Big Bang Data Task\Big bang theory season 10.Outputs[Flat File Source Output].Columns[First aired]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Big Bang Data Task\Union All.Outputs[Union All Output 1].Columns[First aired]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Big Bang Data Task\Union All.Inputs[Union All Input 5]"
+                  dangling="true"
+                  hasSideEffects="true"
+                  name="Union All Input 5">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Big Bang Data Task\Union All.Outputs[Union All Output 1]"
+                  name="Union All Output 1">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Big Bang Data Task\Union All.Outputs[Union All Output 1].Columns[Title]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Big Bang Data Task\Union All.Outputs[Union All Output 1].Columns[Title]"
+                      name="Title" />
+                    <outputColumn
+                      refId="Package\Big Bang Data Task\Union All.Outputs[Union All Output 1].Columns[Episode number]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Big Bang Data Task\Union All.Outputs[Union All Output 1].Columns[Episode number]"
+                      name="Episode number" />
+                    <outputColumn
+                      refId="Package\Big Bang Data Task\Union All.Outputs[Union All Output 1].Columns[Series number]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Big Bang Data Task\Union All.Outputs[Union All Output 1].Columns[Series number]"
+                      name="Series number" />
+                    <outputColumn
+                      refId="Package\Big Bang Data Task\Union All.Outputs[Union All Output 1].Columns[First aired]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Big Bang Data Task\Union All.Outputs[Union All Output 1].Columns[First aired]"
+                      name="First aired" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Big Bang Data Task.Paths[Flat File Source Output]"
+              endId="Package\Big Bang Data Task\Union All.Inputs[Union All Input 2]"
+              name="Flat File Source Output"
+              startId="Package\Big Bang Data Task\Big bang theory season 7.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Big Bang Data Task.Paths[Flat File Source Output1]"
+              endId="Package\Big Bang Data Task\Union All.Inputs[Union All Input 1]"
+              name="Flat File Source Output"
+              startId="Package\Big Bang Data Task\Big bang theory season 8.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Big Bang Data Task.Paths[Flat File Source Output2]"
+              endId="Package\Big Bang Data Task\Union All.Inputs[Union All Input 3]"
+              name="Flat File Source Output"
+              startId="Package\Big Bang Data Task\Big bang theory season 9.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Big Bang Data Task.Paths[Flat File Source Output3]"
+              endId="Package\Big Bang Data Task\Union All.Inputs[Union All Input 4]"
+              name="Flat File Source Output"
+              startId="Package\Big Bang Data Task\Big bang theory season 10.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Big Bang Data Task.Paths[Union All Output 1]"
+              endId="Package\Big Bang Data Task\SQL Big Bang Episodes Data.Inputs[OLE DB Destination Input]"
+              name="Union All Output 1"
+              startId="Package\Big Bang Data Task\Union All.Outputs[Union All Output 1]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Food Lyrics Data Task"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{EED16489-192A-42B1-A956-5B8D286768AC}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Food Lyrics Data Task"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Food Lyrics Data Task\Excel Food Lyrics Data"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="Excel Food Lyrics Data"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">Songs$</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Food Lyrics Data Task\Excel Food Lyrics Data.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Excel Food Lyrics Con]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Food Lyrics Con]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Food Lyrics Data Task\Excel Food Lyrics Data.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Food Lyrics Data Task\Excel Food Lyrics Data.Outputs[Excel Source Output].Columns[Position]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Food Lyrics Data Task\Excel Food Lyrics Data.Outputs[Excel Source Output].ExternalColumns[Position]"
+                      lineageId="Package\Food Lyrics Data Task\Excel Food Lyrics Data.Outputs[Excel Source Output].Columns[Position]"
+                      name="Position"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Food Lyrics Data Task\Excel Food Lyrics Data.Outputs[Excel Source Output].Columns[Artist]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Food Lyrics Data Task\Excel Food Lyrics Data.Outputs[Excel Source Output].ExternalColumns[Artist]"
+                      length="255"
+                      lineageId="Package\Food Lyrics Data Task\Excel Food Lyrics Data.Outputs[Excel Source Output].Columns[Artist]"
+                      name="Artist"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Food Lyrics Data Task\Excel Food Lyrics Data.Outputs[Excel Source Output].Columns[Song]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Food Lyrics Data Task\Excel Food Lyrics Data.Outputs[Excel Source Output].ExternalColumns[Song]"
+                      length="255"
+                      lineageId="Package\Food Lyrics Data Task\Excel Food Lyrics Data.Outputs[Excel Source Output].Columns[Song]"
+                      name="Song"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Food Lyrics Data Task\Excel Food Lyrics Data.Outputs[Excel Source Output].ExternalColumns[Position]"
+                      dataType="r8"
+                      name="Position" />
+                    <externalMetadataColumn
+                      refId="Package\Food Lyrics Data Task\Excel Food Lyrics Data.Outputs[Excel Source Output].ExternalColumns[Artist]"
+                      dataType="wstr"
+                      length="255"
+                      name="Artist" />
+                    <externalMetadataColumn
+                      refId="Package\Food Lyrics Data Task\Excel Food Lyrics Data.Outputs[Excel Source Output].ExternalColumns[Song]"
+                      dataType="wstr"
+                      length="255"
+                      name="Song" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Food Lyrics Data Task\Excel Food Lyrics Data.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Food Lyrics Data Task\Excel Food Lyrics Data.Outputs[Excel Source Error Output].Columns[Position]"
+                      dataType="r8"
+                      lineageId="Package\Food Lyrics Data Task\Excel Food Lyrics Data.Outputs[Excel Source Error Output].Columns[Position]"
+                      name="Position" />
+                    <outputColumn
+                      refId="Package\Food Lyrics Data Task\Excel Food Lyrics Data.Outputs[Excel Source Error Output].Columns[Artist]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Food Lyrics Data Task\Excel Food Lyrics Data.Outputs[Excel Source Error Output].Columns[Artist]"
+                      name="Artist" />
+                    <outputColumn
+                      refId="Package\Food Lyrics Data Task\Excel Food Lyrics Data.Outputs[Excel Source Error Output].Columns[Song]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Food Lyrics Data Task\Excel Food Lyrics Data.Outputs[Excel Source Error Output].Columns[Song]"
+                      name="Song" />
+                    <outputColumn
+                      refId="Package\Food Lyrics Data Task\Excel Food Lyrics Data.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Food Lyrics Data Task\Excel Food Lyrics Data.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Food Lyrics Data Task\Excel Food Lyrics Data.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Food Lyrics Data Task\Excel Food Lyrics Data.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Food Lyrics Data Task\SQL Food Lyrics Data"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="SQL Food Lyrics Data"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[FoodMusic]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Food Lyrics Data Task\SQL Food Lyrics Data.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[SQL Food Lyrics Con]"
+                  connectionManagerRefId="Package.ConnectionManagers[SQL Food Lyrics Con]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Food Lyrics Data Task\SQL Food Lyrics Data.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Food Lyrics Data Task\SQL Food Lyrics Data.Inputs[OLE DB Destination Input].Columns[Position]"
+                      cachedDataType="r8"
+                      cachedName="Position"
+                      externalMetadataColumnId="Package\Food Lyrics Data Task\SQL Food Lyrics Data.Inputs[OLE DB Destination Input].ExternalColumns[Position]"
+                      lineageId="Package\Food Lyrics Data Task\Excel Food Lyrics Data.Outputs[Excel Source Output].Columns[Position]" />
+                    <inputColumn
+                      refId="Package\Food Lyrics Data Task\SQL Food Lyrics Data.Inputs[OLE DB Destination Input].Columns[Artist]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Artist"
+                      externalMetadataColumnId="Package\Food Lyrics Data Task\SQL Food Lyrics Data.Inputs[OLE DB Destination Input].ExternalColumns[Artist]"
+                      lineageId="Package\Food Lyrics Data Task\Excel Food Lyrics Data.Outputs[Excel Source Output].Columns[Artist]" />
+                    <inputColumn
+                      refId="Package\Food Lyrics Data Task\SQL Food Lyrics Data.Inputs[OLE DB Destination Input].Columns[Song]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Song"
+                      externalMetadataColumnId="Package\Food Lyrics Data Task\SQL Food Lyrics Data.Inputs[OLE DB Destination Input].ExternalColumns[SongTitle]"
+                      lineageId="Package\Food Lyrics Data Task\Excel Food Lyrics Data.Outputs[Excel Source Output].Columns[Song]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Food Lyrics Data Task\SQL Food Lyrics Data.Inputs[OLE DB Destination Input].ExternalColumns[Position]"
+                      dataType="i4"
+                      name="Position" />
+                    <externalMetadataColumn
+                      refId="Package\Food Lyrics Data Task\SQL Food Lyrics Data.Inputs[OLE DB Destination Input].ExternalColumns[Artist]"
+                      dataType="wstr"
+                      length="255"
+                      name="Artist" />
+                    <externalMetadataColumn
+                      refId="Package\Food Lyrics Data Task\SQL Food Lyrics Data.Inputs[OLE DB Destination Input].ExternalColumns[SongTitle]"
+                      dataType="wstr"
+                      length="255"
+                      name="SongTitle" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Food Lyrics Data Task\SQL Food Lyrics Data.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Food Lyrics Data Task\SQL Food Lyrics Data.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Food Lyrics Data Task\SQL Food Lyrics Data.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Food Lyrics Data Task\SQL Food Lyrics Data.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Food Lyrics Data Task\SQL Food Lyrics Data.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Food Lyrics Data Task\SQL Food Lyrics Data.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Food Lyrics Data Task.Paths[Excel Source Output]"
+              endId="Package\Food Lyrics Data Task\SQL Food Lyrics Data.Inputs[OLE DB Destination Input]"
+              name="Excel Source Output"
+              startId="Package\Food Lyrics Data Task\Excel Food Lyrics Data.Outputs[Excel Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SQL To Flat File"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{9EFA21A8-984F-4ACC-A80D-5F63B143C5E1}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SQL To Flat File"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\SQL To Flat File\Flat File Destination"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Destination"
+              localeId="16393"
+              name="Flat File Destination"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether the data will overwrite or append to the destination file."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the text to write to the destination file before any data is written."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\SQL To Flat File\Flat File Destination.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\SQL To Flat File\Flat File Destination.Inputs[Flat File Destination Input]"
+                  hasSideEffects="true"
+                  name="Flat File Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\SQL To Flat File\Flat File Destination.Inputs[Flat File Destination Input].Columns[GrandPrixId]"
+                      cachedDataType="i4"
+                      cachedName="GrandPrixId"
+                      externalMetadataColumnId="Package\SQL To Flat File\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[GrandPrixId]"
+                      lineageId="Package\SQL To Flat File\SQL Grand Prix Events Data.Outputs[OLE DB Source Output].Columns[GrandPrixId]" />
+                    <inputColumn
+                      refId="Package\SQL To Flat File\Flat File Destination.Inputs[Flat File Destination Input].Columns[Round]"
+                      cachedDataType="i4"
+                      cachedName="Round"
+                      externalMetadataColumnId="Package\SQL To Flat File\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Round]"
+                      lineageId="Package\SQL To Flat File\SQL Grand Prix Events Data.Outputs[OLE DB Source Output].Columns[Round]" />
+                    <inputColumn
+                      refId="Package\SQL To Flat File\Flat File Destination.Inputs[Flat File Destination Input].Columns[VenueName]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="VenueName"
+                      externalMetadataColumnId="Package\SQL To Flat File\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[VenueName]"
+                      lineageId="Package\SQL To Flat File\SQL Grand Prix Events Data.Outputs[OLE DB Source Output].Columns[VenueName]" />
+                    <inputColumn
+                      refId="Package\SQL To Flat File\Flat File Destination.Inputs[Flat File Destination Input].Columns[Season]"
+                      cachedDataType="i4"
+                      cachedName="Season"
+                      externalMetadataColumnId="Package\SQL To Flat File\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Season]"
+                      lineageId="Package\SQL To Flat File\SQL Grand Prix Events Data.Outputs[OLE DB Source Output].Columns[Season]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\SQL To Flat File\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[GrandPrixId]"
+                      dataType="i4"
+                      name="GrandPrixId" />
+                    <externalMetadataColumn
+                      refId="Package\SQL To Flat File\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Round]"
+                      dataType="i4"
+                      name="Round" />
+                    <externalMetadataColumn
+                      refId="Package\SQL To Flat File\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[VenueName]"
+                      dataType="wstr"
+                      length="255"
+                      name="VenueName" />
+                    <externalMetadataColumn
+                      refId="Package\SQL To Flat File\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Season]"
+                      dataType="i4"
+                      name="Season" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\SQL To Flat File\SQL Grand Prix Events Data"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="SQL Grand Prix Events Data"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[GrandPrixEvents]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\SQL To Flat File\SQL Grand Prix Events Data.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[SQL Grand Prix Events Con]"
+                  connectionManagerRefId="Package.ConnectionManagers[SQL Grand Prix Events Con]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\SQL To Flat File\SQL Grand Prix Events Data.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\SQL To Flat File\SQL Grand Prix Events Data.Outputs[OLE DB Source Output].Columns[GrandPrixId]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SQL To Flat File\SQL Grand Prix Events Data.Outputs[OLE DB Source Output].ExternalColumns[GrandPrixId]"
+                      lineageId="Package\SQL To Flat File\SQL Grand Prix Events Data.Outputs[OLE DB Source Output].Columns[GrandPrixId]"
+                      name="GrandPrixId"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SQL To Flat File\SQL Grand Prix Events Data.Outputs[OLE DB Source Output].Columns[Round]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SQL To Flat File\SQL Grand Prix Events Data.Outputs[OLE DB Source Output].ExternalColumns[Round]"
+                      lineageId="Package\SQL To Flat File\SQL Grand Prix Events Data.Outputs[OLE DB Source Output].Columns[Round]"
+                      name="Round"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SQL To Flat File\SQL Grand Prix Events Data.Outputs[OLE DB Source Output].Columns[VenueName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SQL To Flat File\SQL Grand Prix Events Data.Outputs[OLE DB Source Output].ExternalColumns[VenueName]"
+                      length="255"
+                      lineageId="Package\SQL To Flat File\SQL Grand Prix Events Data.Outputs[OLE DB Source Output].Columns[VenueName]"
+                      name="VenueName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SQL To Flat File\SQL Grand Prix Events Data.Outputs[OLE DB Source Output].Columns[Season]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SQL To Flat File\SQL Grand Prix Events Data.Outputs[OLE DB Source Output].ExternalColumns[Season]"
+                      lineageId="Package\SQL To Flat File\SQL Grand Prix Events Data.Outputs[OLE DB Source Output].Columns[Season]"
+                      name="Season"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\SQL To Flat File\SQL Grand Prix Events Data.Outputs[OLE DB Source Output].ExternalColumns[GrandPrixId]"
+                      dataType="i4"
+                      name="GrandPrixId" />
+                    <externalMetadataColumn
+                      refId="Package\SQL To Flat File\SQL Grand Prix Events Data.Outputs[OLE DB Source Output].ExternalColumns[Round]"
+                      dataType="i4"
+                      name="Round" />
+                    <externalMetadataColumn
+                      refId="Package\SQL To Flat File\SQL Grand Prix Events Data.Outputs[OLE DB Source Output].ExternalColumns[VenueName]"
+                      dataType="wstr"
+                      length="255"
+                      name="VenueName" />
+                    <externalMetadataColumn
+                      refId="Package\SQL To Flat File\SQL Grand Prix Events Data.Outputs[OLE DB Source Output].ExternalColumns[Season]"
+                      dataType="i4"
+                      name="Season" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\SQL To Flat File\SQL Grand Prix Events Data.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\SQL To Flat File\SQL Grand Prix Events Data.Outputs[OLE DB Source Error Output].Columns[GrandPrixId]"
+                      dataType="i4"
+                      lineageId="Package\SQL To Flat File\SQL Grand Prix Events Data.Outputs[OLE DB Source Error Output].Columns[GrandPrixId]"
+                      name="GrandPrixId" />
+                    <outputColumn
+                      refId="Package\SQL To Flat File\SQL Grand Prix Events Data.Outputs[OLE DB Source Error Output].Columns[Round]"
+                      dataType="i4"
+                      lineageId="Package\SQL To Flat File\SQL Grand Prix Events Data.Outputs[OLE DB Source Error Output].Columns[Round]"
+                      name="Round" />
+                    <outputColumn
+                      refId="Package\SQL To Flat File\SQL Grand Prix Events Data.Outputs[OLE DB Source Error Output].Columns[VenueName]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\SQL To Flat File\SQL Grand Prix Events Data.Outputs[OLE DB Source Error Output].Columns[VenueName]"
+                      name="VenueName" />
+                    <outputColumn
+                      refId="Package\SQL To Flat File\SQL Grand Prix Events Data.Outputs[OLE DB Source Error Output].Columns[Season]"
+                      dataType="i4"
+                      lineageId="Package\SQL To Flat File\SQL Grand Prix Events Data.Outputs[OLE DB Source Error Output].Columns[Season]"
+                      name="Season" />
+                    <outputColumn
+                      refId="Package\SQL To Flat File\SQL Grand Prix Events Data.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\SQL To Flat File\SQL Grand Prix Events Data.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\SQL To Flat File\SQL Grand Prix Events Data.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\SQL To Flat File\SQL Grand Prix Events Data.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\SQL To Flat File.Paths[OLE DB Source Output]"
+              endId="Package\SQL To Flat File\Flat File Destination.Inputs[Flat File Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\SQL To Flat File\SQL Grand Prix Events Data.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\TRUNCATE TABLE BigBangEpisodes"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{af531e93-0646-4eec-8f44-c4302609f789}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="TRUNCATE TABLE BigBangEpisodes"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{D970FEA7-48D2-47F1-A4D5-FD6524C342D9}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE BigBangEpisodes" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\TRUNCATE TABLE FoodMusic"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{1D56324E-471A-4840-BBEF-6567F54AC5EA}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="TRUNCATE TABLE FoodMusic"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{6F0639A8-8E79-407E-B0F1-4A920D0DFDA9}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE FoodMusic" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{2988A78C-DF49-46CF-95C3-BA6F42B30452}"
+      DTS:From="Package\TRUNCATE TABLE FoodMusic"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Food Lyrics Data Task" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{C7CCEF9B-BAFA-4DE4-A98B-67128C788D46}"
+      DTS:From="Package\TRUNCATE TABLE BigBangEpisodes"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Big Bang Data Task" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="181.6,41.6"
+          Id="Package\Food Lyrics Data Task"
+          TopLeft="78.3571440978927,98.029413062396" />
+        <NodeLayout
+          Size="216.8,41.6"
+          Id="Package\TRUNCATE TABLE FoodMusic"
+          TopLeft="64.785714784447,12.5588232076704" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="171.17142944117,54.1588232076704">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,43.8705898547255"
+              Start="0,0"
+              End="0,36.3705898547255">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,36.3705898547255" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="152.8,41.6"
+          Id="Package\SQL To Flat File"
+          TopLeft="329.071433060023,61.6764705346117" />
+        <NodeLayout
+          Size="246.4,41.6"
+          Id="Package\TRUNCATE TABLE BigBangEpisodes"
+          TopLeft="543.571437828395,6.88235303769887" />
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\Big Bang Data Task"
+          TopLeft="579.785722533051,93.205882320767" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="665.878580180723,48.4823530376989">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,44.7235292830682"
+              Start="0,0"
+              End="0,37.2235292830682">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,37.2235292830682" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Food Lyrics Data Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="184,41.6"
+          Id="Package\Food Lyrics Data Task\Excel Food Lyrics Data"
+          TopLeft="60.7142867482439,32.1176475092614" />
+        <NodeLayout
+          Size="179.2,41.6"
+          Id="Package\Food Lyrics Data Task\SQL Food Lyrics Data"
+          TopLeft="61.4285724746939,116.235295747803" />
+        <EdgeLayout
+          Id="Package\Food Lyrics Data Task.Paths[Excel Source Output]"
+          TopLeft="151.871429611469,73.7176475092614">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,42.5176482385419"
+              Start="0,0"
+              End="0,35.0176482385419">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,35.0176482385419" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Food Lyrics Data Task\Excel Food Lyrics Data">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Food Lyrics Data Task\SQL Food Lyrics Data">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\SQL To Flat File">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="209.6,41.6"
+          Id="Package\SQL To Flat File\SQL Grand Prix Events Data"
+          TopLeft="137,27" />
+        <NodeLayout
+          Size="171.2,41.6"
+          Id="Package\SQL To Flat File\Flat File Destination"
+          TopLeft="135.5,91.5" />
+        <EdgeLayout
+          Id="Package\SQL To Flat File.Paths[OLE DB Source Output]"
+          TopLeft="241.8,68.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-20.7,22.9"
+              Start="0,0"
+              End="-20.7,15.4">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,7.45" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,7.45"
+                    Point2="0,11.45"
+                    Point3="-4,11.45" />
+                  <mssgle:LineSegment
+                    End="-16.7,11.45" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-16.7,11.45"
+                    Point2="-20.7,11.45"
+                    Point3="-20.7,15.45" />
+                  <mssgle:LineSegment
+                    End="-20.7,15.4" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\SQL To Flat File\SQL Grand Prix Events Data">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Big Bang Data Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="198.4,41.6"
+          Id="Package\Big Bang Data Task\Big bang theory season 7"
+          TopLeft="111.5,61.5" />
+        <NodeLayout
+          Size="198.4,41.6"
+          Id="Package\Big Bang Data Task\Big bang theory season 8"
+          TopLeft="335.5,63.1" />
+        <NodeLayout
+          Size="198.4,41.6"
+          Id="Package\Big Bang Data Task\Big bang theory season 9"
+          TopLeft="559.5,63.7" />
+        <NodeLayout
+          Size="204,41.6"
+          Id="Package\Big Bang Data Task\Big bang theory season 10"
+          TopLeft="785.5,63.3000000000001" />
+        <NodeLayout
+          Size="212,41.6"
+          Id="Package\Big Bang Data Task\SQL Big Bang Episodes Data"
+          TopLeft="467.5,350.5" />
+        <NodeLayout
+          Size="211.2,46.4"
+          Id="Package\Big Bang Data Task\Union All"
+          TopLeft="465.5,230.5" />
+        <EdgeLayout
+          Id="Package\Big Bang Data Task.Paths[Flat File Source Output]"
+          TopLeft="210.7,103.1">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="299.44,127.4"
+              Start="0,0"
+              End="299.44,119.9">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,85.5463258785943" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,85.5463258785943"
+                    Point2="0,89.5463258785943"
+                    Point3="4,89.5463258785943" />
+                  <mssgle:LineSegment
+                    End="295.44,89.5463258785943" />
+                  <mssgle:CubicBezierSegment
+                    Point1="295.44,89.5463258785943"
+                    Point2="299.44,89.5463258785943"
+                    Point3="299.44,93.5463258785943" />
+                  <mssgle:LineSegment
+                    End="299.44,119.9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Big Bang Data Task.Paths[Flat File Source Output1]"
+          TopLeft="434.7,104.7">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="116.08,125.8"
+              Start="0,0"
+              End="116.08,118.3">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,65.5959765297569" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,65.5959765297569"
+                    Point2="0,69.5959765297569"
+                    Point3="4,69.5959765297569" />
+                  <mssgle:LineSegment
+                    End="112.08,69.5959765297569" />
+                  <mssgle:CubicBezierSegment
+                    Point1="112.08,69.5959765297569"
+                    Point2="116.08,69.5959765297569"
+                    Point3="116.08,73.5959765297569" />
+                  <mssgle:LineSegment
+                    End="116.08,118.3" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Big Bang Data Task.Paths[Flat File Source Output2]"
+          TopLeft="658.7,105.3">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-67.2800000000001,125.2"
+              Start="0,0"
+              End="-67.2800000000001,117.7">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,65.2640402347024" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,65.2640402347024"
+                    Point2="0,69.2640402347024"
+                    Point3="-4,69.2640402347024" />
+                  <mssgle:LineSegment
+                    End="-63.2800000000001,69.2640402347024" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-63.2800000000001,69.2640402347024"
+                    Point2="-67.2800000000001,69.2640402347024"
+                    Point3="-67.2800000000001,73.2640402347024" />
+                  <mssgle:LineSegment
+                    End="-67.2800000000001,117.7" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Big Bang Data Task.Paths[Flat File Source Output3]"
+          TopLeft="887.5,104.9">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-255.44,125.6"
+              Start="0,0"
+              End="-255.44,118.1">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,84.2811501597443" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,84.2811501597443"
+                    Point2="0,88.2811501597443"
+                    Point3="-4,88.2811501597443" />
+                  <mssgle:LineSegment
+                    End="-251.44,88.2811501597443" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-251.44,88.2811501597443"
+                    Point2="-255.44,88.2811501597443"
+                    Point3="-255.44,92.2811501597443" />
+                  <mssgle:LineSegment
+                    End="-255.44,118.1" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Big Bang Data Task.Paths[Union All Output 1]"
+          TopLeft="572.3,276.9">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,73.6"
+              Start="0,0"
+              End="0,66.1">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,66.1" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Big Bang Data Task\SQL Big Bang Episodes Data">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
