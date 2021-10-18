@@ -1,0 +1,1577 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="10/17/2021 6:54:41 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="MSI"
+  DTS:CreatorName="MSI\1prab"
+  DTS:DTSID="{082C8FFA-CAF5-48FB-90A5-76B5516EDF18}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.170"
+  DTS:LocaleID="16393"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="5"
+  DTS:VersionGUID="{8D9F4F10-5AB5-4BC3-8B0B-D77B2773ED19}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[MSI\SQLEXPRESS.Dino_DB.sa]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{C9A4510D-F464-483B-9A8A-3AD0EEC361FD}"
+      DTS:ObjectName="MSI\SQLEXPRESS.Dino_DB.sa">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=MSI\SQLEXPRESS;User ID=sa;Initial Catalog=Dino_DB;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATAbnV6TfFEaLlSQVwvMrVwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABobWosqv8gPXc8r/eyq8wp+9wv6WczjowYbBWy+IyIeQAAAAAOgAAAAAIAACAAAACo87EixsHO06bHECsJm5NV+hLixFtxpObWUnbcheNOfBAAAADIwtccDufAo9fWqd5dUWJNQAAAACvc8U14IzWMau+n4Ol3mkCi44If4qqFAAncPnmnQS8g5rWaF6gEFBLdJXMQRk0Ex0NO8MNcT2WGGDNAXyBpodw</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[TblCategory Con]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{4C1E6EB8-0F53-47E0-9033-93F132181576}"
+      DTS:ObjectName="TblCategory Con">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=MSI\SQLEXPRESS;User ID=sa;Initial Catalog=Dino_DB;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATAbnV6TfFEaLlSQVwvMrVwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADibVCAD0ThhhGg0uXTIm+VK9dVZHINqctfh3X07K0TMgAAAAAOgAAAAAIAACAAAAAhpZTNKRA2H6La/2d4NL5dD3pQ4O2nni0t2QQmKazSuxAAAADxeNntzFj+VAHYMWiDzH7tQAAAAEG1KiXrMJQbi+RruWVRjEOFTO8aWR5LMvay94R1umnIvN37ZVBaNs6HoHHy+2wDwb1iQVDdNsQXyd6c0bIiItY</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[X Factor Contestants Con]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{7EFFCF25-0559-48AA-BC9B-772DA99721CB}"
+      DTS:ObjectName="X Factor Contestants Con">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\1prab\Documents\Downloads\SSIS Excel\Task1-XFactorcontestants.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{C07BDA73-10B3-4741-925B-DC755D7F2006}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="UnknownCategoryId">
+      <DTS:VariableValue
+        DTS:DataType="3">5</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\X Factor Task"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{8C142374-342D-4458-BF52-9B55AE9D028D}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="X Factor Task"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\X Factor Task\Converting Double to Integer"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Converting Double to Integer"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\X Factor Task\Converting Double to Integer.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\X Factor Task\Converting Double to Integer.Inputs[Data Conversion Input].Columns[CategoryId]"
+                      cachedDataType="i4"
+                      cachedName="CategoryId"
+                      lineageId="Package\X Factor Task\Merging Above Records.Outputs[Union All Output 1].Columns[CategoryId]" />
+                    <inputColumn
+                      refId="Package\X Factor Task\Converting Double to Integer.Inputs[Data Conversion Input].Columns[Finished]"
+                      cachedDataType="r8"
+                      cachedName="Finished"
+                      lineageId="Package\X Factor Task\Merging Above Records.Outputs[Union All Output 1].Columns[Finished]" />
+                    <inputColumn
+                      refId="Package\X Factor Task\Converting Double to Integer.Inputs[Data Conversion Input].Columns[Series]"
+                      cachedDataType="r8"
+                      cachedName="Series"
+                      lineageId="Package\X Factor Task\Merging Above Records.Outputs[Union All Output 1].Columns[Series]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\X Factor Task\Converting Double to Integer.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\X Factor Task\Converting Double to Integer.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\X Factor Task\Converting Double to Integer.Outputs[Data Conversion Output].Columns[CategoryId]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\X Factor Task\Converting Double to Integer.Outputs[Data Conversion Output].Columns[CategoryId]"
+                      name="CategoryId"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\X Factor Task\Merging Above Records.Outputs[Union All Output 1].Columns[CategoryId]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\X Factor Task\Converting Double to Integer.Outputs[Data Conversion Output].Columns[Finished]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\X Factor Task\Converting Double to Integer.Outputs[Data Conversion Output].Columns[Finished]"
+                      name="Finished"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\X Factor Task\Merging Above Records.Outputs[Union All Output 1].Columns[Finished]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\X Factor Task\Converting Double to Integer.Outputs[Data Conversion Output].Columns[Series]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\X Factor Task\Converting Double to Integer.Outputs[Data Conversion Output].Columns[Series]"
+                      name="Series"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\X Factor Task\Merging Above Records.Outputs[Union All Output 1].Columns[Series]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\X Factor Task\Converting Double to Integer.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\X Factor Task\Converting Double to Integer.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\X Factor Task\Converting Double to Integer.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\X Factor Task\Converting Double to Integer.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\X Factor Task\Converting Double to Integer.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\X Factor Task\Converting Double to Integer.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\X Factor Task\Don't Import It"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Don't Import It"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\X Factor Task\Don't Import It.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\X Factor Task\Don't Import It.Inputs[Derived Column Input].Columns[Category]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Category"
+                      lineageId="Package\X Factor Task\Excel Source.Outputs[Excel Source Output].Columns[Category]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\X Factor Task\Don't Import It.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\X Factor Task\Don't Import It.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\X Factor Task\Don't Import It.Outputs[Derived Column Output].Columns[CategoryId]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\X Factor Task\Don't Import It.Outputs[Derived Column Output].Columns[CategoryId]"
+                      name="CategoryId"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">@[User::UnknownCategoryId]</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">@[User::UnknownCategoryId]</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\X Factor Task\Don't Import It.Outputs[Derived Column Output].Columns[ImportNotes]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\X Factor Task\Don't Import It.Outputs[Derived Column Output].Columns[ImportNotes]"
+                      name="ImportNotes"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_WSTR,50)(#{Package\X Factor Task\Excel Source.Outputs[Excel Source Output].Columns[Category]} + " not found")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_WSTR,50)(Category + " not found")</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\X Factor Task\Don't Import It.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\X Factor Task\Don't Import It.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\X Factor Task\Don't Import It.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\X Factor Task\Don't Import It.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\X Factor Task\Don't Import It.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\X Factor Task\Don't Import It.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\X Factor Task\Excel Source"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="Excel Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">Finalists$</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\X Factor Task\Excel Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[X Factor Contestants Con]"
+                  connectionManagerRefId="Package.ConnectionManagers[X Factor Contestants Con]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\X Factor Task\Excel Source.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\X Factor Task\Excel Source.Outputs[Excel Source Output].Columns[Id]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\X Factor Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[Id]"
+                      lineageId="Package\X Factor Task\Excel Source.Outputs[Excel Source Output].Columns[Id]"
+                      name="Id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\X Factor Task\Excel Source.Outputs[Excel Source Output].Columns[Name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\X Factor Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[Name]"
+                      length="255"
+                      lineageId="Package\X Factor Task\Excel Source.Outputs[Excel Source Output].Columns[Name]"
+                      name="Name"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\X Factor Task\Excel Source.Outputs[Excel Source Output].Columns[Series]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\X Factor Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[Series]"
+                      lineageId="Package\X Factor Task\Excel Source.Outputs[Excel Source Output].Columns[Series]"
+                      name="Series"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\X Factor Task\Excel Source.Outputs[Excel Source Output].Columns[Category]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\X Factor Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[Category]"
+                      length="255"
+                      lineageId="Package\X Factor Task\Excel Source.Outputs[Excel Source Output].Columns[Category]"
+                      name="Category"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\X Factor Task\Excel Source.Outputs[Excel Source Output].Columns[Mentor]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\X Factor Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[Mentor]"
+                      length="255"
+                      lineageId="Package\X Factor Task\Excel Source.Outputs[Excel Source Output].Columns[Mentor]"
+                      name="Mentor"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\X Factor Task\Excel Source.Outputs[Excel Source Output].Columns[Finished]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\X Factor Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[Finished]"
+                      lineageId="Package\X Factor Task\Excel Source.Outputs[Excel Source Output].Columns[Finished]"
+                      name="Finished"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\X Factor Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[Id]"
+                      dataType="r8"
+                      name="Id" />
+                    <externalMetadataColumn
+                      refId="Package\X Factor Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[Name]"
+                      dataType="wstr"
+                      length="255"
+                      name="Name" />
+                    <externalMetadataColumn
+                      refId="Package\X Factor Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[Series]"
+                      dataType="r8"
+                      name="Series" />
+                    <externalMetadataColumn
+                      refId="Package\X Factor Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[Category]"
+                      dataType="wstr"
+                      length="255"
+                      name="Category" />
+                    <externalMetadataColumn
+                      refId="Package\X Factor Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[Mentor]"
+                      dataType="wstr"
+                      length="255"
+                      name="Mentor" />
+                    <externalMetadataColumn
+                      refId="Package\X Factor Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[Finished]"
+                      dataType="r8"
+                      name="Finished" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\X Factor Task\Excel Source.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\X Factor Task\Excel Source.Outputs[Excel Source Error Output].Columns[Id]"
+                      dataType="r8"
+                      lineageId="Package\X Factor Task\Excel Source.Outputs[Excel Source Error Output].Columns[Id]"
+                      name="Id" />
+                    <outputColumn
+                      refId="Package\X Factor Task\Excel Source.Outputs[Excel Source Error Output].Columns[Name]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\X Factor Task\Excel Source.Outputs[Excel Source Error Output].Columns[Name]"
+                      name="Name" />
+                    <outputColumn
+                      refId="Package\X Factor Task\Excel Source.Outputs[Excel Source Error Output].Columns[Series]"
+                      dataType="r8"
+                      lineageId="Package\X Factor Task\Excel Source.Outputs[Excel Source Error Output].Columns[Series]"
+                      name="Series" />
+                    <outputColumn
+                      refId="Package\X Factor Task\Excel Source.Outputs[Excel Source Error Output].Columns[Category]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\X Factor Task\Excel Source.Outputs[Excel Source Error Output].Columns[Category]"
+                      name="Category" />
+                    <outputColumn
+                      refId="Package\X Factor Task\Excel Source.Outputs[Excel Source Error Output].Columns[Mentor]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\X Factor Task\Excel Source.Outputs[Excel Source Error Output].Columns[Mentor]"
+                      name="Mentor" />
+                    <outputColumn
+                      refId="Package\X Factor Task\Excel Source.Outputs[Excel Source Error Output].Columns[Finished]"
+                      dataType="r8"
+                      lineageId="Package\X Factor Task\Excel Source.Outputs[Excel Source Error Output].Columns[Finished]"
+                      name="Finished" />
+                    <outputColumn
+                      refId="Package\X Factor Task\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\X Factor Task\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\X Factor Task\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\X Factor Task\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\X Factor Task\Import Data to tblFinalistes"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Import Data to tblFinalistes"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[tblFinalistes]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\X Factor Task\Import Data to tblFinalistes.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[MSI\SQLEXPRESS.Dino_DB.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[MSI\SQLEXPRESS.Dino_DB.sa]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\X Factor Task\Import Data to tblFinalistes.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\X Factor Task\Import Data to tblFinalistes.Inputs[OLE DB Destination Input].Columns[ImportNote]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="ImportNote"
+                      externalMetadataColumnId="Package\X Factor Task\Import Data to tblFinalistes.Inputs[OLE DB Destination Input].ExternalColumns[ImportNote]"
+                      lineageId="Package\X Factor Task\Merging Above Records.Outputs[Union All Output 1].Columns[ImportNote]" />
+                    <inputColumn
+                      refId="Package\X Factor Task\Import Data to tblFinalistes.Inputs[OLE DB Destination Input].Columns[Name]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Name"
+                      externalMetadataColumnId="Package\X Factor Task\Import Data to tblFinalistes.Inputs[OLE DB Destination Input].ExternalColumns[FinalistName]"
+                      lineageId="Package\X Factor Task\Merging Above Records.Outputs[Union All Output 1].Columns[Name]" />
+                    <inputColumn
+                      refId="Package\X Factor Task\Import Data to tblFinalistes.Inputs[OLE DB Destination Input].Columns[Finished]"
+                      cachedDataType="i4"
+                      cachedName="Finished"
+                      externalMetadataColumnId="Package\X Factor Task\Import Data to tblFinalistes.Inputs[OLE DB Destination Input].ExternalColumns[FinishingPosition]"
+                      lineageId="Package\X Factor Task\Converting Double to Integer.Outputs[Data Conversion Output].Columns[Finished]" />
+                    <inputColumn
+                      refId="Package\X Factor Task\Import Data to tblFinalistes.Inputs[OLE DB Destination Input].Columns[Series]"
+                      cachedDataType="i4"
+                      cachedName="Series"
+                      externalMetadataColumnId="Package\X Factor Task\Import Data to tblFinalistes.Inputs[OLE DB Destination Input].ExternalColumns[SeriesNumber]"
+                      lineageId="Package\X Factor Task\Converting Double to Integer.Outputs[Data Conversion Output].Columns[Series]" />
+                    <inputColumn
+                      refId="Package\X Factor Task\Import Data to tblFinalistes.Inputs[OLE DB Destination Input].Columns[CategoryId]"
+                      cachedDataType="i4"
+                      cachedName="CategoryId"
+                      externalMetadataColumnId="Package\X Factor Task\Import Data to tblFinalistes.Inputs[OLE DB Destination Input].ExternalColumns[CategoryId]"
+                      lineageId="Package\X Factor Task\Converting Double to Integer.Outputs[Data Conversion Output].Columns[CategoryId]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\X Factor Task\Import Data to tblFinalistes.Inputs[OLE DB Destination Input].ExternalColumns[FinalistId]"
+                      dataType="i4"
+                      name="FinalistId" />
+                    <externalMetadataColumn
+                      refId="Package\X Factor Task\Import Data to tblFinalistes.Inputs[OLE DB Destination Input].ExternalColumns[FinalistName]"
+                      dataType="wstr"
+                      length="50"
+                      name="FinalistName" />
+                    <externalMetadataColumn
+                      refId="Package\X Factor Task\Import Data to tblFinalistes.Inputs[OLE DB Destination Input].ExternalColumns[FinishingPosition]"
+                      dataType="i4"
+                      name="FinishingPosition" />
+                    <externalMetadataColumn
+                      refId="Package\X Factor Task\Import Data to tblFinalistes.Inputs[OLE DB Destination Input].ExternalColumns[SeriesNumber]"
+                      dataType="i4"
+                      name="SeriesNumber" />
+                    <externalMetadataColumn
+                      refId="Package\X Factor Task\Import Data to tblFinalistes.Inputs[OLE DB Destination Input].ExternalColumns[CategoryId]"
+                      dataType="i4"
+                      name="CategoryId" />
+                    <externalMetadataColumn
+                      refId="Package\X Factor Task\Import Data to tblFinalistes.Inputs[OLE DB Destination Input].ExternalColumns[ImportNote]"
+                      dataType="wstr"
+                      length="50"
+                      name="ImportNote" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\X Factor Task\Import Data to tblFinalistes.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\X Factor Task\Import Data to tblFinalistes.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\X Factor Task\Import Data to tblFinalistes.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\X Factor Task\Import Data to tblFinalistes.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\X Factor Task\Import Data to tblFinalistes.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\X Factor Task\Import Data to tblFinalistes.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\X Factor Task\Import It"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Import It"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\X Factor Task\Import It.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\X Factor Task\Import It.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\X Factor Task\Import It.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\X Factor Task\Import It.Outputs[Derived Column Output].Columns[ImportNotes]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\X Factor Task\Import It.Outputs[Derived Column Output].Columns[ImportNotes]"
+                      name="ImportNotes"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_WSTR,50)"Imported without problem"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_WSTR,50)"Imported without problem"</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\X Factor Task\Import It.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\X Factor Task\Import It.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\X Factor Task\Import It.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\X Factor Task\Import It.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\X Factor Task\Import It.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\X Factor Task\Import It.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\X Factor Task\Lookup"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Lookup"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[tblCategory]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[tblCategory]) [refTable]
+where [refTable].[CategoryName] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="CategoryId" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CategoryName" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\X Factor Task\Excel Source.Outputs[Excel Source Output].Columns[Category]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\X Factor Task\Lookup.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[TblCategory Con]"
+                  connectionManagerRefId="Package.ConnectionManagers[TblCategory Con]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\X Factor Task\Lookup.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\X Factor Task\Lookup.Inputs[Lookup Input].Columns[Category]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Category"
+                      lineageId="Package\X Factor Task\Excel Source.Outputs[Excel Source Output].Columns[Category]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">CategoryName</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\X Factor Task\Lookup.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\X Factor Task\Lookup.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\X Factor Task\Lookup.Outputs[Lookup Match Output].Columns[CategoryId]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\X Factor Task\Lookup.Outputs[Lookup Match Output].Columns[CategoryId]"
+                      name="CategoryId"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">CategoryId</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\X Factor Task\Lookup.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\X Factor Task\Lookup.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\X Factor Task\Lookup.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\X Factor Task\Lookup.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\X Factor Task\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\X Factor Task\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\X Factor Task\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\X Factor Task\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\X Factor Task\Merging Above Records"
+              componentClassID="Microsoft.UnionAll"
+              contactInfo="Union All;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Combines rows from multiple data flows without sorting. For example, add rows back to a data flow after correction of errors. If sorting is important, we recommend using the Merge transformation."
+              name="Merging Above Records"
+              version="1">
+              <inputs>
+                <input
+                  refId="Package\X Factor Task\Merging Above Records.Inputs[Union All Input 1]"
+                  name="Union All Input 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\X Factor Task\Merging Above Records.Inputs[Union All Input 1].Columns[Id]"
+                      cachedDataType="r8"
+                      cachedName="Id"
+                      lineageId="Package\X Factor Task\Excel Source.Outputs[Excel Source Output].Columns[Id]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\X Factor Task\Merging Above Records.Outputs[Union All Output 1].Columns[Id]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\X Factor Task\Merging Above Records.Inputs[Union All Input 1].Columns[Name]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Name"
+                      lineageId="Package\X Factor Task\Excel Source.Outputs[Excel Source Output].Columns[Name]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\X Factor Task\Merging Above Records.Outputs[Union All Output 1].Columns[Name]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\X Factor Task\Merging Above Records.Inputs[Union All Input 1].Columns[Series]"
+                      cachedDataType="r8"
+                      cachedName="Series"
+                      lineageId="Package\X Factor Task\Excel Source.Outputs[Excel Source Output].Columns[Series]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\X Factor Task\Merging Above Records.Outputs[Union All Output 1].Columns[Series]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\X Factor Task\Merging Above Records.Inputs[Union All Input 1].Columns[Category]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Category"
+                      lineageId="Package\X Factor Task\Excel Source.Outputs[Excel Source Output].Columns[Category]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\X Factor Task\Merging Above Records.Outputs[Union All Output 1].Columns[Category]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\X Factor Task\Merging Above Records.Inputs[Union All Input 1].Columns[Mentor]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Mentor"
+                      lineageId="Package\X Factor Task\Excel Source.Outputs[Excel Source Output].Columns[Mentor]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\X Factor Task\Merging Above Records.Outputs[Union All Output 1].Columns[Mentor]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\X Factor Task\Merging Above Records.Inputs[Union All Input 1].Columns[Finished]"
+                      cachedDataType="r8"
+                      cachedName="Finished"
+                      lineageId="Package\X Factor Task\Excel Source.Outputs[Excel Source Output].Columns[Finished]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\X Factor Task\Merging Above Records.Outputs[Union All Output 1].Columns[Finished]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\X Factor Task\Merging Above Records.Inputs[Union All Input 1].Columns[CategoryId]"
+                      cachedDataType="i4"
+                      cachedName="CategoryId"
+                      lineageId="Package\X Factor Task\Lookup.Outputs[Lookup Match Output].Columns[CategoryId]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\X Factor Task\Merging Above Records.Outputs[Union All Output 1].Columns[CategoryId]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\X Factor Task\Merging Above Records.Inputs[Union All Input 1].Columns[ImportNotes]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="ImportNotes"
+                      lineageId="Package\X Factor Task\Import It.Outputs[Derived Column Output].Columns[ImportNotes]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\X Factor Task\Merging Above Records.Outputs[Union All Output 1].Columns[ImportNote]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\X Factor Task\Merging Above Records.Inputs[Union All Input 2]"
+                  hasSideEffects="true"
+                  name="Union All Input 2">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\X Factor Task\Merging Above Records.Inputs[Union All Input 2].Columns[Id]"
+                      cachedDataType="r8"
+                      cachedName="Id"
+                      lineageId="Package\X Factor Task\Excel Source.Outputs[Excel Source Output].Columns[Id]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\X Factor Task\Merging Above Records.Outputs[Union All Output 1].Columns[Id]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\X Factor Task\Merging Above Records.Inputs[Union All Input 2].Columns[Name]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Name"
+                      lineageId="Package\X Factor Task\Excel Source.Outputs[Excel Source Output].Columns[Name]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\X Factor Task\Merging Above Records.Outputs[Union All Output 1].Columns[Name]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\X Factor Task\Merging Above Records.Inputs[Union All Input 2].Columns[Series]"
+                      cachedDataType="r8"
+                      cachedName="Series"
+                      lineageId="Package\X Factor Task\Excel Source.Outputs[Excel Source Output].Columns[Series]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\X Factor Task\Merging Above Records.Outputs[Union All Output 1].Columns[Series]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\X Factor Task\Merging Above Records.Inputs[Union All Input 2].Columns[Category]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Category"
+                      lineageId="Package\X Factor Task\Excel Source.Outputs[Excel Source Output].Columns[Category]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\X Factor Task\Merging Above Records.Outputs[Union All Output 1].Columns[Category]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\X Factor Task\Merging Above Records.Inputs[Union All Input 2].Columns[Mentor]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Mentor"
+                      lineageId="Package\X Factor Task\Excel Source.Outputs[Excel Source Output].Columns[Mentor]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\X Factor Task\Merging Above Records.Outputs[Union All Output 1].Columns[Mentor]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\X Factor Task\Merging Above Records.Inputs[Union All Input 2].Columns[Finished]"
+                      cachedDataType="r8"
+                      cachedName="Finished"
+                      lineageId="Package\X Factor Task\Excel Source.Outputs[Excel Source Output].Columns[Finished]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\X Factor Task\Merging Above Records.Outputs[Union All Output 1].Columns[Finished]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\X Factor Task\Merging Above Records.Inputs[Union All Input 2].Columns[CategoryId]"
+                      cachedDataType="i4"
+                      cachedName="CategoryId"
+                      lineageId="Package\X Factor Task\Don't Import It.Outputs[Derived Column Output].Columns[CategoryId]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\X Factor Task\Merging Above Records.Outputs[Union All Output 1].Columns[CategoryId]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\X Factor Task\Merging Above Records.Inputs[Union All Input 2].Columns[ImportNotes]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="ImportNotes"
+                      lineageId="Package\X Factor Task\Don't Import It.Outputs[Derived Column Output].Columns[ImportNotes]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\X Factor Task\Merging Above Records.Outputs[Union All Output 1].Columns[ImportNote]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\X Factor Task\Merging Above Records.Inputs[Union All Input 3]"
+                  dangling="true"
+                  hasSideEffects="true"
+                  name="Union All Input 3">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\X Factor Task\Merging Above Records.Outputs[Union All Output 1]"
+                  name="Union All Output 1">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\X Factor Task\Merging Above Records.Outputs[Union All Output 1].Columns[Id]"
+                      dataType="r8"
+                      lineageId="Package\X Factor Task\Merging Above Records.Outputs[Union All Output 1].Columns[Id]"
+                      name="Id" />
+                    <outputColumn
+                      refId="Package\X Factor Task\Merging Above Records.Outputs[Union All Output 1].Columns[Name]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\X Factor Task\Merging Above Records.Outputs[Union All Output 1].Columns[Name]"
+                      name="Name" />
+                    <outputColumn
+                      refId="Package\X Factor Task\Merging Above Records.Outputs[Union All Output 1].Columns[Series]"
+                      dataType="r8"
+                      lineageId="Package\X Factor Task\Merging Above Records.Outputs[Union All Output 1].Columns[Series]"
+                      name="Series" />
+                    <outputColumn
+                      refId="Package\X Factor Task\Merging Above Records.Outputs[Union All Output 1].Columns[Category]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\X Factor Task\Merging Above Records.Outputs[Union All Output 1].Columns[Category]"
+                      name="Category" />
+                    <outputColumn
+                      refId="Package\X Factor Task\Merging Above Records.Outputs[Union All Output 1].Columns[Mentor]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\X Factor Task\Merging Above Records.Outputs[Union All Output 1].Columns[Mentor]"
+                      name="Mentor" />
+                    <outputColumn
+                      refId="Package\X Factor Task\Merging Above Records.Outputs[Union All Output 1].Columns[Finished]"
+                      dataType="r8"
+                      lineageId="Package\X Factor Task\Merging Above Records.Outputs[Union All Output 1].Columns[Finished]"
+                      name="Finished" />
+                    <outputColumn
+                      refId="Package\X Factor Task\Merging Above Records.Outputs[Union All Output 1].Columns[CategoryId]"
+                      dataType="i4"
+                      lineageId="Package\X Factor Task\Merging Above Records.Outputs[Union All Output 1].Columns[CategoryId]"
+                      name="CategoryId" />
+                    <outputColumn
+                      refId="Package\X Factor Task\Merging Above Records.Outputs[Union All Output 1].Columns[ImportNote]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\X Factor Task\Merging Above Records.Outputs[Union All Output 1].Columns[ImportNote]"
+                      name="ImportNote" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\X Factor Task.Paths[Data Conversion Output]"
+              endId="Package\X Factor Task\Import Data to tblFinalistes.Inputs[OLE DB Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\X Factor Task\Converting Double to Integer.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\X Factor Task.Paths[Derived Column Output]"
+              endId="Package\X Factor Task\Merging Above Records.Inputs[Union All Input 1]"
+              name="Derived Column Output"
+              startId="Package\X Factor Task\Import It.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\X Factor Task.Paths[Derived Column Output1]"
+              endId="Package\X Factor Task\Merging Above Records.Inputs[Union All Input 2]"
+              name="Derived Column Output"
+              startId="Package\X Factor Task\Don't Import It.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\X Factor Task.Paths[Excel Source Output]"
+              endId="Package\X Factor Task\Lookup.Inputs[Lookup Input]"
+              name="Excel Source Output"
+              startId="Package\X Factor Task\Excel Source.Outputs[Excel Source Output]" />
+            <path
+              refId="Package\X Factor Task.Paths[Lookup Match Output]"
+              endId="Package\X Factor Task\Import It.Inputs[Derived Column Input]"
+              name="Lookup Match Output"
+              startId="Package\X Factor Task\Lookup.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\X Factor Task.Paths[Lookup No Match Output]"
+              endId="Package\X Factor Task\Don't Import It.Inputs[Derived Column Input]"
+              name="Lookup No Match Output"
+              startId="Package\X Factor Task\Lookup.Outputs[Lookup No Match Output]" />
+            <path
+              refId="Package\X Factor Task.Paths[Union All Output 1]"
+              endId="Package\X Factor Task\Converting Double to Integer.Inputs[Data Conversion Input]"
+              name="Union All Output 1"
+              startId="Package\X Factor Task\Merging Above Records.Outputs[Union All Output 1]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="142.4,41.6"
+          Id="Package\X Factor Task"
+          TopLeft="49.0714293134456,34.5588239369508" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\X Factor Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="138.4,41.6"
+          Id="Package\X Factor Task\Excel Source"
+          TopLeft="403.35714963261,9.32352946538825" />
+        <NodeLayout
+          Size="112.8,41.6"
+          Id="Package\X Factor Task\Lookup"
+          TopLeft="412.642863565562,81.3823535846592" />
+        <EdgeLayout
+          Id="Package\X Factor Task.Paths[Excel Source Output]"
+          TopLeft="470.800006599086,50.9235294653882">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,30.4588241192709"
+              Start="0,0"
+              End="0,22.9588241192709">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.9588241192709" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="121.6,41.6"
+          Id="Package\X Factor Task\Import It"
+          TopLeft="201.214288025486,175.617648603182" />
+        <EdgeLayout
+          Id="Package\X Factor Task.Paths[Lookup Match Output]"
+          TopLeft="451.576196898895,122.982353584659">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-189.561908873409,52.6352950185228"
+              Start="0,0"
+              End="-189.561908873409,45.1352950185228">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.4958127907813" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,17.4958127907813"
+                    Point2="0,21.4958127907813"
+                    Point3="-4,21.4958127907813" />
+                  <mssgle:LineSegment
+                    End="-185.561908873409,21.4958127907813" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-185.561908873409,21.4958127907813"
+                    Point2="-189.561908873409,21.4958127907813"
+                    Point3="-189.561908873409,25.4958127907813" />
+                  <mssgle:LineSegment
+                    End="-189.561908873409,45.1352950185228" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-142.972341155454,26.4958127907813,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="149.6,41.6"
+          Id="Package\X Factor Task\Don't Import It"
+          TopLeft="505.500007493155,180.10000018232" />
+        <EdgeLayout
+          Id="Package\X Factor Task.Paths[Lookup No Match Output]"
+          TopLeft="486.509530232229,122.982353584659">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="93.7904772609269,57.117646597661"
+              Start="0,0"
+              End="93.7904772609269,49.617646597661">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.3263675615622" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19.3263675615622"
+                    Point2="0,23.3263675615622"
+                    Point3="4,23.3263675615622" />
+                  <mssgle:LineSegment
+                    End="89.7904772609269,23.3263675615622" />
+                  <mssgle:CubicBezierSegment
+                    Point1="89.7904772609269,23.3263675615622"
+                    Point2="93.7904772609269,23.3263675615622"
+                    Point3="93.7904772609269,27.3263675615622" />
+                  <mssgle:LineSegment
+                    End="93.7904772609269,49.617646597661" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-8.91114808828653,28.3263675615622,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="189.6,41.6"
+          Id="Package\X Factor Task\Merging Above Records"
+          TopLeft="357.142863224964,258.470591860246" />
+        <EdgeLayout
+          Id="Package\X Factor Task.Paths[Derived Column Output]"
+          TopLeft="262.014288025486,217.217648603182">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="159.661908532811,41.2529432570645"
+              Start="0,0"
+              End="159.661908532811,33.7529432570645">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.5446382056677" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.5446382056677"
+                    Point2="0,24.5446382056677"
+                    Point3="4,24.5446382056677" />
+                  <mssgle:LineSegment
+                    End="155.661908532811,24.5446382056677" />
+                  <mssgle:CubicBezierSegment
+                    Point1="155.661908532811,24.5446382056677"
+                    Point2="159.661908532811,24.5446382056677"
+                    Point3="159.661908532811,28.5446382056677" />
+                  <mssgle:LineSegment
+                    End="159.661908532811,33.7529432570645" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\X Factor Task.Paths[Derived Column Output1]"
+          TopLeft="580.300007493155,221.70000018232">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-98.0904776015247,36.7705916779263"
+              Start="0,0"
+              End="-98.0904776015247,29.2705916779263">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.877732789126" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,17.877732789126"
+                    Point2="0,21.877732789126"
+                    Point3="-4,21.877732789126" />
+                  <mssgle:LineSegment
+                    End="-94.0904776015247,21.877732789126" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-94.0904776015247,21.877732789126"
+                    Point2="-98.0904776015247,21.877732789126"
+                    Point3="-98.0904776015247,25.877732789126" />
+                  <mssgle:LineSegment
+                    End="-98.0904776015247,29.2705916779263" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="216,41.6"
+          Id="Package\X Factor Task\Converting Double to Integer"
+          TopLeft="349.785720148865,334.323534023391" />
+        <EdgeLayout
+          Id="Package\X Factor Task.Paths[Union All Output 1]"
+          TopLeft="454.864291686915,300.070591860247">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,34.252942163144"
+              Start="0,0"
+              End="0,26.752942163144">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.752942163144" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="207.2,41.6"
+          Id="Package\X Factor Task\Import Data to tblFinalistes"
+          TopLeft="344.285720148865,423.64706476502" />
+        <EdgeLayout
+          Id="Package\X Factor Task.Paths[Data Conversion Output]"
+          TopLeft="457.785720148865,375.923534023391">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-9.90000000000009,47.7235307416291"
+              Start="0,0"
+              End="-9.90000000000009,40.2235307416291">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.8617653708145" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19.8617653708145"
+                    Point2="0,23.8617653708145"
+                    Point3="-4,23.8617653708145" />
+                  <mssgle:LineSegment
+                    End="-5.90000000000009,23.8617653708145" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-5.90000000000009,23.8617653708145"
+                    Point2="-9.90000000000009,23.8617653708145"
+                    Point3="-9.90000000000009,27.8617653708145" />
+                  <mssgle:LineSegment
+                    End="-9.90000000000009,40.2235307416291" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\X Factor Task\Excel Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\X Factor Task\Lookup">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[tblCategory]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\X Factor Task\Import Data to tblFinalistes">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
